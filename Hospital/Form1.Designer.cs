@@ -29,15 +29,73 @@
         private void InitializeComponent()
         {
             this.MainPanal = new System.Windows.Forms.Panel();
+            this.RoomBtn = new System.Windows.Forms.Button();
+            this.PatientBtn = new System.Windows.Forms.Button();
+            this.DoctorBtn = new System.Windows.Forms.Button();
+            this.PatientStateBtn = new System.Windows.Forms.Button();
+            this.DoctorAndPatientbtn = new System.Windows.Forms.Button();
+            this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPanal
             // 
+            this.MainPanal.AllowDrop = true;
             this.MainPanal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.MainPanal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MainPanal.Controls.Add(this.DoctorAndPatientbtn);
+            this.MainPanal.Controls.Add(this.PatientStateBtn);
+            this.MainPanal.Controls.Add(this.DoctorBtn);
+            this.MainPanal.Controls.Add(this.PatientBtn);
+            this.MainPanal.Controls.Add(this.RoomBtn);
             this.MainPanal.Location = new System.Drawing.Point(0, 1);
             this.MainPanal.Name = "MainPanal";
-            this.MainPanal.Size = new System.Drawing.Size(815, 486);
+            this.MainPanal.Size = new System.Drawing.Size(813, 486);
             this.MainPanal.TabIndex = 0;
+            // 
+            // RoomBtn
+            // 
+            this.RoomBtn.Location = new System.Drawing.Point(699, 11);
+            this.RoomBtn.Name = "RoomBtn";
+            this.RoomBtn.Size = new System.Drawing.Size(85, 23);
+            this.RoomBtn.TabIndex = 0;
+            this.RoomBtn.Text = "Room";
+            this.RoomBtn.UseVisualStyleBackColor = true;
+            // 
+            // PatientBtn
+            // 
+            this.PatientBtn.Location = new System.Drawing.Point(589, 11);
+            this.PatientBtn.Name = "PatientBtn";
+            this.PatientBtn.Size = new System.Drawing.Size(86, 23);
+            this.PatientBtn.TabIndex = 1;
+            this.PatientBtn.Text = "Patient";
+            this.PatientBtn.UseVisualStyleBackColor = true;
+            // 
+            // DoctorBtn
+            // 
+            this.DoctorBtn.Location = new System.Drawing.Point(475, 12);
+            this.DoctorBtn.Name = "DoctorBtn";
+            this.DoctorBtn.Size = new System.Drawing.Size(85, 23);
+            this.DoctorBtn.TabIndex = 2;
+            this.DoctorBtn.Text = "Doctor";
+            this.DoctorBtn.UseVisualStyleBackColor = true;
+            // 
+            // PatientStateBtn
+            // 
+            this.PatientStateBtn.Location = new System.Drawing.Point(219, 11);
+            this.PatientStateBtn.Name = "PatientStateBtn";
+            this.PatientStateBtn.Size = new System.Drawing.Size(112, 23);
+            this.PatientStateBtn.TabIndex = 3;
+            this.PatientStateBtn.Text = "Patient State";
+            this.PatientStateBtn.UseVisualStyleBackColor = true;
+            // 
+            // DoctorAndPatientbtn
+            // 
+            this.DoctorAndPatientbtn.Location = new System.Drawing.Point(46, 11);
+            this.DoctorAndPatientbtn.Name = "DoctorAndPatientbtn";
+            this.DoctorAndPatientbtn.Size = new System.Drawing.Size(112, 24);
+            this.DoctorAndPatientbtn.TabIndex = 4;
+            this.DoctorAndPatientbtn.Text = "Doctor And Patient";
+            this.DoctorAndPatientbtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -49,6 +107,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MainPanal.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -56,6 +115,11 @@
         #endregion
 
         private System.Windows.Forms.Panel MainPanal;
+        private System.Windows.Forms.Button DoctorAndPatientbtn;
+        private System.Windows.Forms.Button PatientStateBtn;
+        private System.Windows.Forms.Button DoctorBtn;
+        private System.Windows.Forms.Button PatientBtn;
+        private System.Windows.Forms.Button RoomBtn;
     }
 }
 
