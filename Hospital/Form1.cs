@@ -20,8 +20,12 @@ namespace Hospital
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MainPanal.Visible = true;
+            this.DoctorPanal.Visible = false;
         }
 
-    
+        private void label1Label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
