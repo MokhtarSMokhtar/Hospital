@@ -52,7 +52,7 @@
             this.MainPanal.Controls.Add(this.RoomBtn);
             this.MainPanal.Location = new System.Drawing.Point(-4, 1);
             this.MainPanal.Name = "MainPanal";
-            this.MainPanal.Size = new System.Drawing.Size(816, 372);
+            this.MainPanal.Size = new System.Drawing.Size(816, 461);
             this.MainPanal.TabIndex = 0;
             // 
             // DoctorAndPatientbtn
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 385);
+            this.ClientSize = new System.Drawing.Size(812, 474);
             this.Controls.Add(this.MainPanal);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
