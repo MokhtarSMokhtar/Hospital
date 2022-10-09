@@ -55,7 +55,6 @@
             this.DoctorPanal.SuspendLayout();
             this.RoomPanel.SuspendLayout();
 
-            this.DoctorPanal = new System.Windows.Forms.Panel();
             this.label1Label = new System.Windows.Forms.Label();
             this.label1DoctorId = new System.Windows.Forms.Label();
             this.label1DoctorAdd = new System.Windows.Forms.Label();
@@ -477,11 +476,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MainPanal.ResumeLayout(false);
             this.DoctorPanal.ResumeLayout(false);
-
+            this.DoctorPanal.PerformLayout();
             this.RoomPanel.ResumeLayout(false);
             this.RoomPanel.PerformLayout();
 
-            this.DoctorPanal.PerformLayout();
 
             this.ResumeLayout(false);
 
