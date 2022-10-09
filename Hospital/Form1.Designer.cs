@@ -35,6 +35,7 @@
             this.DoctorBtn = new System.Windows.Forms.Button();
             this.PatientBtn = new System.Windows.Forms.Button();
             this.RoomBtn = new System.Windows.Forms.Button();
+            this.DoctorPanal = new System.Windows.Forms.Panel();
             this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.MainPanal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.MainPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanal.BackgroundImage")));
             this.MainPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanal.Controls.Add(this.DoctorPanal);
             this.MainPanal.Controls.Add(this.DoctorAndPatientbtn);
             this.MainPanal.Controls.Add(this.PatientStateBtn);
             this.MainPanal.Controls.Add(this.DoctorBtn);
@@ -52,7 +54,7 @@
             this.MainPanal.Controls.Add(this.RoomBtn);
             this.MainPanal.Location = new System.Drawing.Point(-4, 1);
             this.MainPanal.Name = "MainPanal";
-            this.MainPanal.Size = new System.Drawing.Size(816, 461);
+            this.MainPanal.Size = new System.Drawing.Size(816, 474);
             this.MainPanal.TabIndex = 0;
             // 
             // DoctorAndPatientbtn
@@ -100,6 +102,13 @@
             this.RoomBtn.Text = "Room";
             this.RoomBtn.UseVisualStyleBackColor = true;
             // 
+            // DoctorPanal
+            // 
+            this.DoctorPanal.Location = new System.Drawing.Point(0, 0);
+            this.DoctorPanal.Name = "DoctorPanal";
+            this.DoctorPanal.Size = new System.Drawing.Size(816, 471);
+            this.DoctorPanal.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +132,7 @@
         private System.Windows.Forms.Button DoctorBtn;
         private System.Windows.Forms.Button PatientBtn;
         private System.Windows.Forms.Button RoomBtn;
+        private System.Windows.Forms.Panel DoctorPanal;
     }
 }
 
