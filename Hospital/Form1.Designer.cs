@@ -59,7 +59,7 @@
             // 
             // DoctorAndPatientbtn
             // 
-            this.DoctorAndPatientbtn.Location = new System.Drawing.Point(46, 11);
+            this.DoctorAndPatientbtn.Location = new System.Drawing.Point(27, 11);
             this.DoctorAndPatientbtn.Name = "DoctorAndPatientbtn";
             this.DoctorAndPatientbtn.Size = new System.Drawing.Size(112, 24);
             this.DoctorAndPatientbtn.TabIndex = 4;
