@@ -35,6 +35,7 @@
             this.DoctorBtn = new System.Windows.Forms.Button();
             this.PatientBtn = new System.Windows.Forms.Button();
             this.RoomBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.MainPanal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.MainPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanal.BackgroundImage")));
             this.MainPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanal.Controls.Add(this.button1);
             this.MainPanal.Controls.Add(this.DoctorAndPatientbtn);
             this.MainPanal.Controls.Add(this.PatientStateBtn);
             this.MainPanal.Controls.Add(this.DoctorBtn);
@@ -100,6 +102,15 @@
             this.RoomBtn.Text = "Room";
             this.RoomBtn.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(592, 237);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +134,7 @@
         private System.Windows.Forms.Button DoctorBtn;
         private System.Windows.Forms.Button PatientBtn;
         private System.Windows.Forms.Button RoomBtn;
+        private System.Windows.Forms.Button button1;
     }
 }
 
