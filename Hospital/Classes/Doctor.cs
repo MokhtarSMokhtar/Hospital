@@ -29,7 +29,11 @@ namespace Hospital.Classes
 
         public int MangeDepartment { get; set; }
         public virtual ICollection<Patient> patients { get; set; }
+        [InverseProperty("Doctors")]
+
         public virtual Department WorkDepartment { get; set; }
+        [InverseProperty("Manager")]
+
         public virtual Department manage { get; set; }
 
 

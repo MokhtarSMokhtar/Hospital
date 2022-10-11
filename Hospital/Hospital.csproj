@@ -59,9 +59,10 @@
     <Compile Include="Classes\Department.cs" />
     <Compile Include="Classes\Doctor.cs" />
     <Compile Include="Classes\Gender.cs" />
-    <Compile Include="Classes\MedicineTime.cs" />
+    <Compile Include="Classes\DrageTime.cs" />
     <Compile Include="Classes\Nurse.cs" />
     <Compile Include="Classes\Patient.cs" />
+    <Compile Include="Classes\PatientVisitors.cs" />
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\Visits.cs" />
     <Compile Include="Data\Context.cs" />

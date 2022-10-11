@@ -14,14 +14,17 @@ namespace Hospital.Classes
 
         public string Address { get; set; }
         public int Phone { get; set; }
-
         public int Age { get; set; }
         public string Case { get; set; }
         public Gender gender { get; set; }
 
         public ICollection<Doctor> Doctors { get; set; }
 
-        public virtual ICollection<MedicineTime> medicineTimes { get; set; }
-            
+        public virtual ICollection<DrageTime> medicineTimes { get; set; }
+
+        public virtual ICollection<PatientVisitors> Visitors { get; set; }
+
+
+
     }
 }
