@@ -33,7 +33,6 @@ namespace Hospital.Classes
         public Nullable<int> DepartmentWorkId { get; set; }
 
         public virtual ICollection<Patient> patients { get; set; }
-        //[ForeignKey("DepartmentWorkId")]
 
         [InverseProperty("Doctors")]
         public virtual Department WorkDepartment { get; set; }
