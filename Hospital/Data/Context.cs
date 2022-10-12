@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 namespace Hospital.Data
 {
     {
+
+        public Context():base(@"Data Source = 192.168.1.110; Initial Catalog = Hospital; User ID = Hospital; Password=123;Connect Timeout = 30;")
         {
 
         }
