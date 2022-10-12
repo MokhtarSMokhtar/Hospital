@@ -216,7 +216,6 @@
             this.RoomPanel.ResumeLayout(false);
             this.RoomPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.FormClosed += RoomForm_FormClosed;
 
         }
 

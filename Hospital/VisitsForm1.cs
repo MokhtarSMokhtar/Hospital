@@ -20,6 +20,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += VisitsForm1_FormClosed;
+
         }
 
         private void label7_Click(object sender, EventArgs e)
