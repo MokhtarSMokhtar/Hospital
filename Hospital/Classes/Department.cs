@@ -14,7 +14,7 @@ namespace Hospital.Classes
         public int ID { get; set; }
         public string Name { get; set; }
         //[ForeignKey("Manager")]
-
+        
         //public Nullable<int> DoctorManageId { get; set; }
 
 
