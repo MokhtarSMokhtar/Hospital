@@ -78,10 +78,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210120915124_update2.cs" />
-    <Compile Include="Migrations\202210120915124_update2.designer.cs">
-      <DependentUpon>202210120915124_update2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nusre.cs">
       <SubType>Form</SubType>
@@ -103,11 +99,11 @@
     <Compile Include="RoomForm.Designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visits.cs">
+    <Compile Include="VisitsForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visits.Designer.cs">
-      <DependentUpon>Visits.cs</DependentUpon>
+    <Compile Include="VisitsForm1.Designer.cs">
+      <DependentUpon>VisitsForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
@@ -136,8 +132,8 @@
     <EmbeddedResource Include="RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visits.resx">
-      <DependentUpon>Visits.cs</DependentUpon>
+    <EmbeddedResource Include="VisitsForm1.resx">
+      <DependentUpon>VisitsForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
