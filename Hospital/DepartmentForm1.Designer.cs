@@ -243,7 +243,6 @@
             this.Deptpanal.PerformLayout();
             this.ViewPanal.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.FormClosed += DepartmentForm1_FormClosed;
 
         }
 

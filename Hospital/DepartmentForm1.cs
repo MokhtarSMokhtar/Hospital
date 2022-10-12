@@ -21,8 +21,8 @@ namespace Hospital
 
         private void DepartmentForm_Load(object sender, EventArgs e)
         {
-            //this.Deptpanal.Visible = true;
-            //this.ViewPanal.Visible = false;
+            this.Deptpanal.Visible = true;
+            this.ViewPanal.Visible = false;
         }
         private void DepartmentForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
@@ -34,7 +34,6 @@ namespace Hospital
         {
 
             this.ViewPanal.Visible = true;
-            this.Deptpanal.Visible = false;
         }
 
         private void AddDeptbtn_Click(object sender, EventArgs e)
@@ -55,7 +54,6 @@ namespace Hospital
         private void Backbtn_Click(object sender, EventArgs e)
         {
             this.ViewPanal.Visible = false;
-            this.Deptpanal.Visible = true;
         }
     }
 }

@@ -80,7 +80,7 @@
             // 
             // Doctorbtn
             // 
-            this.Doctorbtn.Location = new System.Drawing.Point(515, 232);
+            this.Doctorbtn.Location = new System.Drawing.Point(515, 222);
             this.Doctorbtn.Name = "Doctorbtn";
             this.Doctorbtn.Size = new System.Drawing.Size(75, 23);
             this.Doctorbtn.TabIndex = 19;
@@ -250,13 +250,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name ";
             // 
-            // Visits
+            // VisitsForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "VisitsForm";
+            this.Name = "VisitsForm1";
             this.Text = "Visits";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
