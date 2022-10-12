@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hospital.Data;
 namespace Hospital
 {
     public partial class PatiantForm : Form
     {
-        public PatiantForm()
-        {
-            InitializeComponent();
-        }
 
+        Context context;
+        MainForm mainForm;
+        public PatiantForm(Context _context, MainForm _mainForm)
+        {
+            context = _context;
+            InitializeComponent();
+            this.mainForm = _mainForm;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +49,15 @@ namespace Hospital
         private void Doctor_Click(object sender, EventArgs e)
         {
 
+        }
+        private void PatiantForm_FormClosed1(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            mainForm.Visible = true;
+        }
+
+        private void Patient_Back_Click(object sender, EventArgs e)
+        {
+            mainForm.Visible = true;
         }
     }
 }

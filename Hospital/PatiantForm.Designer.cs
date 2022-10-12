@@ -220,6 +220,7 @@
             this.Patient_Back.TabIndex = 18;
             this.Patient_Back.Text = "Back";
             this.Patient_Back.UseVisualStyleBackColor = false;
+            this.Patient_Back.Click += new System.EventHandler(this.Patient_Back_Click);
             // 
             // Paitient_previous
             // 
@@ -239,7 +240,7 @@
             this.Paitient_next.Text = ">";
             this.Paitient_next.UseVisualStyleBackColor = true;
             // 
-            // Patiant
+            // PatiantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -268,13 +269,17 @@
             this.Controls.Add(this.p_id);
             this.Controls.Add(this.patients);
             this.DoubleBuffered = true;
-            this.Name = "Patiant";
+            this.Name = "PatiantForm";
             this.Text = "Patiant";
             this.Load += new System.EventHandler(this.Patiant_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+      
+
+
 
         #endregion
 

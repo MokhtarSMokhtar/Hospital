@@ -16,12 +16,19 @@ namespace Hospital
         DepartmentForm1 departmentForm;
         DoctorForm doctorForm;
         Context context;
+        PatiantForm patiantForm;
+        NusreForm nusreForm;
+        RoomForm roomForm;
+        VisitsForm1 visitsForm1;
+       
+        
         public MainForm()
         {
             InitializeComponent();
             context = new Context();
+            
 
-            PatiantForm patiant = new PatiantForm();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,7 +58,30 @@ namespace Hospital
         }
         private void PatientBtn_Click(object sender, EventArgs e)
         {
+            patiantForm = new PatiantForm(this.context, this);
+            patiantForm.Show();
+            this.Visible = false;
+        }
 
+        private void NurseBtn_Click(object sender, EventArgs e)
+        {
+            nusreForm = new NusreForm(this.context, this);
+            nusreForm.Show();
+            this.Visible = false;
+        }
+
+        private void RoomBtn_Click(object sender, EventArgs e)
+        {
+            roomForm = new RoomForm(this.context, this);
+            roomForm.Show();
+            this.Visible = false;
+        }
+
+        private void VisitBtn_Click(object sender, EventArgs e)
+        {
+            visitsForm1 = new VisitsForm1(this.context, this);
+            visitsForm1.Show();
+            this.Visible = false;
         }
     }
 }
