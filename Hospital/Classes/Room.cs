@@ -14,7 +14,9 @@ namespace Hospital.Classes
         public int ID { get; set; }
         public string Name { get; set; }
         public int NumberOfBeds { get; set; }
+        //[ForeignKey("Manager")]
 
+        //public int? ManagerID { get; set; }
         public string Type { get; set; }    
         public Department Department  { get; set; }
         [Required]

@@ -13,12 +13,10 @@ namespace Hospital.Classes
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        //[ForeignKey("Manager")]
-        
-        //public Nullable<int> DoctorManageId { get; set; }
+     
 
 
-        public virtual ICollection<Room>Rooms { get; set; }
+        public virtual ICollection<Room> Rooms { get; set; }
         [Required]
 
         public virtual Doctor Manager { get; set; }

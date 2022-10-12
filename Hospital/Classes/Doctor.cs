@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Hospital.Classes
 {
 
-   
+
     public class Doctor
     {
         [Key]
@@ -39,7 +39,7 @@ namespace Hospital.Classes
         public virtual Department WorkDepartment { get; set; }
 
         [InverseProperty("Manager")]
-        public virtual Department  manage { get; set; }
+        public virtual Department manage { get; set; }
 
 
     }
