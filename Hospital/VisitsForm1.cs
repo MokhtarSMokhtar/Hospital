@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Data;
 
 namespace Hospital
 {
     public partial class VisitsForm1 : Form
     {
-        public VisitsForm1()
+        Context context;
+        MainForm mainForm;
+        public VisitsForm1(Context _context, MainForm _mainForm)
         {
+            context = _context;
             InitializeComponent();
+            mainForm = _mainForm;
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -27,6 +32,18 @@ namespace Hospital
 
         }
 
-     
+        private void Doctorbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void VisitsForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
+        {
+            mainForm.Visible = true;
+        }
     }
 }

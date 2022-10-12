@@ -71,6 +71,7 @@
             this.VisitBtn.TabIndex = 6;
             this.VisitBtn.Text = "Visits";
             this.VisitBtn.UseVisualStyleBackColor = false;
+            this.VisitBtn.Click += new System.EventHandler(this.VisitBtn_Click);
             // 
             // NurseBtn
             // 
@@ -81,6 +82,7 @@
             this.NurseBtn.TabIndex = 5;
             this.NurseBtn.Text = "Nurse";
             this.NurseBtn.UseVisualStyleBackColor = false;
+            this.NurseBtn.Click += new System.EventHandler(this.NurseBtn_Click);
             // 
             // DoctorAndPatientbtn
             // 
@@ -134,6 +136,7 @@
             this.RoomBtn.TabIndex = 0;
             this.RoomBtn.Text = "Room";
             this.RoomBtn.UseVisualStyleBackColor = false;
+            this.RoomBtn.Click += new System.EventHandler(this.RoomBtn_Click);
             // 
             // DeptBtn
             // 
