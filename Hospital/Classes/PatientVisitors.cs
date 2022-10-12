@@ -13,7 +13,7 @@ namespace Hospital.Classes
         public DateTime Date { get; set; }
         [Key,ForeignKey("Patient") , Column(Order = 1)]
         public int PatientId { get; set; }
-        [Key,ForeignKey("Visits") , Column(Order = 1)]
+        [Key,ForeignKey("Visits") , Column(Order =21)]
         public int VisitorId { get; set; }
 
         public virtual Patient Patient { get; set; }
