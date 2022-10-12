@@ -55,7 +55,7 @@ namespace Hospital
             departmentForm.Show();
             this.Visible = false;
 
-
+        }
         private void PatientBtn_Click(object sender, EventArgs e)
         {
             patiantForm = new PatiantForm(this.context, this);
