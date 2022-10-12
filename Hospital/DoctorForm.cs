@@ -13,16 +13,22 @@ namespace Hospital
     public partial class DoctorForm : Form
     {
         Context context;
-        public DoctorForm( Context _context)
+        MainForm mainForm;
+        public DoctorForm( Context _context, MainForm _mainForm)
         {
             context = _context;
             InitializeComponent();
+            this.mainForm = _mainForm;
         }
 
         private void AddDoctorbtn_Click(object sender, EventArgs e)
         {
 
 
+        }
+        private void showMain(object sender, EventArgs e)
+        {
+            mainForm.Visible = true;
         }
     }
 }

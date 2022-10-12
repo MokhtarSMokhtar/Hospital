@@ -34,9 +34,9 @@ namespace Hospital
 
         private void DoctorBtn_Click(object sender, EventArgs e)
         {
-            doctorForm = new DoctorForm(this.context);
-            
-
+            doctorForm = new DoctorForm(this.context ,this);
+            doctorForm.Show();
+            this.Visible = false;   
         }
     }
 }

@@ -250,6 +250,7 @@
             this.DoctorPanal.ResumeLayout(false);
             this.DoctorPanal.PerformLayout();
             this.ResumeLayout(false);
+            this.FormClosed += showMain;
 
         }
 
