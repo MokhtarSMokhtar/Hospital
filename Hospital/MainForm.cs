@@ -13,6 +13,7 @@ namespace Hospital
 {
     public partial class MainForm : Form
     {
+        DepartmentForm1 departmentForm;
         DoctorForm doctorForm;
         Context context;
         public MainForm()
@@ -37,6 +38,15 @@ namespace Hospital
             doctorForm = new DoctorForm(this.context ,this);
             doctorForm.Show();
             this.Visible = false;   
+        }
+
+        private void DeptBtn_Click(object sender, EventArgs e)
+        {
+            departmentForm = new DepartmentForm1(this);
+            departmentForm.Show();
+            this.Visible = false;
+
+
         }
     }
 }

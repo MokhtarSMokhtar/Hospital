@@ -14,6 +14,7 @@ namespace Hospital
     {
         Context context;
         MainForm mainForm;
+        
         public DoctorForm( Context _context, MainForm _mainForm)
         {
             context = _context;
