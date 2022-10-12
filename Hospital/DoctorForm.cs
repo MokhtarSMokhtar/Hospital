@@ -14,7 +14,10 @@ namespace Hospital
     {
         Context context;
         MainForm mainForm;
+        RoomForm roomForm;
+
         
+ 
         public DoctorForm( Context _context, MainForm _mainForm)
         {
             context = _context;
@@ -30,6 +33,16 @@ namespace Hospital
         private void showMain(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+        }
+
+        private void FromDoctorToMain_Click(object sender, EventArgs e)
+        {
+            mainForm.Visible = true;
+        }
+
+        private void FromDoctorToRoom_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

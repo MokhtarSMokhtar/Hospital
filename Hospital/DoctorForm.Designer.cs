@@ -87,6 +87,7 @@
             this.FromDoctorToMain.TabIndex = 17;
             this.FromDoctorToMain.Text = "Back";
             this.FromDoctorToMain.UseVisualStyleBackColor = true;
+            this.FromDoctorToMain.Click += new System.EventHandler(this.FromDoctorToMain_Click);
             // 
             // FromDoctorToPAtiant
             // 
@@ -108,12 +109,13 @@
             // 
             // FromDoctorToRoom
             // 
-            this.FromDoctorToRoom.Location = new System.Drawing.Point(492, 108);
+            this.FromDoctorToRoom.Location = new System.Drawing.Point(492, 102);
             this.FromDoctorToRoom.Name = "FromDoctorToRoom";
-            this.FromDoctorToRoom.Size = new System.Drawing.Size(75, 31);
+            this.FromDoctorToRoom.Size = new System.Drawing.Size(75, 37);
             this.FromDoctorToRoom.TabIndex = 14;
             this.FromDoctorToRoom.Text = "Room";
             this.FromDoctorToRoom.UseVisualStyleBackColor = true;
+            this.FromDoctorToRoom.Click += new System.EventHandler(this.FromDoctorToRoom_Click);
             // 
             // UpdateDoctorbtn
             // 
@@ -250,7 +252,6 @@
             this.DoctorPanal.ResumeLayout(false);
             this.DoctorPanal.PerformLayout();
             this.ResumeLayout(false);
-            this.FormClosed += showMain;
 
         }
 

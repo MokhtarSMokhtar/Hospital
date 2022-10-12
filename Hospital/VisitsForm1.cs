@@ -39,7 +39,7 @@ namespace Hospital
 
         private void MainBtn_Click(object sender, EventArgs e)
         {
-
+            mainForm.Visible = true;
         }
         private void VisitsForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
