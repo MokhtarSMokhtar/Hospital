@@ -40,6 +40,8 @@ namespace Hospital
         private void FromDoctorToMain_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+            this.Hide();
+
         }
 
         private void FromDoctorToRoom_Click(object sender, EventArgs e)

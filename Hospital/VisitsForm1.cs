@@ -42,10 +42,13 @@ namespace Hospital
         private void MainBtn_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+            this.Hide();
+
         }
         private void VisitsForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             mainForm.Visible = true;
+
         }
     }
 }
