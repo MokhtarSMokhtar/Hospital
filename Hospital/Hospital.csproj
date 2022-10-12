@@ -66,6 +66,12 @@
     <Compile Include="Classes\Room.cs" />
     <Compile Include="Classes\Visits.cs" />
     <Compile Include="Data\Context.cs" />
+    <Compile Include="DepartmentForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentForm1.Designer.cs">
+      <DependentUpon>DepartmentForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="VisitsForm1.Designer.cs">
       <DependentUpon>VisitsForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DepartmentForm1.resx">
+      <DependentUpon>DepartmentForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </EmbeddedResource>
