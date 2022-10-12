@@ -56,6 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Department.cs" />
+    <Compile Include="Classes\Doctor.cs" />
+    <Compile Include="Classes\Gender.cs" />
+    <Compile Include="Classes\DrageTime.cs" />
+    <Compile Include="Classes\Nurse.cs" />
+    <Compile Include="Classes\Patient.cs" />
+    <Compile Include="Classes\PatientVisitors.cs" />
+    <Compile Include="Classes\Room.cs" />
+    <Compile Include="Classes\Visits.cs" />
+    <Compile Include="Data\Context.cs" />
     <Compile Include="DoctorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +118,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
