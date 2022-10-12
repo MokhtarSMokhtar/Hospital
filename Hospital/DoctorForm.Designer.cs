@@ -138,6 +138,7 @@
             this.AddDoctorbtn.TabIndex = 11;
             this.AddDoctorbtn.Text = "Add";
             this.AddDoctorbtn.UseVisualStyleBackColor = true;
+            this.AddDoctorbtn.Click += new System.EventHandler(this.AddDoctorbtn_Click);
             // 
             // DoctorAddressText
             // 
