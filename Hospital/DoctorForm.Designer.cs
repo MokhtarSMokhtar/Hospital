@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorForm));
             this.DoctorPanal = new System.Windows.Forms.Panel();
             this.FromDoctorToMain = new System.Windows.Forms.Button();
             this.FromDoctorToPAtiant = new System.Windows.Forms.Button();
@@ -53,6 +54,8 @@
             // DoctorPanal
             // 
             this.DoctorPanal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DoctorPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DoctorPanal.BackgroundImage")));
+            this.DoctorPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoctorPanal.Controls.Add(this.FromDoctorToMain);
             this.DoctorPanal.Controls.Add(this.FromDoctorToPAtiant);
             this.DoctorPanal.Controls.Add(this.FromDoctorToVisite);
@@ -78,27 +81,27 @@
             // 
             // FromDoctorToMain
             // 
-            this.FromDoctorToMain.Location = new System.Drawing.Point(492, 297);
+            this.FromDoctorToMain.Location = new System.Drawing.Point(492, 280);
             this.FromDoctorToMain.Name = "FromDoctorToMain";
-            this.FromDoctorToMain.Size = new System.Drawing.Size(75, 23);
+            this.FromDoctorToMain.Size = new System.Drawing.Size(75, 40);
             this.FromDoctorToMain.TabIndex = 17;
             this.FromDoctorToMain.Text = "Back";
             this.FromDoctorToMain.UseVisualStyleBackColor = true;
             // 
             // FromDoctorToPAtiant
             // 
-            this.FromDoctorToPAtiant.Location = new System.Drawing.Point(492, 231);
+            this.FromDoctorToPAtiant.Location = new System.Drawing.Point(492, 216);
             this.FromDoctorToPAtiant.Name = "FromDoctorToPAtiant";
-            this.FromDoctorToPAtiant.Size = new System.Drawing.Size(75, 23);
+            this.FromDoctorToPAtiant.Size = new System.Drawing.Size(75, 38);
             this.FromDoctorToPAtiant.TabIndex = 16;
             this.FromDoctorToPAtiant.Text = "Patient";
             this.FromDoctorToPAtiant.UseVisualStyleBackColor = true;
             // 
             // FromDoctorToVisite
             // 
-            this.FromDoctorToVisite.Location = new System.Drawing.Point(492, 169);
+            this.FromDoctorToVisite.Location = new System.Drawing.Point(492, 158);
             this.FromDoctorToVisite.Name = "FromDoctorToVisite";
-            this.FromDoctorToVisite.Size = new System.Drawing.Size(75, 23);
+            this.FromDoctorToVisite.Size = new System.Drawing.Size(75, 34);
             this.FromDoctorToVisite.TabIndex = 15;
             this.FromDoctorToVisite.Text = "Visite";
             this.FromDoctorToVisite.UseVisualStyleBackColor = true;
@@ -107,7 +110,7 @@
             // 
             this.FromDoctorToRoom.Location = new System.Drawing.Point(492, 108);
             this.FromDoctorToRoom.Name = "FromDoctorToRoom";
-            this.FromDoctorToRoom.Size = new System.Drawing.Size(75, 23);
+            this.FromDoctorToRoom.Size = new System.Drawing.Size(75, 31);
             this.FromDoctorToRoom.TabIndex = 14;
             this.FromDoctorToRoom.Text = "Room";
             this.FromDoctorToRoom.UseVisualStyleBackColor = true;

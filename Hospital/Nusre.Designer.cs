@@ -42,20 +42,22 @@
             this.NAge = new System.Windows.Forms.Label();
             this.NGender = new System.Windows.Forms.Label();
             this.Nphone = new System.Windows.Forms.Label();
-            this.Room = new System.Windows.Forms.Button();
-            this.DrageTime = new System.Windows.Forms.Button();
-            this.Back = new System.Windows.Forms.Button();
-            this.nbuttonleft = new System.Windows.Forms.Button();
-            this.nbuttonright = new System.Windows.Forms.Button();
+            this.Nurse_Room = new System.Windows.Forms.Button();
+            this.Nurse_DrageTime = new System.Windows.Forms.Button();
+            this.Nurse_Back = new System.Windows.Forms.Button();
+            this.Nurse_previous = new System.Windows.Forms.Button();
+            this.Nurse_next = new System.Windows.Forms.Button();
+            this.Nurse_patient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nurse
             // 
             this.Nurse.AutoSize = true;
             this.Nurse.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Nurse.Location = new System.Drawing.Point(49, 21);
+            this.Nurse.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nurse.Location = new System.Drawing.Point(24, 9);
             this.Nurse.Name = "Nurse";
-            this.Nurse.Size = new System.Drawing.Size(35, 13);
+            this.Nurse.Size = new System.Drawing.Size(66, 24);
             this.Nurse.TabIndex = 0;
             this.Nurse.Text = "Nurse";
             // 
@@ -155,56 +157,67 @@
             this.Nphone.TabIndex = 14;
             this.Nphone.Text = "phone";
             // 
-            // Room
+            // Nurse_Room
             // 
-            this.Room.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Room.Location = new System.Drawing.Point(453, 48);
-            this.Room.Name = "Room";
-            this.Room.Size = new System.Drawing.Size(94, 40);
-            this.Room.TabIndex = 17;
-            this.Room.Text = "Room";
-            this.Room.UseVisualStyleBackColor = false;
-            this.Room.Click += new System.EventHandler(this.button1_Click);
+            this.Nurse_Room.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nurse_Room.Location = new System.Drawing.Point(453, 48);
+            this.Nurse_Room.Name = "Nurse_Room";
+            this.Nurse_Room.Size = new System.Drawing.Size(94, 40);
+            this.Nurse_Room.TabIndex = 17;
+            this.Nurse_Room.Text = "Room";
+            this.Nurse_Room.UseVisualStyleBackColor = false;
+            this.Nurse_Room.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DrageTime
+            // Nurse_DrageTime
             // 
-            this.DrageTime.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.DrageTime.Location = new System.Drawing.Point(453, 108);
-            this.DrageTime.Name = "DrageTime";
-            this.DrageTime.Size = new System.Drawing.Size(94, 41);
-            this.DrageTime.TabIndex = 18;
-            this.DrageTime.Text = "DrageTime";
-            this.DrageTime.UseVisualStyleBackColor = false;
+            this.Nurse_DrageTime.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nurse_DrageTime.Location = new System.Drawing.Point(453, 108);
+            this.Nurse_DrageTime.Name = "Nurse_DrageTime";
+            this.Nurse_DrageTime.Size = new System.Drawing.Size(94, 41);
+            this.Nurse_DrageTime.TabIndex = 18;
+            this.Nurse_DrageTime.Text = "DrageTime";
+            this.Nurse_DrageTime.UseVisualStyleBackColor = false;
             // 
-            // Back
+            // Nurse_Back
             // 
-            this.Back.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Back.Location = new System.Drawing.Point(453, 160);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(94, 45);
-            this.Back.TabIndex = 19;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = false;
+            this.Nurse_Back.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Nurse_Back.Location = new System.Drawing.Point(453, 223);
+            this.Nurse_Back.Name = "Nurse_Back";
+            this.Nurse_Back.Size = new System.Drawing.Size(94, 45);
+            this.Nurse_Back.TabIndex = 19;
+            this.Nurse_Back.Text = "Back";
+            this.Nurse_Back.UseVisualStyleBackColor = false;
+            this.Nurse_Back.Click += new System.EventHandler(this.Nurse_Back_Click);
             // 
-            // nbuttonleft
+            // Nurse_previous
             // 
-            this.nbuttonleft.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.nbuttonleft.Location = new System.Drawing.Point(112, 278);
-            this.nbuttonleft.Name = "nbuttonleft";
-            this.nbuttonleft.Size = new System.Drawing.Size(27, 23);
-            this.nbuttonleft.TabIndex = 20;
-            this.nbuttonleft.Text = "<";
-            this.nbuttonleft.UseVisualStyleBackColor = false;
+            this.Nurse_previous.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nurse_previous.Location = new System.Drawing.Point(112, 278);
+            this.Nurse_previous.Name = "Nurse_previous";
+            this.Nurse_previous.Size = new System.Drawing.Size(27, 23);
+            this.Nurse_previous.TabIndex = 20;
+            this.Nurse_previous.Text = "<";
+            this.Nurse_previous.UseVisualStyleBackColor = false;
             // 
-            // nbuttonright
+            // Nurse_next
             // 
-            this.nbuttonright.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.nbuttonright.Location = new System.Drawing.Point(164, 278);
-            this.nbuttonright.Name = "nbuttonright";
-            this.nbuttonright.Size = new System.Drawing.Size(24, 23);
-            this.nbuttonright.TabIndex = 21;
-            this.nbuttonright.Text = ">";
-            this.nbuttonright.UseVisualStyleBackColor = false;
+            this.Nurse_next.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nurse_next.Location = new System.Drawing.Point(164, 278);
+            this.Nurse_next.Name = "Nurse_next";
+            this.Nurse_next.Size = new System.Drawing.Size(24, 23);
+            this.Nurse_next.TabIndex = 21;
+            this.Nurse_next.Text = ">";
+            this.Nurse_next.UseVisualStyleBackColor = false;
+            // 
+            // Nurse_patient
+            // 
+            this.Nurse_patient.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Nurse_patient.Location = new System.Drawing.Point(453, 167);
+            this.Nurse_patient.Name = "Nurse_patient";
+            this.Nurse_patient.Size = new System.Drawing.Size(94, 39);
+            this.Nurse_patient.TabIndex = 22;
+            this.Nurse_patient.Text = "Paient";
+            this.Nurse_patient.UseVisualStyleBackColor = false;
             // 
             // Nusre
             // 
@@ -213,11 +226,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(659, 313);
-            this.Controls.Add(this.nbuttonright);
-            this.Controls.Add(this.nbuttonleft);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.DrageTime);
-            this.Controls.Add(this.Room);
+            this.Controls.Add(this.Nurse_patient);
+            this.Controls.Add(this.Nurse_next);
+            this.Controls.Add(this.Nurse_previous);
+            this.Controls.Add(this.Nurse_Back);
+            this.Controls.Add(this.Nurse_DrageTime);
+            this.Controls.Add(this.Nurse_Room);
             this.Controls.Add(this.Nphone);
             this.Controls.Add(this.NGender);
             this.Controls.Add(this.NAge);
@@ -254,10 +268,11 @@
         private System.Windows.Forms.Label NAge;
         private System.Windows.Forms.Label NGender;
         private System.Windows.Forms.Label Nphone;
-        private System.Windows.Forms.Button Room;
-        private System.Windows.Forms.Button DrageTime;
-        private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Button nbuttonleft;
-        private System.Windows.Forms.Button nbuttonright;
+        private System.Windows.Forms.Button Nurse_Room;
+        private System.Windows.Forms.Button Nurse_DrageTime;
+        private System.Windows.Forms.Button Nurse_Back;
+        private System.Windows.Forms.Button Nurse_previous;
+        private System.Windows.Forms.Button Nurse_next;
+        private System.Windows.Forms.Button Nurse_patient;
     }
 }

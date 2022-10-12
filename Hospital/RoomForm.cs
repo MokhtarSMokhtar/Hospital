@@ -16,5 +16,10 @@ namespace Hospital
         {
             InitializeComponent();
         }
+
+        private void Doctor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
