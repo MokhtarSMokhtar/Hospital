@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace Hospital.Classes
    
     public class Doctor
     {
+        [Key]
+
         public int ID { get; set; }
         public string Name { get; set; }
 
@@ -22,20 +25,21 @@ namespace Hospital.Classes
         public int Age { get; set; }
 
         public Gender gender { get; set; }
-
-        [ForeignKey ("WorkDepartment")]
-        public int DepartmentId { get; set; }
         [ForeignKey("manage")]
 
-        public int MangeDepartment { get; set; }
-        public virtual ICollection<Patient> patients { get; set; }
-        [InverseProperty("Doctors")]
+        public Nullable<int> DepartmentManageId { get; set; }
+        [ForeignKey("WorkDepartment")]
 
+        public Nullable<int> DepartmentWorkId { get; set; }
+
+        public virtual ICollection<Patient> patients { get; set; }
+        [Required]
+        [InverseProperty("Doctors")]
         public virtual Department WorkDepartment { get; set; }
+
         [InverseProperty("Manager")]
 
-        public virtual Department manage { get; set; }
-
+        public virtual Department  manage { get; set; }
 
 
     }
