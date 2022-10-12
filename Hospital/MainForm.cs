@@ -20,6 +20,8 @@ namespace Hospital
         {
             InitializeComponent();
             context = new Context();
+
+            PatiantForm patiant = new PatiantForm();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,6 +48,9 @@ namespace Hospital
             departmentForm.Show();
             this.Visible = false;
 
+
+        private void PatientBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

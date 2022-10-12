@@ -1,6 +1,6 @@
 ﻿namespace Hospital
 {
-    partial class Patiant
+    partial class PatiantForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patiant));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatiantForm));
             this.patients = new System.Windows.Forms.Label();
             this.p_id = new System.Windows.Forms.TextBox();
             this.p_name = new System.Windows.Forms.TextBox();

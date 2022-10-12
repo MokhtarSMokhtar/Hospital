@@ -38,6 +38,7 @@
             this.PatientBtn = new System.Windows.Forms.Button();
             this.RoomBtn = new System.Windows.Forms.Button();
             this.DeptBtn = new System.Windows.Forms.Button();
+
             this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +123,7 @@
             this.PatientBtn.TabIndex = 1;
             this.PatientBtn.Text = "Patient";
             this.PatientBtn.UseVisualStyleBackColor = false;
+            this.PatientBtn.Click += new System.EventHandler(this.PatientBtn_Click);
             // 
             // RoomBtn
             // 
@@ -145,6 +147,7 @@
             this.DeptBtn.UseVisualStyleBackColor = false;
             this.DeptBtn.Click += new System.EventHandler(this.DeptBtn_Click);
             // 
+
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

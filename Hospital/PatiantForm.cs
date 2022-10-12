@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class Patiant : Form
+    public partial class PatiantForm : Form
     {
-        public Patiant()
+        public PatiantForm()
         {
             InitializeComponent();
         }

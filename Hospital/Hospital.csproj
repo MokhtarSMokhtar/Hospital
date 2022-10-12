@@ -89,17 +89,17 @@
       <DependentUpon>202210121752510_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Nusre.cs">
+    <Compile Include="NusreForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nusre.Designer.cs">
-      <DependentUpon>Nusre.cs</DependentUpon>
+    <Compile Include="NusreForm.Designer.cs">
+      <DependentUpon>NusreForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patiant.cs">
+    <Compile Include="PatiantForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patiant.Designer.cs">
-      <DependentUpon>Patiant.cs</DependentUpon>
+    <Compile Include="PatiantForm.Designer.cs">
+      <DependentUpon>PatiantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,11 +127,11 @@
     <EmbeddedResource Include="Migrations\202210121752510_init.resx">
       <DependentUpon>202210121752510_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nusre.resx">
-      <DependentUpon>Nusre.cs</DependentUpon>
+    <EmbeddedResource Include="NusreForm.resx">
+      <DependentUpon>NusreForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patiant.resx">
-      <DependentUpon>Patiant.cs</DependentUpon>
+    <EmbeddedResource Include="PatiantForm.resx">
+      <DependentUpon>PatiantForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
