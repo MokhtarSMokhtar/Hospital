@@ -78,17 +78,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210120915124_update2.cs" />
-    <Compile Include="Migrations\202210120915124_update2.designer.cs">
-      <DependentUpon>202210120915124_update2.cs</DependentUpon>
+    <Compile Include="Migrations\202210121634527_init.cs" />
+    <Compile Include="Migrations\202210121634527_init.designer.cs">
+      <DependentUpon>202210121634527_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Patiant.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Patiant.Designer.cs">
-      <DependentUpon>Patiant.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomForm.cs">
@@ -97,11 +91,11 @@
     <Compile Include="RoomForm.Designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Visits.cs">
+    <Compile Include="VisitsForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Visits.Designer.cs">
-      <DependentUpon>Visits.cs</DependentUpon>
+    <Compile Include="VisitsForm1.Designer.cs">
+      <DependentUpon>VisitsForm1.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
@@ -109,11 +103,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210120915124_update2.resx">
-      <DependentUpon>202210120915124_update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Patiant.resx">
-      <DependentUpon>Patiant.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210121634527_init.resx">
+      <DependentUpon>202210121634527_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,8 +118,8 @@
     <EmbeddedResource Include="RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Visits.resx">
-      <DependentUpon>Visits.cs</DependentUpon>
+    <EmbeddedResource Include="VisitsForm1.resx">
+      <DependentUpon>VisitsForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class update2 : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -30,10 +30,10 @@
                         Age = c.Int(nullable: false),
                         gender = c.Int(nullable: false),
                         DepartmentManageId = c.Int(),
-                        DepartmentWorkId = c.Int(nullable: false),
+                        DepartmentWorkId = c.Int(),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Departments", t => t.DepartmentWorkId, cascadeDelete: true)
+                .ForeignKey("dbo.Departments", t => t.DepartmentWorkId)
                 .Index(t => t.DepartmentWorkId);
             
             CreateTable(
@@ -141,7 +141,6 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Departments", "ID", "dbo.Doctors");
             DropForeignKey("dbo.Doctors", "DepartmentWorkId", "dbo.Departments");
             DropForeignKey("dbo.PatientVisitors", "VisitorId", "dbo.Visits");
             DropForeignKey("dbo.PatientVisitors", "PatientId", "dbo.Patients");
@@ -152,6 +151,7 @@
             DropForeignKey("dbo.Rooms", "Department_ID", "dbo.Departments");
             DropForeignKey("dbo.PatientDoctors", "Doctor_ID", "dbo.Doctors");
             DropForeignKey("dbo.PatientDoctors", "Patient_ID", "dbo.Patients");
+            DropForeignKey("dbo.Departments", "ID", "dbo.Doctors");
             DropIndex("dbo.PatientDoctors", new[] { "Doctor_ID" });
             DropIndex("dbo.PatientDoctors", new[] { "Patient_ID" });
             DropIndex("dbo.PatientVisitors", new[] { "VisitorId" });

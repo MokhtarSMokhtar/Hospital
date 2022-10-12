@@ -29,12 +29,11 @@ namespace Hospital.Classes
 
         public Gender gender { get; set; }
         public  ICollection<DrageTime> medicineTimes { get; set; }
+
         [InverseProperty("Manager")]
-
         public virtual Room  ManagerRoom { get; set; }
-        [Required]
-        [InverseProperty("Nurses")]
 
+        [InverseProperty("Nurses")]
         public virtual Room Room { get; set; }
 
 
