@@ -23,6 +23,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             this.mainForm = _mainForm;
+            this.FormClosed += showMain;
+
         }
 
         private void AddDoctorbtn_Click(object sender, EventArgs e)

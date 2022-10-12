@@ -20,6 +20,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += NusreForm_FormClosed;
+
         }
 
         private void Nusre_Load(object sender, EventArgs e)

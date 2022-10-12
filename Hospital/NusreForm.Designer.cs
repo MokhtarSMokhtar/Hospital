@@ -250,7 +250,6 @@
             this.Load += new System.EventHandler(this.Nusre_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormClosed += NusreForm_FormClosed;
 
         }
 
