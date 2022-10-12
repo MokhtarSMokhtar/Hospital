@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visits));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Doctorbtn = new System.Windows.Forms.Button();
             this.Patientbtn = new System.Windows.Forms.Button();
@@ -54,6 +55,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.Doctorbtn);
             this.panel1.Controls.Add(this.Patientbtn);
             this.panel1.Controls.Add(this.MainBtn);
@@ -80,29 +83,29 @@
             // 
             // Doctorbtn
             // 
-            this.Doctorbtn.Location = new System.Drawing.Point(515, 232);
+            this.Doctorbtn.Location = new System.Drawing.Point(515, 181);
             this.Doctorbtn.Name = "Doctorbtn";
-            this.Doctorbtn.Size = new System.Drawing.Size(75, 23);
+            this.Doctorbtn.Size = new System.Drawing.Size(75, 37);
             this.Doctorbtn.TabIndex = 19;
             this.Doctorbtn.Text = "Doctor";
             this.Doctorbtn.UseVisualStyleBackColor = true;
             // 
             // Patientbtn
             // 
-            this.Patientbtn.Location = new System.Drawing.Point(515, 146);
+            this.Patientbtn.Location = new System.Drawing.Point(515, 126);
             this.Patientbtn.Name = "Patientbtn";
-            this.Patientbtn.Size = new System.Drawing.Size(75, 23);
+            this.Patientbtn.Size = new System.Drawing.Size(75, 43);
             this.Patientbtn.TabIndex = 18;
             this.Patientbtn.Text = "Patient";
             this.Patientbtn.UseVisualStyleBackColor = true;
             // 
             // MainBtn
             // 
-            this.MainBtn.Location = new System.Drawing.Point(515, 78);
+            this.MainBtn.Location = new System.Drawing.Point(515, 236);
             this.MainBtn.Name = "MainBtn";
-            this.MainBtn.Size = new System.Drawing.Size(75, 23);
+            this.MainBtn.Size = new System.Drawing.Size(75, 34);
             this.MainBtn.TabIndex = 17;
-            this.MainBtn.Text = "MAIN";
+            this.MainBtn.Text = "Back";
             this.MainBtn.UseVisualStyleBackColor = true;
             // 
             // Visitor

@@ -1,6 +1,6 @@
 ﻿namespace Hospital
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainPanal = new System.Windows.Forms.Panel();
             this.DoctorAndPatientbtn = new System.Windows.Forms.Button();
             this.PatientStateBtn = new System.Windows.Forms.Button();
             this.DoctorBtn = new System.Windows.Forms.Button();
             this.PatientBtn = new System.Windows.Forms.Button();
             this.RoomBtn = new System.Windows.Forms.Button();
+            this.NurseBtn = new System.Windows.Forms.Button();
+            this.VisitBtn = new System.Windows.Forms.Button();
             this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +47,8 @@
             this.MainPanal.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.MainPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanal.BackgroundImage")));
             this.MainPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPanal.Controls.Add(this.VisitBtn);
+            this.MainPanal.Controls.Add(this.NurseBtn);
             this.MainPanal.Controls.Add(this.DoctorAndPatientbtn);
             this.MainPanal.Controls.Add(this.PatientStateBtn);
             this.MainPanal.Controls.Add(this.DoctorBtn);
@@ -57,49 +61,75 @@
             // 
             // DoctorAndPatientbtn
             // 
+            this.DoctorAndPatientbtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.DoctorAndPatientbtn.Location = new System.Drawing.Point(27, 11);
             this.DoctorAndPatientbtn.Name = "DoctorAndPatientbtn";
-            this.DoctorAndPatientbtn.Size = new System.Drawing.Size(112, 24);
+            this.DoctorAndPatientbtn.Size = new System.Drawing.Size(112, 35);
             this.DoctorAndPatientbtn.TabIndex = 4;
             this.DoctorAndPatientbtn.Text = "Doctor And Patient";
-            this.DoctorAndPatientbtn.UseVisualStyleBackColor = true;
+            this.DoctorAndPatientbtn.UseVisualStyleBackColor = false;
             // 
             // PatientStateBtn
             // 
-            this.PatientStateBtn.Location = new System.Drawing.Point(219, 11);
+            this.PatientStateBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PatientStateBtn.Location = new System.Drawing.Point(145, 12);
             this.PatientStateBtn.Name = "PatientStateBtn";
-            this.PatientStateBtn.Size = new System.Drawing.Size(112, 23);
+            this.PatientStateBtn.Size = new System.Drawing.Size(112, 34);
             this.PatientStateBtn.TabIndex = 3;
             this.PatientStateBtn.Text = "Patient State";
-            this.PatientStateBtn.UseVisualStyleBackColor = true;
+            this.PatientStateBtn.UseVisualStyleBackColor = false;
             // 
             // DoctorBtn
             // 
-            this.DoctorBtn.Location = new System.Drawing.Point(475, 12);
+            this.DoctorBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DoctorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DoctorBtn.Location = new System.Drawing.Point(368, 11);
             this.DoctorBtn.Name = "DoctorBtn";
-            this.DoctorBtn.Size = new System.Drawing.Size(85, 23);
+            this.DoctorBtn.Size = new System.Drawing.Size(85, 34);
             this.DoctorBtn.TabIndex = 2;
             this.DoctorBtn.Text = "Doctor";
-            this.DoctorBtn.UseVisualStyleBackColor = true;
+            this.DoctorBtn.UseVisualStyleBackColor = false;
             this.DoctorBtn.Click += new System.EventHandler(this.DoctorBtn_Click);
             // 
             // PatientBtn
             // 
-            this.PatientBtn.Location = new System.Drawing.Point(589, 11);
+            this.PatientBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PatientBtn.Location = new System.Drawing.Point(459, 12);
             this.PatientBtn.Name = "PatientBtn";
-            this.PatientBtn.Size = new System.Drawing.Size(86, 23);
+            this.PatientBtn.Size = new System.Drawing.Size(86, 34);
             this.PatientBtn.TabIndex = 1;
             this.PatientBtn.Text = "Patient";
-            this.PatientBtn.UseVisualStyleBackColor = true;
+            this.PatientBtn.UseVisualStyleBackColor = false;
             // 
             // RoomBtn
             // 
-            this.RoomBtn.Location = new System.Drawing.Point(699, 11);
+            this.RoomBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.RoomBtn.Location = new System.Drawing.Point(643, 12);
             this.RoomBtn.Name = "RoomBtn";
-            this.RoomBtn.Size = new System.Drawing.Size(85, 23);
+            this.RoomBtn.Size = new System.Drawing.Size(85, 34);
             this.RoomBtn.TabIndex = 0;
             this.RoomBtn.Text = "Room";
-            this.RoomBtn.UseVisualStyleBackColor = true;
+            this.RoomBtn.UseVisualStyleBackColor = false;
+            // 
+            // NurseBtn
+            // 
+            this.NurseBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NurseBtn.Location = new System.Drawing.Point(551, 12);
+            this.NurseBtn.Name = "NurseBtn";
+            this.NurseBtn.Size = new System.Drawing.Size(86, 34);
+            this.NurseBtn.TabIndex = 5;
+            this.NurseBtn.Text = "Nurse";
+            this.NurseBtn.UseVisualStyleBackColor = false;
+            // 
+            // VisitBtn
+            // 
+            this.VisitBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.VisitBtn.Location = new System.Drawing.Point(731, 12);
+            this.VisitBtn.Name = "VisitBtn";
+            this.VisitBtn.Size = new System.Drawing.Size(85, 34);
+            this.VisitBtn.TabIndex = 6;
+            this.VisitBtn.Text = "Visits";
+            this.VisitBtn.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -124,7 +154,8 @@
         private System.Windows.Forms.Button DoctorBtn;
         private System.Windows.Forms.Button PatientBtn;
         private System.Windows.Forms.Button RoomBtn;
-
+        private System.Windows.Forms.Button VisitBtn;
+        private System.Windows.Forms.Button NurseBtn;
     }
 }
 
