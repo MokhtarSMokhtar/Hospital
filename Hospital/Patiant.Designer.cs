@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Patiant));
             this.patients = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.Label();
-            this.Phone = new System.Windows.Forms.Label();
-            this.Age = new System.Windows.Forms.Label();
-            this.Case = new System.Windows.Forms.Label();
-            this.Gender = new System.Windows.Forms.Label();
+            this.p_id = new System.Windows.Forms.TextBox();
+            this.p_name = new System.Windows.Forms.TextBox();
+            this.p_adress = new System.Windows.Forms.TextBox();
+            this.p_phone = new System.Windows.Forms.TextBox();
+            this.p_age = new System.Windows.Forms.TextBox();
+            this.p_case = new System.Windows.Forms.TextBox();
+            this.p_gender = new System.Windows.Forms.TextBox();
+            this.PID = new System.Windows.Forms.Label();
+            this.PName = new System.Windows.Forms.Label();
+            this.PAddress = new System.Windows.Forms.Label();
+            this.PPhone = new System.Windows.Forms.Label();
+            this.PAge = new System.Windows.Forms.Label();
+            this.PCase = new System.Windows.Forms.Label();
+            this.PGender = new System.Windows.Forms.Label();
             this.Doctor = new System.Windows.Forms.Button();
             this.Room = new System.Windows.Forms.Button();
             this.Visits = new System.Windows.Forms.Button();
@@ -57,127 +57,127 @@
             this.patients.AutoSize = true;
             this.patients.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.patients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.patients.Location = new System.Drawing.Point(46, 32);
+            this.patients.Location = new System.Drawing.Point(50, 26);
             this.patients.Name = "patients";
             this.patients.Size = new System.Drawing.Size(45, 13);
             this.patients.TabIndex = 0;
             this.patients.Text = "Patients";
             this.patients.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // p_id
             // 
-            this.textBox1.Location = new System.Drawing.Point(165, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(114, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.p_id.Location = new System.Drawing.Point(165, 55);
+            this.p_id.Name = "p_id";
+            this.p_id.Size = new System.Drawing.Size(114, 20);
+            this.p_id.TabIndex = 1;
+            this.p_id.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // p_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(165, 89);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 20);
-            this.textBox2.TabIndex = 2;
+            this.p_name.Location = new System.Drawing.Point(165, 89);
+            this.p_name.Name = "p_name";
+            this.p_name.Size = new System.Drawing.Size(114, 20);
+            this.p_name.TabIndex = 2;
             // 
-            // textBox3
+            // p_adress
             // 
-            this.textBox3.Location = new System.Drawing.Point(165, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 3;
+            this.p_adress.Location = new System.Drawing.Point(165, 125);
+            this.p_adress.Name = "p_adress";
+            this.p_adress.Size = new System.Drawing.Size(114, 20);
+            this.p_adress.TabIndex = 3;
             // 
-            // textBox4
+            // p_phone
             // 
-            this.textBox4.Location = new System.Drawing.Point(165, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 20);
-            this.textBox4.TabIndex = 4;
+            this.p_phone.Location = new System.Drawing.Point(165, 164);
+            this.p_phone.Name = "p_phone";
+            this.p_phone.Size = new System.Drawing.Size(114, 20);
+            this.p_phone.TabIndex = 4;
             // 
-            // textBox5
+            // p_age
             // 
-            this.textBox5.Location = new System.Drawing.Point(165, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 20);
-            this.textBox5.TabIndex = 5;
+            this.p_age.Location = new System.Drawing.Point(165, 208);
+            this.p_age.Name = "p_age";
+            this.p_age.Size = new System.Drawing.Size(114, 20);
+            this.p_age.TabIndex = 5;
             // 
-            // textBox6
+            // p_case
             // 
-            this.textBox6.Location = new System.Drawing.Point(165, 244);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 20);
-            this.textBox6.TabIndex = 6;
+            this.p_case.Location = new System.Drawing.Point(165, 244);
+            this.p_case.Name = "p_case";
+            this.p_case.Size = new System.Drawing.Size(114, 20);
+            this.p_case.TabIndex = 6;
             // 
-            // textBox7
+            // p_gender
             // 
-            this.textBox7.Location = new System.Drawing.Point(165, 287);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 20);
-            this.textBox7.TabIndex = 7;
+            this.p_gender.Location = new System.Drawing.Point(165, 287);
+            this.p_gender.Name = "p_gender";
+            this.p_gender.Size = new System.Drawing.Size(114, 20);
+            this.p_gender.TabIndex = 7;
             // 
-            // ID
+            // PID
             // 
-            this.ID.AutoSize = true;
-            this.ID.Location = new System.Drawing.Point(68, 56);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(18, 13);
-            this.ID.TabIndex = 8;
-            this.ID.Text = "ID";
-            this.ID.Click += new System.EventHandler(this.ID_Click);
+            this.PID.AutoSize = true;
+            this.PID.Location = new System.Drawing.Point(77, 62);
+            this.PID.Name = "PID";
+            this.PID.Size = new System.Drawing.Size(18, 13);
+            this.PID.TabIndex = 8;
+            this.PID.Text = "ID";
+            this.PID.Click += new System.EventHandler(this.ID_Click);
             // 
-            // Name
+            // PName
             // 
-            this.Name.AutoSize = true;
-            this.Name.Location = new System.Drawing.Point(68, 96);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(35, 13);
-            this.Name.TabIndex = 9;
-            this.Name.Text = "Name";
-            this.Name.Click += new System.EventHandler(this.label1_Click_1);
+            this.PName.AutoSize = true;
+            this.PName.Location = new System.Drawing.Point(68, 96);
+            this.PName.Name = "PName";
+            this.PName.Size = new System.Drawing.Size(35, 13);
+            this.PName.TabIndex = 9;
+            this.PName.Text = "Name";
+            this.PName.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // Address
+            // PAddress
             // 
-            this.Address.AutoSize = true;
-            this.Address.Location = new System.Drawing.Point(68, 132);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(45, 13);
-            this.Address.TabIndex = 10;
-            this.Address.Text = "Address";
+            this.PAddress.AutoSize = true;
+            this.PAddress.Location = new System.Drawing.Point(68, 132);
+            this.PAddress.Name = "PAddress";
+            this.PAddress.Size = new System.Drawing.Size(45, 13);
+            this.PAddress.TabIndex = 10;
+            this.PAddress.Text = "Address";
             // 
-            // Phone
+            // PPhone
             // 
-            this.Phone.AutoSize = true;
-            this.Phone.Location = new System.Drawing.Point(71, 170);
-            this.Phone.Name = "Phone";
-            this.Phone.Size = new System.Drawing.Size(38, 13);
-            this.Phone.TabIndex = 11;
-            this.Phone.Text = "Phone";
+            this.PPhone.AutoSize = true;
+            this.PPhone.Location = new System.Drawing.Point(71, 170);
+            this.PPhone.Name = "PPhone";
+            this.PPhone.Size = new System.Drawing.Size(38, 13);
+            this.PPhone.TabIndex = 11;
+            this.PPhone.Text = "Phone";
             // 
-            // Age
+            // PAge
             // 
-            this.Age.AutoSize = true;
-            this.Age.Location = new System.Drawing.Point(77, 215);
-            this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(26, 13);
-            this.Age.TabIndex = 12;
-            this.Age.Text = "Age";
+            this.PAge.AutoSize = true;
+            this.PAge.Location = new System.Drawing.Point(77, 215);
+            this.PAge.Name = "PAge";
+            this.PAge.Size = new System.Drawing.Size(26, 13);
+            this.PAge.TabIndex = 12;
+            this.PAge.Text = "Age";
             // 
-            // Case
+            // PCase
             // 
-            this.Case.AutoSize = true;
-            this.Case.Location = new System.Drawing.Point(74, 251);
-            this.Case.Name = "Case";
-            this.Case.Size = new System.Drawing.Size(31, 13);
-            this.Case.TabIndex = 13;
-            this.Case.Text = "Case";
+            this.PCase.AutoSize = true;
+            this.PCase.Location = new System.Drawing.Point(74, 251);
+            this.PCase.Name = "PCase";
+            this.PCase.Size = new System.Drawing.Size(31, 13);
+            this.PCase.TabIndex = 13;
+            this.PCase.Text = "Case";
             // 
-            // Gender
+            // PGender
             // 
-            this.Gender.AutoSize = true;
-            this.Gender.Location = new System.Drawing.Point(74, 294);
-            this.Gender.Name = "Gender";
-            this.Gender.Size = new System.Drawing.Size(42, 13);
-            this.Gender.TabIndex = 14;
-            this.Gender.Text = "Gender";
+            this.PGender.AutoSize = true;
+            this.PGender.Location = new System.Drawing.Point(74, 294);
+            this.PGender.Name = "PGender";
+            this.PGender.Size = new System.Drawing.Size(42, 13);
+            this.PGender.TabIndex = 14;
+            this.PGender.Text = "Gender";
             // 
             // Doctor
             // 
@@ -188,6 +188,7 @@
             this.Doctor.TabIndex = 15;
             this.Doctor.Text = "Doctor";
             this.Doctor.UseVisualStyleBackColor = false;
+            this.Doctor.Click += new System.EventHandler(this.Doctor_Click);
             // 
             // Room
             // 
@@ -204,7 +205,7 @@
             this.Visits.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Visits.Location = new System.Drawing.Point(481, 143);
             this.Visits.Name = "Visits";
-            this.Visits.Size = new System.Drawing.Size(94, 40);
+            this.Visits.Size = new System.Drawing.Size(94, 41);
             this.Visits.TabIndex = 17;
             this.Visits.Text = "Visits";
             this.Visits.UseVisualStyleBackColor = false;
@@ -250,20 +251,20 @@
             this.Controls.Add(this.Visits);
             this.Controls.Add(this.Room);
             this.Controls.Add(this.Doctor);
-            this.Controls.Add(this.Gender);
-            this.Controls.Add(this.Case);
-            this.Controls.Add(this.Age);
-            this.Controls.Add(this.Phone);
-            this.Controls.Add(this.Address);
-            this.Controls.Add(this.Name);
-            this.Controls.Add(this.ID);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PGender);
+            this.Controls.Add(this.PCase);
+            this.Controls.Add(this.PAge);
+            this.Controls.Add(this.PPhone);
+            this.Controls.Add(this.PAddress);
+            this.Controls.Add(this.PName);
+            this.Controls.Add(this.PID);
+            this.Controls.Add(this.p_gender);
+            this.Controls.Add(this.p_case);
+            this.Controls.Add(this.p_age);
+            this.Controls.Add(this.p_phone);
+            this.Controls.Add(this.p_adress);
+            this.Controls.Add(this.p_name);
+            this.Controls.Add(this.p_id);
             this.Controls.Add(this.patients);
             this.DoubleBuffered = true;
             this.Name = "Patiant";
@@ -277,20 +278,20 @@
         #endregion
 
         private System.Windows.Forms.Label patients;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.Label Name;
-        private System.Windows.Forms.Label Address;
-        private System.Windows.Forms.Label Phone;
-        private System.Windows.Forms.Label Age;
-        private System.Windows.Forms.Label Case;
-        private System.Windows.Forms.Label Gender;
+        private System.Windows.Forms.TextBox p_id;
+        private System.Windows.Forms.TextBox p_name;
+        private System.Windows.Forms.TextBox p_adress;
+        private System.Windows.Forms.TextBox p_phone;
+        private System.Windows.Forms.TextBox p_age;
+        private System.Windows.Forms.TextBox p_case;
+        private System.Windows.Forms.TextBox p_gender;
+        private System.Windows.Forms.Label PID;
+        private System.Windows.Forms.Label PName;
+        private System.Windows.Forms.Label PAddress;
+        private System.Windows.Forms.Label PPhone;
+        private System.Windows.Forms.Label PAge;
+        private System.Windows.Forms.Label PCase;
+        private System.Windows.Forms.Label PGender;
         private System.Windows.Forms.Button Doctor;
         private System.Windows.Forms.Button Room;
         private System.Windows.Forms.Button Visits;
