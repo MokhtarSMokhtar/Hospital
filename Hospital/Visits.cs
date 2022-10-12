@@ -7,22 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Hospital.Data;
+
 namespace Hospital
 {
-    public partial class DoctorForm : Form
+    public partial class Visits : Form
     {
-        Context context;
-        public DoctorForm( Context _context)
+        public Visits()
         {
-            context = _context;
             InitializeComponent();
         }
 
-        private void AddDoctorbtn_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void VisitorADDbtn_Click(object sender, EventArgs e)
+        {
 
         }
+
+     
     }
 }

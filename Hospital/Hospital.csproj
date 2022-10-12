@@ -91,6 +91,12 @@
     <Compile Include="RoomForm.Designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Visits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visits.Designer.cs">
+      <DependentUpon>Visits.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DoctorForm.resx">
       <DependentUpon>DoctorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     </Compile>
     <EmbeddedResource Include="RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visits.resx">
+      <DependentUpon>Visits.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
