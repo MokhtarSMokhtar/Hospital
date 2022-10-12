@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hospital.Data
 {
-    internal class Context : DbContext
+    public class Context : DbContext
     {
 
 
