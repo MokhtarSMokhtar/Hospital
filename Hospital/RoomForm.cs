@@ -17,9 +17,9 @@ namespace Hospital
         MainForm mainForm;
         DoctorForm doctorForm;
         PatiantForm patiantForm;
-        NusreForm nusreForm;
+        NusreForm nurseForm;
         VisitsForm1 visitsForm1;
-        RoomForm roomForm;
+       // RoomForm roomForm;
         public RoomForm(Context _context, MainForm _mainForm)
         {
             context = _context;
@@ -43,11 +43,11 @@ namespace Hospital
             patiantForm = _patiantForm;
             //this.FormClosed += RoomForm_FormClosed;
         }
-        public RoomForm(Context _context, NusreForm _nusreForm)
+        public RoomForm(Context _context, NusreForm _nurseForm)
         {
             context = _context;
             InitializeComponent();
-            nusreForm = _nusreForm;
+             nurseForm= _nurseForm;
             //this.FormClosed += RoomForm_FormClosed;
         }
         public RoomForm(Context _context, VisitsForm1 _visitsForm1)
