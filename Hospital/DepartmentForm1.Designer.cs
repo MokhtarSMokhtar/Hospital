@@ -30,6 +30,8 @@
         {
             this.Deptpanal = new System.Windows.Forms.Panel();
             this.ViewPanal = new System.Windows.Forms.Panel();
+            this.radioButtonNurse = new System.Windows.Forms.RadioButton();
+            this.radioButtonDoctor = new System.Windows.Forms.RadioButton();
             this.Backbtn = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,6 +75,8 @@
             // 
             // ViewPanal
             // 
+            this.ViewPanal.Controls.Add(this.radioButtonNurse);
+            this.ViewPanal.Controls.Add(this.radioButtonDoctor);
             this.ViewPanal.Controls.Add(this.Backbtn);
             this.ViewPanal.Controls.Add(this.listView1);
             this.ViewPanal.Controls.Add(this.DeptInfoCompo);
@@ -80,6 +84,30 @@
             this.ViewPanal.Name = "ViewPanal";
             this.ViewPanal.Size = new System.Drawing.Size(799, 448);
             this.ViewPanal.TabIndex = 12;
+            // 
+            // radioButtonNurse
+            // 
+            this.radioButtonNurse.AutoSize = true;
+            this.radioButtonNurse.Location = new System.Drawing.Point(129, 130);
+            this.radioButtonNurse.Name = "radioButtonNurse";
+            this.radioButtonNurse.Size = new System.Drawing.Size(53, 17);
+            this.radioButtonNurse.TabIndex = 4;
+            this.radioButtonNurse.TabStop = true;
+            this.radioButtonNurse.Text = "Nurse";
+            this.radioButtonNurse.UseVisualStyleBackColor = true;
+            this.radioButtonNurse.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
+            // 
+            // radioButtonDoctor
+            // 
+            this.radioButtonDoctor.AutoSize = true;
+            this.radioButtonDoctor.Location = new System.Drawing.Point(27, 130);
+            this.radioButtonDoctor.Name = "radioButtonDoctor";
+            this.radioButtonDoctor.Size = new System.Drawing.Size(57, 17);
+            this.radioButtonDoctor.TabIndex = 3;
+            this.radioButtonDoctor.TabStop = true;
+            this.radioButtonDoctor.Text = "Doctor";
+            this.radioButtonDoctor.UseVisualStyleBackColor = true;
+            this.radioButtonDoctor.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
             // 
             // Backbtn
             // 
@@ -125,7 +153,7 @@
             this.DeptInfoCompo.FormattingEnabled = true;
             this.DeptInfoCompo.Location = new System.Drawing.Point(12, 28);
             this.DeptInfoCompo.Name = "DeptInfoCompo";
-            this.DeptInfoCompo.Size = new System.Drawing.Size(121, 21);
+            this.DeptInfoCompo.Size = new System.Drawing.Size(152, 21);
             this.DeptInfoCompo.TabIndex = 0;
             // 
             // ViewDeptbtn
@@ -242,6 +270,7 @@
             this.Deptpanal.ResumeLayout(false);
             this.Deptpanal.PerformLayout();
             this.ViewPanal.ResumeLayout(false);
+            this.ViewPanal.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +300,7 @@
         private System.Windows.Forms.Button UpdateDeptBtn;
         private System.Windows.Forms.Button AddDeptbtn;
         private System.Windows.Forms.Button Backbtn;
+        private System.Windows.Forms.RadioButton radioButtonNurse;
+        private System.Windows.Forms.RadioButton radioButtonDoctor;
     }
 }

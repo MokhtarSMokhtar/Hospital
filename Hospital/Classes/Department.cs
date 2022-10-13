@@ -15,7 +15,6 @@ namespace Hospital.Classes
         public string Name { get; set; }
         public virtual ICollection<Room> Rooms { get; set; }
         [Required]
-
         public virtual Doctor Manager { get; set; }
 
         public virtual ICollection<Doctor> Doctors { get; set; }
