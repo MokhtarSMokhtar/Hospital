@@ -51,7 +51,7 @@ namespace Hospital
 
         private void DeptBtn_Click(object sender, EventArgs e)
         {
-            departmentForm = new DepartmentForm1(this);
+            departmentForm = new DepartmentForm1(this.context ,this);
             departmentForm.Show();
             this.Visible = false;
 

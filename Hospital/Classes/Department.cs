@@ -13,9 +13,6 @@ namespace Hospital.Classes
     {
         public int ID { get; set; }
         public string Name { get; set; }
-     
-
-
         public virtual ICollection<Room> Rooms { get; set; }
         [Required]
 

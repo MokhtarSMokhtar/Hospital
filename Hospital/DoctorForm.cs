@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Classes;
 using Hospital.Data;
 namespace Hospital
 {
@@ -26,6 +27,10 @@ namespace Hospital
             InitializeComponent();
             this.mainForm = _mainForm;
             this.FormClosed += showMain;
+            var dEP = context.Departments.ToArray();
+            DoctorDeptCompo.DataSource = dEP;
+            DoctorDeptCompo.DisplayMember = "Name";
+            DoctorDeptCompo.ValueMember = "ID";
 
         }
 
@@ -59,7 +64,21 @@ namespace Hospital
 
         private void AddDoctorbtn_Click(object sender, EventArgs e)
         {
+            var doctor = new Doctor
+            {
+                ID = Convert.ToInt32(this.DoctorIDText.Text),
+                Name = this.DoctorNameText.Text,
+                Phone = Convert.ToInt32(this.DoctorPhoneText.Text),
+                Address = this.DoctorAddressText.Text,
+                Age = Convert.ToInt32(this.DoctorAgetext.Text),
+                Spacial = this.DoctorSpicia.Text,
+                gender = this.Malechek.Checked ? Gender.Male : Gender.Female,
+                WorkDepartment = (Department)DoctorDeptCompo.SelectedItem
 
+            };
+         
+            context.Doctors.Add(doctor);
+            context.SaveChanges();
 
         }
         private void showMain(object sender, EventArgs e)

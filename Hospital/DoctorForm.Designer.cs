@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorForm));
             this.DoctorPanal = new System.Windows.Forms.Panel();
             this.FromDoctorToMain = new System.Windows.Forms.Button();
             this.FromDoctorToPAtiant = new System.Windows.Forms.Button();
@@ -48,14 +47,27 @@
             this.label1DoctorAdd = new System.Windows.Forms.Label();
             this.label1DoctorId = new System.Windows.Forms.Label();
             this.label1Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DoctorAgetext = new System.Windows.Forms.TextBox();
+            this.Fmalecheck = new System.Windows.Forms.CheckBox();
+            this.Malechek = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3Depat = new System.Windows.Forms.Label();
+            this.DoctorDeptCompo = new System.Windows.Forms.ComboBox();
             this.DoctorPanal.SuspendLayout();
             this.SuspendLayout();
             // 
             // DoctorPanal
             // 
             this.DoctorPanal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.DoctorPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DoctorPanal.BackgroundImage")));
             this.DoctorPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DoctorPanal.Controls.Add(this.DoctorDeptCompo);
+            this.DoctorPanal.Controls.Add(this.label3Depat);
+            this.DoctorPanal.Controls.Add(this.label2);
+            this.DoctorPanal.Controls.Add(this.Malechek);
+            this.DoctorPanal.Controls.Add(this.Fmalecheck);
+            this.DoctorPanal.Controls.Add(this.DoctorAgetext);
+            this.DoctorPanal.Controls.Add(this.label1);
             this.DoctorPanal.Controls.Add(this.FromDoctorToMain);
             this.DoctorPanal.Controls.Add(this.FromDoctorToPAtiant);
             this.DoctorPanal.Controls.Add(this.FromDoctorToVisite);
@@ -148,35 +160,35 @@
             // 
             // DoctorAddressText
             // 
-            this.DoctorAddressText.Location = new System.Drawing.Point(219, 370);
+            this.DoctorAddressText.Location = new System.Drawing.Point(206, 291);
             this.DoctorAddressText.Name = "DoctorAddressText";
             this.DoctorAddressText.Size = new System.Drawing.Size(169, 20);
             this.DoctorAddressText.TabIndex = 10;
             // 
             // DoctorPhoneText
             // 
-            this.DoctorPhoneText.Location = new System.Drawing.Point(219, 300);
+            this.DoctorPhoneText.Location = new System.Drawing.Point(206, 245);
             this.DoctorPhoneText.Name = "DoctorPhoneText";
             this.DoctorPhoneText.Size = new System.Drawing.Size(169, 20);
             this.DoctorPhoneText.TabIndex = 9;
             // 
             // DoctorNameText
             // 
-            this.DoctorNameText.Location = new System.Drawing.Point(219, 173);
+            this.DoctorNameText.Location = new System.Drawing.Point(206, 114);
             this.DoctorNameText.Name = "DoctorNameText";
             this.DoctorNameText.Size = new System.Drawing.Size(169, 20);
             this.DoctorNameText.TabIndex = 8;
             // 
             // DoctorSpicia
             // 
-            this.DoctorSpicia.Location = new System.Drawing.Point(219, 234);
+            this.DoctorSpicia.Location = new System.Drawing.Point(206, 201);
             this.DoctorSpicia.Name = "DoctorSpicia";
             this.DoctorSpicia.Size = new System.Drawing.Size(169, 20);
             this.DoctorSpicia.TabIndex = 7;
             // 
             // DoctorIDText
             // 
-            this.DoctorIDText.Location = new System.Drawing.Point(219, 108);
+            this.DoctorIDText.Location = new System.Drawing.Point(206, 78);
             this.DoctorIDText.Name = "DoctorIDText";
             this.DoctorIDText.Size = new System.Drawing.Size(169, 20);
             this.DoctorIDText.TabIndex = 6;
@@ -185,7 +197,7 @@
             // 
             this.label4DoctorPh.AutoSize = true;
             this.label4DoctorPh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4DoctorPh.Location = new System.Drawing.Point(38, 300);
+            this.label4DoctorPh.Location = new System.Drawing.Point(33, 239);
             this.label4DoctorPh.Name = "label4DoctorPh";
             this.label4DoctorPh.Size = new System.Drawing.Size(143, 25);
             this.label4DoctorPh.TabIndex = 5;
@@ -195,7 +207,7 @@
             // 
             this.label3DoctorSpi.AutoSize = true;
             this.label3DoctorSpi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3DoctorSpi.Location = new System.Drawing.Point(38, 234);
+            this.label3DoctorSpi.Location = new System.Drawing.Point(30, 195);
             this.label3DoctorSpi.Name = "label3DoctorSpi";
             this.label3DoctorSpi.Size = new System.Drawing.Size(140, 25);
             this.label3DoctorSpi.TabIndex = 4;
@@ -205,7 +217,7 @@
             // 
             this.labelDoctorName.AutoSize = true;
             this.labelDoctorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDoctorName.Location = new System.Drawing.Point(38, 167);
+            this.labelDoctorName.Location = new System.Drawing.Point(33, 114);
             this.labelDoctorName.Name = "labelDoctorName";
             this.labelDoctorName.Size = new System.Drawing.Size(137, 25);
             this.labelDoctorName.TabIndex = 3;
@@ -215,7 +227,7 @@
             // 
             this.label1DoctorAdd.AutoSize = true;
             this.label1DoctorAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1DoctorAdd.Location = new System.Drawing.Point(38, 370);
+            this.label1DoctorAdd.Location = new System.Drawing.Point(33, 285);
             this.label1DoctorAdd.Name = "label1DoctorAdd";
             this.label1DoctorAdd.Size = new System.Drawing.Size(160, 25);
             this.label1DoctorAdd.TabIndex = 2;
@@ -225,7 +237,7 @@
             // 
             this.label1DoctorId.AutoSize = true;
             this.label1DoctorId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1DoctorId.Location = new System.Drawing.Point(38, 102);
+            this.label1DoctorId.Location = new System.Drawing.Point(39, 78);
             this.label1DoctorId.Name = "label1DoctorId";
             this.label1DoctorId.Size = new System.Drawing.Size(101, 25);
             this.label1DoctorId.TabIndex = 1;
@@ -241,6 +253,71 @@
             this.label1Label.Size = new System.Drawing.Size(120, 39);
             this.label1Label.TabIndex = 0;
             this.label1Label.Text = "Doctor";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(33, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Doctor Age";
+            // 
+            // DoctorAgetext
+            // 
+            this.DoctorAgetext.Location = new System.Drawing.Point(206, 158);
+            this.DoctorAgetext.Name = "DoctorAgetext";
+            this.DoctorAgetext.Size = new System.Drawing.Size(169, 20);
+            this.DoctorAgetext.TabIndex = 19;
+            // 
+            // Fmalecheck
+            // 
+            this.Fmalecheck.AutoSize = true;
+            this.Fmalecheck.Location = new System.Drawing.Point(300, 385);
+            this.Fmalecheck.Name = "Fmalecheck";
+            this.Fmalecheck.Size = new System.Drawing.Size(60, 17);
+            this.Fmalecheck.TabIndex = 20;
+            this.Fmalecheck.Text = "Female";
+            this.Fmalecheck.UseVisualStyleBackColor = true;
+            // 
+            // Malechek
+            // 
+            this.Malechek.AutoSize = true;
+            this.Malechek.Location = new System.Drawing.Point(215, 385);
+            this.Malechek.Name = "Malechek";
+            this.Malechek.Size = new System.Drawing.Size(48, 17);
+            this.Malechek.TabIndex = 21;
+            this.Malechek.Text = "Male";
+            this.Malechek.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 377);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 25);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Gender";
+            // 
+            // label3Depat
+            // 
+            this.label3Depat.AutoSize = true;
+            this.label3Depat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3Depat.Location = new System.Drawing.Point(33, 330);
+            this.label3Depat.Name = "label3Depat";
+            this.label3Depat.Size = new System.Drawing.Size(123, 25);
+            this.label3Depat.TabIndex = 23;
+            this.label3Depat.Text = "Department";
+            // 
+            // DoctorDeptCompo
+            // 
+            this.DoctorDeptCompo.FormattingEnabled = true;
+            this.DoctorDeptCompo.Location = new System.Drawing.Point(206, 330);
+            this.DoctorDeptCompo.Name = "DoctorDeptCompo";
+            this.DoctorDeptCompo.Size = new System.Drawing.Size(169, 21);
+            this.DoctorDeptCompo.TabIndex = 25;
             // 
             // DoctorForm
             // 
@@ -281,5 +358,12 @@
         private System.Windows.Forms.Label label1DoctorAdd;
         private System.Windows.Forms.Label label1DoctorId;
         private System.Windows.Forms.Label label1Label;
+        private System.Windows.Forms.TextBox DoctorAgetext;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox Malechek;
+        private System.Windows.Forms.CheckBox Fmalecheck;
+        private System.Windows.Forms.ComboBox DoctorDeptCompo;
+        private System.Windows.Forms.Label label3Depat;
     }
 }
