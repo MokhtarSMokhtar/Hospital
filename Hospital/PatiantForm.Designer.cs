@@ -200,6 +200,7 @@
             this.patient_Room.TabIndex = 16;
             this.patient_Room.Text = "Room";
             this.patient_Room.UseVisualStyleBackColor = false;
+            this.patient_Room.Click += new System.EventHandler(this.patient_Room_Click);
             // 
             // Patient_Visits
             // 
@@ -210,6 +211,7 @@
             this.Patient_Visits.TabIndex = 17;
             this.Patient_Visits.Text = "Visits";
             this.Patient_Visits.UseVisualStyleBackColor = false;
+            this.Patient_Visits.Click += new System.EventHandler(this.Patient_Visits_Click);
             // 
             // Patient_Back
             // 

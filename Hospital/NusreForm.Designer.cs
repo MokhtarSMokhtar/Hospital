@@ -166,7 +166,7 @@
             this.Nurse_Room.TabIndex = 17;
             this.Nurse_Room.Text = "Room";
             this.Nurse_Room.UseVisualStyleBackColor = false;
-            this.Nurse_Room.Click += new System.EventHandler(this.button1_Click);
+            this.Nurse_Room.Click += new System.EventHandler(this.Nurse_Room_Click);
             // 
             // Nurse_DrageTime
             // 
@@ -218,8 +218,9 @@
             this.Nurse_patient.TabIndex = 22;
             this.Nurse_patient.Text = "Paient";
             this.Nurse_patient.UseVisualStyleBackColor = false;
+            this.Nurse_patient.Click += new System.EventHandler(this.Nurse_patient_Click);
             // 
-            // Nusre
+            // NusreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -245,7 +246,7 @@
             this.Controls.Add(this.NName);
             this.Controls.Add(this.NID);
             this.Controls.Add(this.Nurse);
-            this.Name = "Nusre";
+            this.Name = "NusreForm";
             this.Text = "Nusre";
             this.Load += new System.EventHandler(this.Nusre_Load);
             this.ResumeLayout(false);

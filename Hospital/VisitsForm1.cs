@@ -15,11 +15,41 @@ namespace Hospital
     {
         Context context;
         MainForm mainForm;
+        DoctorForm doctorForm;
+        PatiantForm patiantForm;
+        RoomForm roomForm;
+
         public VisitsForm1(Context _context, MainForm _mainForm)
         {
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += VisitsForm1_FormClosed;
+
+        }
+        public VisitsForm1(Context _context, DoctorForm _doctorForm)
+        {
+            context = _context;
+            InitializeComponent();
+            doctorForm = _doctorForm;
+            this.FormClosed += VisitsForm1_FormClosed;
+
+        }
+
+        public VisitsForm1(Context _context, PatiantForm _patiantForm)
+        {
+            context = _context;
+            InitializeComponent();
+            patiantForm = _patiantForm;
+            this.FormClosed += VisitsForm1_FormClosed;
+
+        }
+
+        public VisitsForm1(Context _context, RoomForm _roomForm)
+        {
+            context = _context;
+            InitializeComponent();
+            roomForm = _roomForm;
             this.FormClosed += VisitsForm1_FormClosed;
 
         }
@@ -36,7 +66,9 @@ namespace Hospital
 
         private void Doctorbtn_Click(object sender, EventArgs e)
         {
-
+            doctorForm = new DoctorForm(this.context, this);
+            doctorForm.Show();
+            this.Visible = false;
         }
 
         private void MainBtn_Click(object sender, EventArgs e)
@@ -49,6 +81,20 @@ namespace Hospital
         {
             mainForm.Visible = true;
 
+        }
+
+        private void Patientbtn_Click(object sender, EventArgs e)
+        {
+            patiantForm = new PatiantForm(this.context, this);
+            patiantForm.Show();
+            this.Visible = false;
+        }
+
+        private void roomBtn_Click(object sender, EventArgs e)
+        {
+            roomForm = new RoomForm(this.context, this);
+            roomForm.Show();
+            this.Visible = false;
         }
     }
 }
