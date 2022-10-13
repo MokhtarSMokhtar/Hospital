@@ -30,6 +30,8 @@
         {
             this.Deptpanal = new System.Windows.Forms.Panel();
             this.ViewPanal = new System.Windows.Forms.Panel();
+            this.radioButtonNurse = new System.Windows.Forms.RadioButton();
+            this.radioButtonDoctor = new System.Windows.Forms.RadioButton();
             this.Backbtn = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,8 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label1name = new System.Windows.Forms.Label();
             this.Deptlable = new System.Windows.Forms.Label();
-            this.radioButtonDoctor = new System.Windows.Forms.RadioButton();
-            this.radioButtonNurse = new System.Windows.Forms.RadioButton();
             this.Deptpanal.SuspendLayout();
             this.ViewPanal.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,30 @@
             this.ViewPanal.Name = "ViewPanal";
             this.ViewPanal.Size = new System.Drawing.Size(799, 448);
             this.ViewPanal.TabIndex = 12;
+            // 
+            // radioButtonNurse
+            // 
+            this.radioButtonNurse.AutoSize = true;
+            this.radioButtonNurse.Location = new System.Drawing.Point(129, 130);
+            this.radioButtonNurse.Name = "radioButtonNurse";
+            this.radioButtonNurse.Size = new System.Drawing.Size(53, 17);
+            this.radioButtonNurse.TabIndex = 4;
+            this.radioButtonNurse.TabStop = true;
+            this.radioButtonNurse.Text = "Nurse";
+            this.radioButtonNurse.UseVisualStyleBackColor = true;
+            this.radioButtonNurse.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
+            // 
+            // radioButtonDoctor
+            // 
+            this.radioButtonDoctor.AutoSize = true;
+            this.radioButtonDoctor.Location = new System.Drawing.Point(27, 130);
+            this.radioButtonDoctor.Name = "radioButtonDoctor";
+            this.radioButtonDoctor.Size = new System.Drawing.Size(57, 17);
+            this.radioButtonDoctor.TabIndex = 3;
+            this.radioButtonDoctor.TabStop = true;
+            this.radioButtonDoctor.Text = "Doctor";
+            this.radioButtonDoctor.UseVisualStyleBackColor = true;
+            this.radioButtonDoctor.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
             // 
             // Backbtn
             // 
@@ -233,30 +257,6 @@
             this.Deptlable.Size = new System.Drawing.Size(149, 25);
             this.Deptlable.TabIndex = 0;
             this.Deptlable.Text = "Departments";
-            // 
-            // radioButtonDoctor
-            // 
-            this.radioButtonDoctor.AutoSize = true;
-            this.radioButtonDoctor.Location = new System.Drawing.Point(27, 130);
-            this.radioButtonDoctor.Name = "radioButtonDoctor";
-            this.radioButtonDoctor.Size = new System.Drawing.Size(57, 17);
-            this.radioButtonDoctor.TabIndex = 3;
-            this.radioButtonDoctor.TabStop = true;
-            this.radioButtonDoctor.Text = "Doctor";
-            this.radioButtonDoctor.UseVisualStyleBackColor = true;
-            this.radioButtonDoctor.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
-            // 
-            // radioButtonNurse
-            // 
-            this.radioButtonNurse.AutoSize = true;
-            this.radioButtonNurse.Location = new System.Drawing.Point(129, 130);
-            this.radioButtonNurse.Name = "radioButtonNurse";
-            this.radioButtonNurse.Size = new System.Drawing.Size(53, 17);
-            this.radioButtonNurse.TabIndex = 4;
-            this.radioButtonNurse.TabStop = true;
-            this.radioButtonNurse.Text = "Nurse";
-            this.radioButtonNurse.UseVisualStyleBackColor = true;
-            this.radioButtonNurse.CheckedChanged += new System.EventHandler(this.radioButtonDoctor_CheckedChanged);
             // 
             // DepartmentForm1
             // 
