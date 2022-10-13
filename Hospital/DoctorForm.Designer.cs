@@ -97,6 +97,7 @@
             this.FromDoctorToPAtiant.TabIndex = 16;
             this.FromDoctorToPAtiant.Text = "Patient";
             this.FromDoctorToPAtiant.UseVisualStyleBackColor = true;
+            this.FromDoctorToPAtiant.Click += new System.EventHandler(this.FromDoctorToPAtiant_Click);
             // 
             // FromDoctorToVisite
             // 
@@ -106,6 +107,7 @@
             this.FromDoctorToVisite.TabIndex = 15;
             this.FromDoctorToVisite.Text = "Visite";
             this.FromDoctorToVisite.UseVisualStyleBackColor = true;
+            this.FromDoctorToVisite.Click += new System.EventHandler(this.FromDoctorToVisite_Click);
             // 
             // FromDoctorToRoom
             // 
@@ -115,7 +117,6 @@
             this.FromDoctorToRoom.TabIndex = 14;
             this.FromDoctorToRoom.Text = "Room";
             this.FromDoctorToRoom.UseVisualStyleBackColor = true;
-            this.FromDoctorToRoom.Click += new System.EventHandler(this.FromDoctorToRoom_Click);
             // 
             // UpdateDoctorbtn
             // 
@@ -254,6 +255,10 @@
             this.ResumeLayout(false);
 
         }
+
+       
+
+
 
         #endregion
 
