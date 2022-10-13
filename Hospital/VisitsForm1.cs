@@ -20,6 +20,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += VisitsForm1_FormClosed;
+
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -40,10 +42,13 @@ namespace Hospital
         private void MainBtn_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+            this.Hide();
+
         }
         private void VisitsForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             mainForm.Visible = true;
+
         }
     }
 }

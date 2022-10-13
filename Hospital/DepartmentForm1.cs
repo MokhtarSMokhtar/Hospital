@@ -17,6 +17,8 @@ namespace Hospital
         {
             this.mainForm = main;   
             InitializeComponent();
+            this.FormClosed += DepartmentForm1_FormClosed;
+
         }
 
         private void DepartmentForm_Load(object sender, EventArgs e)

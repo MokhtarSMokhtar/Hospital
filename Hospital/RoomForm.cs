@@ -20,6 +20,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += RoomForm_FormClosed;
+
         }
 
         private void Doctor_Click(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace Hospital
         private void Room_Back_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+            this.Hide()
         }
     }
 }

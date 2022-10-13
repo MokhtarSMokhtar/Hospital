@@ -20,6 +20,8 @@ namespace Hospital
             context = _context;
             InitializeComponent();
             mainForm = _mainForm;
+            this.FormClosed += NusreForm_FormClosed;
+
         }
 
         private void Nusre_Load(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace Hospital
         private void Nurse_Back_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
+            this.Hide();
+
         }
         private void NusreForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
