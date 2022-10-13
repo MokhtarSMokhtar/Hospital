@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -28,14 +29,24 @@ namespace Hospital
         {
             context = _context;
             InitializeComponent();
-            this.mainForm = _mainForm;
             this.FormClosed += showMain;
-            var dEP = context.Departments.ToArray();
-            DoctorDeptCompo.DataSource = dEP;
+            this.mainForm = _mainForm;
             DoctorDeptCompo.DisplayMember = "Name";
             DoctorDeptCompo.ValueMember = "ID";
-
+            var list = context.Departments.AsNoTracking().ToList();
+            DoctorDeptCompo.DataSource = list;
+  
         }
+
+
+        private IQueryable<Department>DeptSelect ()
+         { 
+            var dept = 
+                from d in
+                context.Departments
+                       select d;
+            return dept;
+         }
 
         public DoctorForm(Context _context, PatiantForm _patiantForm)
         {
@@ -128,7 +139,7 @@ namespace Hospital
         private void UpdateDoctorbtn_Click(object sender, EventArgs e)
         {
             int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
-            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).AsNoTracking().FirstOrDefault();
             try
             {
                 doctor.ID = Convert.ToInt32(this.DoctorIDText.Text);
@@ -154,7 +165,7 @@ namespace Hospital
         private void DeleteDoctorbtn_Click(object sender, EventArgs e)
         {
             int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
-            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).AsNoTracking().FirstOrDefault();
             try
             {
                 context.Doctors.Remove(doctor);
@@ -167,5 +178,7 @@ namespace Hospital
 
 
         }
+
+       
     }
 }

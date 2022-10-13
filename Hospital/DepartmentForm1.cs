@@ -24,10 +24,7 @@ namespace Hospital
             context = _context; 
             InitializeComponent();
             this.FormClosed += DepartmentForm1_FormClosed;
-            var dEP = context.Departments.ToArray();
-            DeptInfoCompo.DataSource = dEP;
-            DeptInfoCompo.DisplayMember = "Name";
-            DeptInfoCompo.ValueMember = "ID";
+
         }
 
         private void DepartmentForm_Load(object sender, EventArgs e)
@@ -45,6 +42,14 @@ namespace Hospital
         {
 
             this.ViewPanal.Visible = true;
+
+            var dEP = context.Departments.ToArray();
+            DeptInfoCompo.Items.AddRange(dEP);
+            //DeptInfoCompo.DisplayMember = "Name";
+            //DeptInfoCompo.ValueMember = "ID";
+            //DeptInfoCompo.DataSource = dEP;
+         
+
         }
 
         private void AddDeptbtn_Click(object sender, EventArgs e)
