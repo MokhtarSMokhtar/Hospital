@@ -4,11 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Classes;
 using Hospital.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 namespace Hospital
 {
     public partial class DoctorForm : Form
@@ -66,6 +69,49 @@ namespace Hospital
         private void FromDoctorToRoom_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void UpdateDoctorbtn_Click(object sender, EventArgs e)
+        {
+            int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            try
+            {
+                doctor.ID = Convert.ToInt32(this.DoctorIDText.Text);
+                doctor.Name = this.DoctorNameText.Text;
+                doctor.Phone = Convert.ToInt32(this.DoctorPhoneText.Text);
+                doctor.Address = this.DoctorAddressText.Text;
+                doctor.Age = Convert.ToInt32(this.DoctorAgetext.Text);
+                doctor.Spacial = this.DoctorSpicia.Text;
+                doctor.gender = this.Malechek.Checked ? Gender.Male : Gender.Female;
+                doctor.WorkDepartment = (Department)DoctorDeptCompo.SelectedItem;
+
+                context.SaveChanges();
+
+            }
+            catch(Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+
+
+        }
+
+        private void DeleteDoctorbtn_Click(object sender, EventArgs e)
+        {
+            int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            try
+            {
+                context.Doctors.Remove(doctor);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+
+
         }
     }
 }

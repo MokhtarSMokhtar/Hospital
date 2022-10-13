@@ -17,14 +17,17 @@ namespace Hospital
     {
         MainForm mainForm;
         Context context;
-        
+      
         public DepartmentForm1(Context _context,MainForm main )
         {
             this.mainForm = main;   
             context = _context; 
             InitializeComponent();
             this.FormClosed += DepartmentForm1_FormClosed;
-
+            var dEP = context.Departments.ToArray();
+            DeptInfoCompo.DataSource = dEP;
+            DeptInfoCompo.DisplayMember = "Name";
+            DeptInfoCompo.ValueMember = "ID";
         }
 
         private void DepartmentForm_Load(object sender, EventArgs e)
@@ -70,6 +73,43 @@ namespace Hospital
             }
         }
 
+        private void AddDeptLissToCompo()
+        {
+            var dept = (Department)DeptInfoCompo.SelectedItem;
+           // ListViewItem listView = new ListViewItem();
+           
+            if (this.radioButtonDoctor.Checked == true)
+            {
+                listView1.Items.Clear();
+                foreach (var item in dept.Doctors)
+                {
+                    ListViewItem listView = new ListViewItem(item.ID.ToString());
+                    listView.SubItems.Add(item.Name);
+                    listView.SubItems.Add(item.Phone.ToString());
+                    this.listView1.Items.Add(listView);
+                }
+           
+            }
+            else if (this.radioButtonNurse.Checked == true)
+            {
+                listView1.Items.Clear();
+
+                var nurses = context.Rooms.Where(r => r.Department.ID == dept.ID).Select(n => n.Nurses);
+                foreach (var item in nurses)
+                {
+                    foreach (var nurse in item)
+                    {
+                        ListViewItem listView = new ListViewItem(nurse.ID.ToString());
+                        listView.SubItems.Add(nurse.Name);
+                        listView.SubItems.Add(nurse.Phone.ToString());
+                        this.listView1.Items.Add(listView);
+
+                    }
+                }
+
+            }
+        }
+
         private void UpdateDeptBtn_Click(object sender, EventArgs e)
         {
 
@@ -83,6 +123,11 @@ namespace Hospital
         private void Backbtn_Click(object sender, EventArgs e)
         {
             this.ViewPanal.Visible = false;
+        }
+
+        private void radioButtonDoctor_CheckedChanged(object sender, EventArgs e)
+        {
+            AddDeptLissToCompo();
         }
     }
 }

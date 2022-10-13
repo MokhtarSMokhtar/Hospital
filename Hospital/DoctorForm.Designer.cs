@@ -137,6 +137,7 @@
             this.UpdateDoctorbtn.TabIndex = 13;
             this.UpdateDoctorbtn.Text = "Update";
             this.UpdateDoctorbtn.UseVisualStyleBackColor = true;
+            this.UpdateDoctorbtn.Click += new System.EventHandler(this.UpdateDoctorbtn_Click);
             // 
             // DeleteDoctorbtn
             // 
@@ -146,6 +147,7 @@
             this.DeleteDoctorbtn.TabIndex = 12;
             this.DeleteDoctorbtn.Text = "Delete";
             this.DeleteDoctorbtn.UseVisualStyleBackColor = true;
+            this.DeleteDoctorbtn.Click += new System.EventHandler(this.DeleteDoctorbtn_Click);
             // 
             // AddDoctorbtn
             // 
