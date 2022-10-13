@@ -40,11 +40,11 @@
             this.roomtype = new System.Windows.Forms.TextBox();
             this.Room_Back = new System.Windows.Forms.Button();
             this.RoomPanel = new System.Windows.Forms.Panel();
-            this.Room_Visits = new System.Windows.Forms.Button();
-            this.Room_Doctor = new System.Windows.Forms.Button();
-            this.Room_patient = new System.Windows.Forms.Button();
-            this.Room_next = new System.Windows.Forms.Button();
             this.Room_previous = new System.Windows.Forms.Button();
+            this.Room_next = new System.Windows.Forms.Button();
+            this.Room_patient = new System.Windows.Forms.Button();
+            this.Room_Doctor = new System.Windows.Forms.Button();
+            this.Room_Visits = new System.Windows.Forms.Button();
             this.RoomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,6 +132,7 @@
             this.Room_Back.TabIndex = 19;
             this.Room_Back.Text = "Back";
             this.Room_Back.UseVisualStyleBackColor = false;
+            this.Room_Back.Click += new System.EventHandler(this.Room_Back_Click);
             // 
             // RoomPanel
             // 
@@ -156,15 +157,33 @@
             this.RoomPanel.Size = new System.Drawing.Size(721, 309);
             this.RoomPanel.TabIndex = 1;
             // 
-            // Room_Visits
+            // Room_previous
             // 
-            this.Room_Visits.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Room_Visits.Location = new System.Drawing.Point(506, 129);
-            this.Room_Visits.Name = "Room_Visits";
-            this.Room_Visits.Size = new System.Drawing.Size(94, 41);
-            this.Room_Visits.TabIndex = 20;
-            this.Room_Visits.Text = "Visits";
-            this.Room_Visits.UseVisualStyleBackColor = false;
+            this.Room_previous.Location = new System.Drawing.Point(186, 286);
+            this.Room_previous.Name = "Room_previous";
+            this.Room_previous.Size = new System.Drawing.Size(36, 23);
+            this.Room_previous.TabIndex = 25;
+            this.Room_previous.Text = "<";
+            this.Room_previous.UseVisualStyleBackColor = true;
+            // 
+            // Room_next
+            // 
+            this.Room_next.Location = new System.Drawing.Point(228, 286);
+            this.Room_next.Name = "Room_next";
+            this.Room_next.Size = new System.Drawing.Size(34, 23);
+            this.Room_next.TabIndex = 24;
+            this.Room_next.Text = ">";
+            this.Room_next.UseVisualStyleBackColor = true;
+            // 
+            // Room_patient
+            // 
+            this.Room_patient.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Room_patient.Location = new System.Drawing.Point(506, 188);
+            this.Room_patient.Name = "Room_patient";
+            this.Room_patient.Size = new System.Drawing.Size(94, 39);
+            this.Room_patient.TabIndex = 23;
+            this.Room_patient.Text = "Paient";
+            this.Room_patient.UseVisualStyleBackColor = false;
             // 
             // Room_Doctor
             // 
@@ -177,33 +196,15 @@
             this.Room_Doctor.UseVisualStyleBackColor = false;
             this.Room_Doctor.Click += new System.EventHandler(this.Doctor_Click);
             // 
-            // Room_patient
+            // Room_Visits
             // 
-            this.Room_patient.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Room_patient.Location = new System.Drawing.Point(506, 188);
-            this.Room_patient.Name = "Room_patient";
-            this.Room_patient.Size = new System.Drawing.Size(94, 39);
-            this.Room_patient.TabIndex = 23;
-            this.Room_patient.Text = "Paient";
-            this.Room_patient.UseVisualStyleBackColor = false;
-            // 
-            // Room_next
-            // 
-            this.Room_next.Location = new System.Drawing.Point(228, 286);
-            this.Room_next.Name = "Room_next";
-            this.Room_next.Size = new System.Drawing.Size(34, 23);
-            this.Room_next.TabIndex = 24;
-            this.Room_next.Text = ">";
-            this.Room_next.UseVisualStyleBackColor = true;
-            // 
-            // Room_previous
-            // 
-            this.Room_previous.Location = new System.Drawing.Point(186, 286);
-            this.Room_previous.Name = "Room_previous";
-            this.Room_previous.Size = new System.Drawing.Size(36, 23);
-            this.Room_previous.TabIndex = 25;
-            this.Room_previous.Text = "<";
-            this.Room_previous.UseVisualStyleBackColor = true;
+            this.Room_Visits.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Room_Visits.Location = new System.Drawing.Point(506, 129);
+            this.Room_Visits.Name = "Room_Visits";
+            this.Room_Visits.Size = new System.Drawing.Size(94, 41);
+            this.Room_Visits.TabIndex = 20;
+            this.Room_Visits.Text = "Visits";
+            this.Room_Visits.UseVisualStyleBackColor = false;
             // 
             // RoomForm
             // 
@@ -216,7 +217,6 @@
             this.RoomPanel.ResumeLayout(false);
             this.RoomPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.FormClosed += RoomForm_FormClosed;
 
         }
 
