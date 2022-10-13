@@ -15,6 +15,8 @@ namespace Hospital
     {
         Context context;
         MainForm mainForm;
+        RoomForm roomForm;
+        PatiantForm patiantForm;
         public NusreForm(Context _context, MainForm _mainForm)
         {
             context = _context;
@@ -34,9 +36,11 @@ namespace Hospital
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Nurse_Room_Click(object sender, EventArgs e)
         {
-
+            roomForm = new RoomForm(this.context, this);
+            roomForm.Show();
+            this.Visible = false;
         }
 
         private void Nurse_Back_Click(object sender, EventArgs e)
@@ -48,6 +52,13 @@ namespace Hospital
         private void NusreForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             mainForm.Visible = true;
+        }
+
+        private void Nurse_patient_Click(object sender, EventArgs e)
+        {
+            patiantForm = new PatiantForm(this.context, this);
+            patiantForm.Show();
+            this.Visible = false;
         }
     }
 }
