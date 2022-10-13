@@ -104,6 +104,7 @@ namespace Hospital
         {
             mainForm.Visible = true;
             this.Hide();
+
             //doctorForm.Visible=true;
             //this.Hide();
 
@@ -121,6 +122,10 @@ namespace Hospital
             visitsForm1 = new VisitsForm1(this.context, this);
             visitsForm1.Show();
             this.Visible = false;
+ 
+            
+            
+ 
         }
     }
 }

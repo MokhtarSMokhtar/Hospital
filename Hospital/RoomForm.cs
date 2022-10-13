@@ -73,6 +73,7 @@ namespace Hospital
         {
             mainForm.Visible = true;
             this.Hide();
+
         }
 
         private void Room_Visits_Click(object sender, EventArgs e)
