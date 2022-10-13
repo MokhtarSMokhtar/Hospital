@@ -44,12 +44,12 @@
             this.PAge = new System.Windows.Forms.Label();
             this.PCase = new System.Windows.Forms.Label();
             this.PGender = new System.Windows.Forms.Label();
-            this.Doctor = new System.Windows.Forms.Button();
-            this.Room = new System.Windows.Forms.Button();
-            this.Visits = new System.Windows.Forms.Button();
-            this.Back = new System.Windows.Forms.Button();
-            this.moveleft = new System.Windows.Forms.Button();
-            this.moveright = new System.Windows.Forms.Button();
+            this.Patient_Doctor = new System.Windows.Forms.Button();
+            this.patient_Room = new System.Windows.Forms.Button();
+            this.Patient_Visits = new System.Windows.Forms.Button();
+            this.Patient_Back = new System.Windows.Forms.Button();
+            this.Paitient_previous = new System.Windows.Forms.Button();
+            this.Paitient_next = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // patients
@@ -57,9 +57,10 @@
             this.patients.AutoSize = true;
             this.patients.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.patients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.patients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patients.Location = new System.Drawing.Point(50, 26);
             this.patients.Name = "patients";
-            this.patients.Size = new System.Drawing.Size(45, 13);
+            this.patients.Size = new System.Drawing.Size(83, 24);
             this.patients.TabIndex = 0;
             this.patients.Text = "Patients";
             this.patients.Click += new System.EventHandler(this.label1_Click);
@@ -179,64 +180,64 @@
             this.PGender.TabIndex = 14;
             this.PGender.Text = "Gender";
             // 
-            // Doctor
+            // Patient_Doctor
             // 
-            this.Doctor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Doctor.Location = new System.Drawing.Point(481, 55);
-            this.Doctor.Name = "Doctor";
-            this.Doctor.Size = new System.Drawing.Size(94, 35);
-            this.Doctor.TabIndex = 15;
-            this.Doctor.Text = "Doctor";
-            this.Doctor.UseVisualStyleBackColor = false;
-            this.Doctor.Click += new System.EventHandler(this.Doctor_Click);
+            this.Patient_Doctor.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Patient_Doctor.Location = new System.Drawing.Point(481, 55);
+            this.Patient_Doctor.Name = "Patient_Doctor";
+            this.Patient_Doctor.Size = new System.Drawing.Size(94, 35);
+            this.Patient_Doctor.TabIndex = 15;
+            this.Patient_Doctor.Text = "Doctor";
+            this.Patient_Doctor.UseVisualStyleBackColor = false;
+            this.Patient_Doctor.Click += new System.EventHandler(this.Doctor_Click);
             // 
-            // Room
+            // patient_Room
             // 
-            this.Room.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Room.Location = new System.Drawing.Point(481, 96);
-            this.Room.Name = "Room";
-            this.Room.Size = new System.Drawing.Size(94, 41);
-            this.Room.TabIndex = 16;
-            this.Room.Text = "Room";
-            this.Room.UseVisualStyleBackColor = false;
+            this.patient_Room.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.patient_Room.Location = new System.Drawing.Point(481, 96);
+            this.patient_Room.Name = "patient_Room";
+            this.patient_Room.Size = new System.Drawing.Size(94, 41);
+            this.patient_Room.TabIndex = 16;
+            this.patient_Room.Text = "Room";
+            this.patient_Room.UseVisualStyleBackColor = false;
             // 
-            // Visits
+            // Patient_Visits
             // 
-            this.Visits.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Visits.Location = new System.Drawing.Point(481, 143);
-            this.Visits.Name = "Visits";
-            this.Visits.Size = new System.Drawing.Size(94, 41);
-            this.Visits.TabIndex = 17;
-            this.Visits.Text = "Visits";
-            this.Visits.UseVisualStyleBackColor = false;
+            this.Patient_Visits.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Patient_Visits.Location = new System.Drawing.Point(481, 143);
+            this.Patient_Visits.Name = "Patient_Visits";
+            this.Patient_Visits.Size = new System.Drawing.Size(94, 41);
+            this.Patient_Visits.TabIndex = 17;
+            this.Patient_Visits.Text = "Visits";
+            this.Patient_Visits.UseVisualStyleBackColor = false;
             // 
-            // Back
+            // Patient_Back
             // 
-            this.Back.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Back.Location = new System.Drawing.Point(481, 215);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(94, 45);
-            this.Back.TabIndex = 18;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = false;
+            this.Patient_Back.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Patient_Back.Location = new System.Drawing.Point(481, 215);
+            this.Patient_Back.Name = "Patient_Back";
+            this.Patient_Back.Size = new System.Drawing.Size(94, 45);
+            this.Patient_Back.TabIndex = 18;
+            this.Patient_Back.Text = "Back";
+            this.Patient_Back.UseVisualStyleBackColor = false;
             // 
-            // moveleft
+            // Paitient_previous
             // 
-            this.moveleft.Location = new System.Drawing.Point(342, 284);
-            this.moveleft.Name = "moveleft";
-            this.moveleft.Size = new System.Drawing.Size(39, 23);
-            this.moveleft.TabIndex = 19;
-            this.moveleft.Text = "<";
-            this.moveleft.UseVisualStyleBackColor = true;
+            this.Paitient_previous.Location = new System.Drawing.Point(342, 284);
+            this.Paitient_previous.Name = "Paitient_previous";
+            this.Paitient_previous.Size = new System.Drawing.Size(39, 23);
+            this.Paitient_previous.TabIndex = 19;
+            this.Paitient_previous.Text = "<";
+            this.Paitient_previous.UseVisualStyleBackColor = true;
             // 
-            // moveright
+            // Paitient_next
             // 
-            this.moveright.Location = new System.Drawing.Point(403, 284);
-            this.moveright.Name = "moveright";
-            this.moveright.Size = new System.Drawing.Size(39, 23);
-            this.moveright.TabIndex = 20;
-            this.moveright.Text = ">";
-            this.moveright.UseVisualStyleBackColor = true;
+            this.Paitient_next.Location = new System.Drawing.Point(403, 284);
+            this.Paitient_next.Name = "Paitient_next";
+            this.Paitient_next.Size = new System.Drawing.Size(39, 23);
+            this.Paitient_next.TabIndex = 20;
+            this.Paitient_next.Text = ">";
+            this.Paitient_next.UseVisualStyleBackColor = true;
             // 
             // Patiant
             // 
@@ -245,12 +246,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(664, 325);
-            this.Controls.Add(this.moveright);
-            this.Controls.Add(this.moveleft);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.Visits);
-            this.Controls.Add(this.Room);
-            this.Controls.Add(this.Doctor);
+            this.Controls.Add(this.Paitient_next);
+            this.Controls.Add(this.Paitient_previous);
+            this.Controls.Add(this.Patient_Back);
+            this.Controls.Add(this.Patient_Visits);
+            this.Controls.Add(this.patient_Room);
+            this.Controls.Add(this.Patient_Doctor);
             this.Controls.Add(this.PGender);
             this.Controls.Add(this.PCase);
             this.Controls.Add(this.PAge);
@@ -292,11 +293,11 @@
         private System.Windows.Forms.Label PAge;
         private System.Windows.Forms.Label PCase;
         private System.Windows.Forms.Label PGender;
-        private System.Windows.Forms.Button Doctor;
-        private System.Windows.Forms.Button Room;
-        private System.Windows.Forms.Button Visits;
-        private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Button moveleft;
-        private System.Windows.Forms.Button moveright;
+        private System.Windows.Forms.Button Patient_Doctor;
+        private System.Windows.Forms.Button patient_Room;
+        private System.Windows.Forms.Button Patient_Visits;
+        private System.Windows.Forms.Button Patient_Back;
+        private System.Windows.Forms.Button Paitient_previous;
+        private System.Windows.Forms.Button Paitient_next;
     }
 }

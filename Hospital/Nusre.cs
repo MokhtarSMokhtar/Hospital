@@ -31,5 +31,10 @@ namespace Hospital
         {
 
         }
+
+        private void Nurse_Back_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
