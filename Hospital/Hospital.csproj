@@ -83,6 +83,12 @@
       <DependentUpon>202210120915124_update2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Nusre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nusre.Designer.cs">
+      <DependentUpon>Nusre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210120915124_update2.resx">
       <DependentUpon>202210120915124_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nusre.resx">
+      <DependentUpon>Nusre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patiant.resx">
       <DependentUpon>Patiant.cs</DependentUpon>

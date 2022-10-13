@@ -10,20 +10,24 @@ using System.Windows.Forms;
 
 namespace Hospital
 {
-    public partial class Form1 : Form
+    public partial class Nusre : Form
     {
-        public Form1()
+        public Nusre()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Nusre_Load(object sender, EventArgs e)
         {
-            this.MainPanal.Visible = true;
-           // this.DoctorPanal.Visible = false;
+
         }
 
-        private void label1Label_Click(object sender, EventArgs e)
+        private void Doctor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
