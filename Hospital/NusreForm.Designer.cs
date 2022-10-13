@@ -166,7 +166,6 @@
             this.Nurse_Room.TabIndex = 17;
             this.Nurse_Room.Text = "Room";
             this.Nurse_Room.UseVisualStyleBackColor = false;
-            this.Nurse_Room.Click += new System.EventHandler(this.Nurse_Room_Click);
             // 
             // Nurse_DrageTime
             // 
