@@ -61,7 +61,8 @@ namespace Hospital
         {
             mainForm.Visible = true;
             this.Hide();
-
+            
+            
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Hospital
         private void Room_Back_Click(object sender, EventArgs e)
         {
             mainForm.Visible = true;
-            this.Hide()
+            this.Hide();
         }
     }
 }
