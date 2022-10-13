@@ -11,11 +11,11 @@ using Hospital.Data;
 
 namespace Hospital
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         DoctorForm doctorForm;
         Context context;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             context = new Context();
