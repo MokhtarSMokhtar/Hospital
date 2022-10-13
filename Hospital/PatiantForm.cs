@@ -57,7 +57,7 @@ namespace Hospital
 
         private void Patient_Back_Click(object sender, EventArgs e)
         {
-
+            mainForm.Visible = true;
         }
     }
 }
