@@ -25,9 +25,6 @@ namespace Hospital
         {
             this.MainPanal.Visible = true;
  
-           // this.DoctorPanal.Visible = false;
- 
- 
         }
 
         private void label1Label_Click(object sender, EventArgs e)
@@ -38,6 +35,7 @@ namespace Hospital
         private void DoctorBtn_Click(object sender, EventArgs e)
         {
             doctorForm = new DoctorForm(this.context);
+            
 
         }
     }

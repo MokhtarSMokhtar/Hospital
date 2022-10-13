@@ -1,6 +1,6 @@
 ﻿namespace Hospital
 {
-    partial class Visits
+    partial class VisitsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -259,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Visits";
+            this.Name = "Visitor";
             this.Text = "Visits";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

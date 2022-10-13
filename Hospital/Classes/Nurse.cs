@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Hospital.Classes
 {
-    
+
 
     public class Nurse
     {
@@ -28,13 +28,12 @@ namespace Hospital.Classes
         public int RoomManageId { get; set; }
 
         public Gender gender { get; set; }
-        public  ICollection<DrageTime> medicineTimes { get; set; }
+        public ICollection<DrageTime> medicineTimes { get; set; }
+
         [InverseProperty("Manager")]
+        public virtual Room ManagerRoom { get; set; }
 
-        public virtual Room  ManagerRoom { get; set; }
-        [Required]
         [InverseProperty("Nurses")]
-
         public virtual Room Room { get; set; }
 
 
