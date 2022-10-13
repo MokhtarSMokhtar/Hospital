@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MainPanal = new System.Windows.Forms.Panel();
+            this.VisitBtn = new System.Windows.Forms.Button();
+            this.NurseBtn = new System.Windows.Forms.Button();
             this.DoctorAndPatientbtn = new System.Windows.Forms.Button();
             this.PatientStateBtn = new System.Windows.Forms.Button();
             this.DoctorBtn = new System.Windows.Forms.Button();
             this.PatientBtn = new System.Windows.Forms.Button();
             this.RoomBtn = new System.Windows.Forms.Button();
-            this.NurseBtn = new System.Windows.Forms.Button();
-            this.VisitBtn = new System.Windows.Forms.Button();
             this.MainPanal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,26 @@
             this.MainPanal.Name = "MainPanal";
             this.MainPanal.Size = new System.Drawing.Size(816, 473);
             this.MainPanal.TabIndex = 0;
+            // 
+            // VisitBtn
+            // 
+            this.VisitBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.VisitBtn.Location = new System.Drawing.Point(731, 12);
+            this.VisitBtn.Name = "VisitBtn";
+            this.VisitBtn.Size = new System.Drawing.Size(85, 34);
+            this.VisitBtn.TabIndex = 6;
+            this.VisitBtn.Text = "Visits";
+            this.VisitBtn.UseVisualStyleBackColor = false;
+            // 
+            // NurseBtn
+            // 
+            this.NurseBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NurseBtn.Location = new System.Drawing.Point(551, 12);
+            this.NurseBtn.Name = "NurseBtn";
+            this.NurseBtn.Size = new System.Drawing.Size(86, 34);
+            this.NurseBtn.TabIndex = 5;
+            this.NurseBtn.Text = "Nurse";
+            this.NurseBtn.UseVisualStyleBackColor = false;
             // 
             // DoctorAndPatientbtn
             // 
@@ -100,6 +120,7 @@
             this.PatientBtn.TabIndex = 1;
             this.PatientBtn.Text = "Patient";
             this.PatientBtn.UseVisualStyleBackColor = false;
+            this.PatientBtn.Click += new System.EventHandler(this.PatientBtn_Click);
             // 
             // RoomBtn
             // 
@@ -111,33 +132,13 @@
             this.RoomBtn.Text = "Room";
             this.RoomBtn.UseVisualStyleBackColor = false;
             // 
-            // NurseBtn
-            // 
-            this.NurseBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.NurseBtn.Location = new System.Drawing.Point(551, 12);
-            this.NurseBtn.Name = "NurseBtn";
-            this.NurseBtn.Size = new System.Drawing.Size(86, 34);
-            this.NurseBtn.TabIndex = 5;
-            this.NurseBtn.Text = "Nurse";
-            this.NurseBtn.UseVisualStyleBackColor = false;
-            // 
-            // VisitBtn
-            // 
-            this.VisitBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.VisitBtn.Location = new System.Drawing.Point(731, 12);
-            this.VisitBtn.Name = "VisitBtn";
-            this.VisitBtn.Size = new System.Drawing.Size(85, 34);
-            this.VisitBtn.TabIndex = 6;
-            this.VisitBtn.Text = "Visits";
-            this.VisitBtn.UseVisualStyleBackColor = false;
-            // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 474);
             this.Controls.Add(this.MainPanal);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
