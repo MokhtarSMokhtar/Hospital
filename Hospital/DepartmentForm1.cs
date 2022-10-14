@@ -129,5 +129,10 @@ namespace Hospital
         {
             AddDeptLissToCompo();
         }
+
+        private void DeptInfoCompo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

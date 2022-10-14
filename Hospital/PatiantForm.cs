@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Classes;
 using Hospital.Data;
 namespace Hospital
 {
@@ -47,7 +48,7 @@ namespace Hospital
 
         }
 
-        public PatiantForm(Context _context,RoomForm _roomForm)
+        public PatiantForm(Context _context, RoomForm _roomForm)
         {
             context = _context;
             InitializeComponent();
@@ -122,10 +123,61 @@ namespace Hospital
             visitsForm1 = new VisitsForm1(this.context, this);
             visitsForm1.Show();
             this.Visible = false;
- 
-            
-            
- 
+        }
+
+        private void PatientAddBtn_Click(object sender, EventArgs e)
+        {
+            var patient = new Patient
+            {
+                ID = Convert.ToInt32(this.p_id.Text),
+                Name = this.p_name.Text,
+                Address = this.p_address.Text,
+                Phone = Convert.ToInt32(this.p_phone.Text),
+                Age = Convert.ToInt32(this.p_age.Text),
+                Case = this.p_case.Text,
+                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female
+
+            };
+            context.Patients.Add(patient);
+            context.SaveChanges();
+        }
+
+        private void PatientUpdateBtn_Click(object sender, EventArgs e)
+        {
+            int patientid = Convert.ToInt32(this.p_id.Text);
+            var patient = context.Patients.Where(d => d.ID == patientid).FirstOrDefault();
+
+            try
+            {
+                patient.ID = Convert.ToInt32(this.p_id.Text);
+                patient.Name = this.p_name.Text;
+                patient.Address = this.p_address.Text;
+                patient.Age = Convert.ToInt32(this.p_age.Text);
+                patient.Phone = Convert.ToInt32(this.p_phone.Text);
+                patient.Case = this.p_case.Text;
+                patient.gender = this.PatientMale.Checked ? Gender.Male : Gender.Female;
+
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+        }
+
+        private void PatientDeleteBtn_Click(object sender, EventArgs e)
+        {
+            int patientid = Convert.ToInt32(this.p_id.Text);
+            var patient = context.Doctors.Where(d => d.ID == patientid).FirstOrDefault();
+            try
+            {
+                context.Doctors.Remove(patient);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
     }
 }

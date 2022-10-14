@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Classes;
 using Hospital.Data;
 
 namespace Hospital
@@ -23,6 +25,10 @@ namespace Hospital
             InitializeComponent();
             mainForm = _mainForm;
             this.FormClosed += NusreForm_FormClosed;
+            //var dEP = context.Departments.ToArray();
+            //NurseDeptCompo.DataSource = dEP;
+            //NurseDeptCompo.DisplayMember = "Name";
+            //NurseDeptCompo.ValueMember = "ID";
 
         }
 
@@ -59,6 +65,61 @@ namespace Hospital
             patiantForm = new PatiantForm(this.context, this);
             patiantForm.Show();
             this.Visible = false;
+        }
+
+        private void NurseAddBtn_Click(object sender, EventArgs e)
+        {
+            var nurse = new Nurse
+            {
+                ID = Convert.ToInt32(this.n_id.Text),
+                Name = this.n_name.Text,
+                Address = this.n_address.Text,
+                Age = Convert.ToInt32(this.n_age.Text),
+                Phone = Convert.ToInt32(this.n_phone.Text),
+                gender = this.NurseMale.Checked ? Gender.Male : Gender.Female,
+            };
+
+            context.Nurses.Add(nurse);
+            context.SaveChanges();
+        }
+
+        private void NurseUpdateBtn_Click(object sender, EventArgs e)
+        {
+            int nurseid = Convert.ToInt32(this.n_id.Text);
+            var nurse = context.Nurses.Where(d => d.ID == nurseid).FirstOrDefault();
+
+
+            try
+            {
+                nurse.ID = Convert.ToInt32(this.n_id.Text);
+                nurse.Name = this.n_name.Text;
+                nurse.Address = this.n_address.Text;
+                nurse.Age = Convert.ToInt32(this.n_age.Text);
+                nurse.Phone = Convert.ToInt32(this.n_phone.Text);
+                nurse.gender = this.NurseMale.Checked ? Gender.Male : Gender.Female;
+
+                context.SaveChanges();
+
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            int nurseid = Convert.ToInt32(this.n_id.Text);
+            var nurse = context.Nurses.Where(d => d.ID == nurseid).FirstOrDefault();
+            try
+            {
+                context.Nurses.Remove(nurse);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
     }
 }
