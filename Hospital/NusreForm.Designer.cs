@@ -135,7 +135,7 @@
             // NAge
             // 
             this.NAge.AutoSize = true;
-            this.NAge.Location = new System.Drawing.Point(51, 148);
+            this.NAge.Location = new System.Drawing.Point(51, 144);
             this.NAge.Name = "NAge";
             this.NAge.Size = new System.Drawing.Size(26, 13);
             this.NAge.TabIndex = 12;
