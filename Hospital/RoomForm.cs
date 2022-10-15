@@ -90,5 +90,10 @@ namespace Hospital
             patiantForm.Show();
             this.Visible = false;
         }
+
+        private void RoomPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -54,6 +54,16 @@
             this.PatientAddBtn = new System.Windows.Forms.Button();
             this.PatientUpdateBtn = new System.Windows.Forms.Button();
             this.PatientDeleteBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comfirmbtn = new System.Windows.Forms.Button();
+            this.DrageTextBox = new System.Windows.Forms.TextBox();
+            this.AmChecked = new System.Windows.Forms.CheckBox();
+            this.PmChecked = new System.Windows.Forms.CheckBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NurseCombo = new System.Windows.Forms.ComboBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // patients
@@ -127,7 +137,7 @@
             this.PName.AutoSize = true;
             this.PName.Location = new System.Drawing.Point(68, 96);
             this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(35, 13);
+            this.PName.Size = new System.Drawing.Size(34, 13);
             this.PName.TabIndex = 9;
             this.PName.Text = "Name";
             this.PName.Click += new System.EventHandler(this.label1_Click_1);
@@ -137,7 +147,7 @@
             this.PAddress.AutoSize = true;
             this.PAddress.Location = new System.Drawing.Point(68, 132);
             this.PAddress.Name = "PAddress";
-            this.PAddress.Size = new System.Drawing.Size(45, 13);
+            this.PAddress.Size = new System.Drawing.Size(46, 13);
             this.PAddress.TabIndex = 10;
             this.PAddress.Text = "Address";
             // 
@@ -146,7 +156,7 @@
             this.PPhone.AutoSize = true;
             this.PPhone.Location = new System.Drawing.Point(71, 170);
             this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(38, 13);
+            this.PPhone.Size = new System.Drawing.Size(37, 13);
             this.PPhone.TabIndex = 11;
             this.PPhone.Text = "Phone";
             // 
@@ -244,7 +254,7 @@
             this.PatientMale.AutoSize = true;
             this.PatientMale.Location = new System.Drawing.Point(165, 290);
             this.PatientMale.Name = "PatientMale";
-            this.PatientMale.Size = new System.Drawing.Size(49, 17);
+            this.PatientMale.Size = new System.Drawing.Size(48, 17);
             this.PatientMale.TabIndex = 21;
             this.PatientMale.Text = "Male";
             this.PatientMale.UseVisualStyleBackColor = true;
@@ -292,13 +302,97 @@
             this.PatientDeleteBtn.UseVisualStyleBackColor = true;
             this.PatientDeleteBtn.Click += new System.EventHandler(this.PatientDeleteBtn_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.NurseCombo);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.checkedListBox1);
+            this.panel1.Controls.Add(this.PmChecked);
+            this.panel1.Controls.Add(this.AmChecked);
+            this.panel1.Controls.Add(this.DrageTextBox);
+            this.panel1.Controls.Add(this.comfirmbtn);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(715, 351);
+            this.panel1.TabIndex = 26;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(491, 267);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // comfirmbtn
+            // 
+            this.comfirmbtn.Location = new System.Drawing.Point(174, 152);
+            this.comfirmbtn.Name = "comfirmbtn";
+            this.comfirmbtn.Size = new System.Drawing.Size(75, 23);
+            this.comfirmbtn.TabIndex = 1;
+            this.comfirmbtn.Text = "Confirm";
+            this.comfirmbtn.UseVisualStyleBackColor = true;
+            this.comfirmbtn.Click += new System.EventHandler(this.comfirmbtn_Click);
+            // 
+            // DrageTextBox
+            // 
+            this.DrageTextBox.Location = new System.Drawing.Point(165, 30);
+            this.DrageTextBox.Name = "DrageTextBox";
+            this.DrageTextBox.Size = new System.Drawing.Size(130, 20);
+            this.DrageTextBox.TabIndex = 2;
+            // 
+            // AmChecked
+            // 
+            this.AmChecked.AutoSize = true;
+            this.AmChecked.Location = new System.Drawing.Point(367, 59);
+            this.AmChecked.Name = "AmChecked";
+            this.AmChecked.Size = new System.Drawing.Size(41, 17);
+            this.AmChecked.TabIndex = 3;
+            this.AmChecked.Text = "Am";
+            this.AmChecked.UseVisualStyleBackColor = true;
+            // 
+            // PmChecked
+            // 
+            this.PmChecked.AutoSize = true;
+            this.PmChecked.Location = new System.Drawing.Point(317, 59);
+            this.PmChecked.Name = "PmChecked";
+            this.PmChecked.Size = new System.Drawing.Size(40, 17);
+            this.PmChecked.TabIndex = 4;
+            this.PmChecked.Text = "Pm";
+            this.PmChecked.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(710, 170);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBox1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(165, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // NurseCombo
+            // 
+            this.NurseCombo.FormattingEnabled = true;
+            this.NurseCombo.Location = new System.Drawing.Point(165, 82);
+            this.NurseCombo.Name = "NurseCombo";
+            this.NurseCombo.Size = new System.Drawing.Size(130, 21);
+            this.NurseCombo.TabIndex = 7;
+            // 
             // PatiantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(713, 344);
+            this.ClientSize = new System.Drawing.Size(713, 348);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PatientDeleteBtn);
             this.Controls.Add(this.PatientUpdateBtn);
             this.Controls.Add(this.PatientAddBtn);
@@ -328,6 +422,8 @@
             this.Name = "PatiantForm";
             this.Text = "Patiant";
             this.Load += new System.EventHandler(this.Patiant_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +462,14 @@
         private System.Windows.Forms.Button PatientAddBtn;
         private System.Windows.Forms.Button PatientUpdateBtn;
         private System.Windows.Forms.Button PatientDeleteBtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckBox PmChecked;
+        private System.Windows.Forms.CheckBox AmChecked;
+        private System.Windows.Forms.TextBox DrageTextBox;
+        private System.Windows.Forms.Button comfirmbtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NurseCombo;
     }
 }

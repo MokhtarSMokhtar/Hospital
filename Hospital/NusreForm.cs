@@ -25,16 +25,28 @@ namespace Hospital
             InitializeComponent();
             mainForm = _mainForm;
             this.FormClosed += NusreForm_FormClosed;
-            //var dEP = context.Departments.ToArray();
-            //NurseDeptCompo.DataSource = dEP;
-            //NurseDeptCompo.DisplayMember = "Name";
-            //NurseDeptCompo.ValueMember = "ID";
+    
 
         }
 
         private void Nusre_Load(object sender, EventArgs e)
         {
 
+            var dEP = context.Departments.ToList();
+            NurseDeptCompo.DataSource = dEP;
+            NurseDeptCompo.DisplayMember = "Name";
+            NurseDeptCompo.ValueMember = "ID";
+          
+            foreach (var item in dEP)
+            {
+                var Rooms = context.Rooms.Where(d => d.Department.ID == item.ID ).Select(r => new { r.ID, r.Name }).ToList();
+                foreach (var room in Rooms)
+                {
+                    this.ComboRoom.Items.Add(item);
+
+                }
+            }
+        
         }
 
         private void Doctor_Click(object sender, EventArgs e)
@@ -77,6 +89,8 @@ namespace Hospital
                 Age = Convert.ToInt32(this.n_age.Text),
                 Phone = Convert.ToInt32(this.n_phone.Text),
                 gender = this.NurseMale.Checked ? Gender.Male : Gender.Female,
+                Room = (Room)ComboRoom.SelectedItem,
+                shift = this.AmChecked.Checked ? Shift.Am : Shift.Pm,
             };
 
             context.Nurses.Add(nurse);

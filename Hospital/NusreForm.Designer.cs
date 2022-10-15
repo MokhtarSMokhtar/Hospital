@@ -44,8 +44,6 @@
             this.Nurse_Room = new System.Windows.Forms.Button();
             this.Nurse_DrageTime = new System.Windows.Forms.Button();
             this.Nurse_Back = new System.Windows.Forms.Button();
-            this.Nurse_previous = new System.Windows.Forms.Button();
-            this.Nurse_next = new System.Windows.Forms.Button();
             this.Nurse_patient = new System.Windows.Forms.Button();
             this.NurseAddBtn = new System.Windows.Forms.Button();
             this.NurseUpdateBtn = new System.Windows.Forms.Button();
@@ -54,6 +52,11 @@
             this.NurseFemale = new System.Windows.Forms.CheckBox();
             this.NurseDeptCompo = new System.Windows.Forms.ComboBox();
             this.NurseDepartment = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ComboRoom = new System.Windows.Forms.ComboBox();
+            this.PMCheked = new System.Windows.Forms.CheckBox();
+            this.AmChecked = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Nurse
@@ -81,7 +84,7 @@
             this.NName.AutoSize = true;
             this.NName.Location = new System.Drawing.Point(49, 74);
             this.NName.Name = "NName";
-            this.NName.Size = new System.Drawing.Size(35, 13);
+            this.NName.Size = new System.Drawing.Size(34, 13);
             this.NName.TabIndex = 2;
             this.NName.Text = "Name";
             // 
@@ -125,7 +128,7 @@
             this.NAddress.AutoSize = true;
             this.NAddress.Location = new System.Drawing.Point(45, 106);
             this.NAddress.Name = "NAddress";
-            this.NAddress.Size = new System.Drawing.Size(45, 13);
+            this.NAddress.Size = new System.Drawing.Size(46, 13);
             this.NAddress.TabIndex = 11;
             this.NAddress.Text = "Address";
             // 
@@ -141,7 +144,7 @@
             // NGender
             // 
             this.NGender.AutoSize = true;
-            this.NGender.Location = new System.Drawing.Point(35, 244);
+            this.NGender.Location = new System.Drawing.Point(35, 318);
             this.NGender.Name = "NGender";
             this.NGender.Size = new System.Drawing.Size(42, 13);
             this.NGender.TabIndex = 13;
@@ -187,26 +190,6 @@
             this.Nurse_Back.UseVisualStyleBackColor = false;
             this.Nurse_Back.Click += new System.EventHandler(this.Nurse_Back_Click);
             // 
-            // Nurse_previous
-            // 
-            this.Nurse_previous.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Nurse_previous.Location = new System.Drawing.Point(38, 283);
-            this.Nurse_previous.Name = "Nurse_previous";
-            this.Nurse_previous.Size = new System.Drawing.Size(27, 23);
-            this.Nurse_previous.TabIndex = 20;
-            this.Nurse_previous.Text = "<";
-            this.Nurse_previous.UseVisualStyleBackColor = false;
-            // 
-            // Nurse_next
-            // 
-            this.Nurse_next.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Nurse_next.Location = new System.Drawing.Point(71, 283);
-            this.Nurse_next.Name = "Nurse_next";
-            this.Nurse_next.Size = new System.Drawing.Size(24, 23);
-            this.Nurse_next.TabIndex = 21;
-            this.Nurse_next.Text = ">";
-            this.Nurse_next.UseVisualStyleBackColor = false;
-            // 
             // Nurse_patient
             // 
             this.Nurse_patient.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -221,7 +204,7 @@
             // NurseAddBtn
             // 
             this.NurseAddBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.NurseAddBtn.Location = new System.Drawing.Point(112, 278);
+            this.NurseAddBtn.Location = new System.Drawing.Point(82, 348);
             this.NurseAddBtn.Name = "NurseAddBtn";
             this.NurseAddBtn.Size = new System.Drawing.Size(75, 23);
             this.NurseAddBtn.TabIndex = 23;
@@ -232,7 +215,7 @@
             // NurseUpdateBtn
             // 
             this.NurseUpdateBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.NurseUpdateBtn.Location = new System.Drawing.Point(193, 278);
+            this.NurseUpdateBtn.Location = new System.Drawing.Point(167, 348);
             this.NurseUpdateBtn.Name = "NurseUpdateBtn";
             this.NurseUpdateBtn.Size = new System.Drawing.Size(75, 23);
             this.NurseUpdateBtn.TabIndex = 24;
@@ -243,7 +226,7 @@
             // Delete
             // 
             this.Delete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Delete.Location = new System.Drawing.Point(274, 278);
+            this.Delete.Location = new System.Drawing.Point(266, 348);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(75, 23);
             this.Delete.TabIndex = 25;
@@ -254,9 +237,9 @@
             // NurseMale
             // 
             this.NurseMale.AutoSize = true;
-            this.NurseMale.Location = new System.Drawing.Point(112, 243);
+            this.NurseMale.Location = new System.Drawing.Point(109, 318);
             this.NurseMale.Name = "NurseMale";
-            this.NurseMale.Size = new System.Drawing.Size(49, 17);
+            this.NurseMale.Size = new System.Drawing.Size(48, 17);
             this.NurseMale.TabIndex = 26;
             this.NurseMale.Text = "Male";
             this.NurseMale.UseVisualStyleBackColor = true;
@@ -264,7 +247,7 @@
             // NurseFemale
             // 
             this.NurseFemale.AutoSize = true;
-            this.NurseFemale.Location = new System.Drawing.Point(167, 243);
+            this.NurseFemale.Location = new System.Drawing.Point(167, 318);
             this.NurseFemale.Name = "NurseFemale";
             this.NurseFemale.Size = new System.Drawing.Size(60, 17);
             this.NurseFemale.TabIndex = 27;
@@ -284,9 +267,55 @@
             this.NurseDepartment.AutoSize = true;
             this.NurseDepartment.Location = new System.Drawing.Point(28, 219);
             this.NurseDepartment.Name = "NurseDepartment";
-            this.NurseDepartment.Size = new System.Drawing.Size(62, 13);
+            this.NurseDepartment.Size = new System.Drawing.Size(64, 13);
             this.NurseDepartment.TabIndex = 29;
             this.NurseDepartment.Text = "Department";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Shift";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 255);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Room";
+            // 
+            // ComboRoom
+            // 
+            this.ComboRoom.FormattingEnabled = true;
+            this.ComboRoom.Location = new System.Drawing.Point(112, 252);
+            this.ComboRoom.Name = "ComboRoom";
+            this.ComboRoom.Size = new System.Drawing.Size(115, 21);
+            this.ComboRoom.TabIndex = 33;
+            // 
+            // PMCheked
+            // 
+            this.PMCheked.AutoSize = true;
+            this.PMCheked.Location = new System.Drawing.Point(109, 279);
+            this.PMCheked.Name = "PMCheked";
+            this.PMCheked.Size = new System.Drawing.Size(40, 17);
+            this.PMCheked.TabIndex = 34;
+            this.PMCheked.Text = "Pm";
+            this.PMCheked.UseVisualStyleBackColor = true;
+            // 
+            // AmChecked
+            // 
+            this.AmChecked.AutoSize = true;
+            this.AmChecked.Location = new System.Drawing.Point(167, 279);
+            this.AmChecked.Name = "AmChecked";
+            this.AmChecked.Size = new System.Drawing.Size(41, 17);
+            this.AmChecked.TabIndex = 35;
+            this.AmChecked.Text = "Am";
+            this.AmChecked.UseVisualStyleBackColor = true;
             // 
             // NusreForm
             // 
@@ -294,7 +323,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(671, 327);
+            this.ClientSize = new System.Drawing.Size(773, 408);
+            this.Controls.Add(this.AmChecked);
+            this.Controls.Add(this.PMCheked);
+            this.Controls.Add(this.ComboRoom);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.NurseDepartment);
             this.Controls.Add(this.NurseDeptCompo);
             this.Controls.Add(this.NurseFemale);
@@ -303,8 +337,6 @@
             this.Controls.Add(this.NurseUpdateBtn);
             this.Controls.Add(this.NurseAddBtn);
             this.Controls.Add(this.Nurse_patient);
-            this.Controls.Add(this.Nurse_next);
-            this.Controls.Add(this.Nurse_previous);
             this.Controls.Add(this.Nurse_Back);
             this.Controls.Add(this.Nurse_DrageTime);
             this.Controls.Add(this.Nurse_Room);
@@ -347,8 +379,6 @@
         private System.Windows.Forms.Button Nurse_Room;
         private System.Windows.Forms.Button Nurse_DrageTime;
         private System.Windows.Forms.Button Nurse_Back;
-        private System.Windows.Forms.Button Nurse_previous;
-        private System.Windows.Forms.Button Nurse_next;
         private System.Windows.Forms.Button Nurse_patient;
         private System.Windows.Forms.Button NurseAddBtn;
         private System.Windows.Forms.Button NurseUpdateBtn;
@@ -357,5 +387,10 @@
         private System.Windows.Forms.CheckBox NurseFemale;
         private System.Windows.Forms.ComboBox NurseDeptCompo;
         private System.Windows.Forms.Label NurseDepartment;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox ComboRoom;
+        private System.Windows.Forms.CheckBox PMCheked;
+        private System.Windows.Forms.CheckBox AmChecked;
     }
 }
