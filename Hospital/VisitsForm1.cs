@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,7 +71,6 @@ namespace Hospital
                 Name = this.VisitorNameText.Text,
                 ID = Convert.ToInt32(this.VisitorIDText.Text),
                 Phone = Convert.ToInt32(this.VisitorPhoneText.Text),
-               
                 gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female,
             };
 
@@ -127,6 +128,36 @@ namespace Hospital
 
         private void VisitorUpdatebtn_Click(object sender, EventArgs e)
         {
+           // var patient = PatientIDComp.SelectedItem as Patient;
+
+            int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
+            var visitor = context.Doctors.Where(d => d.ID == visitorid).AsNoTracking().FirstOrDefault();
+            try
+            {
+                visitor.Name = this.VisitorIDText.Text;
+                visitor.ID = Convert.ToInt32(this.VisitorIDText.Text);
+                visitor.Phone = Convert.ToInt32(this.VisitorPhoneText.Text);
+                visitor.gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female;
+
+                context.SaveChanges();
+
+                //    var ptientvisitors = new PatientVisitors
+                //    {
+                //        Patient = patient,
+                //        Visits = visitorid,
+                //    };
+                //    visits.Patients = new List<PatientVisitors>()
+                //{
+                //    ptientvisitors,
+                //};
+
+                //context.Visits.Add(visits);
+
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
 
         }
 
@@ -147,6 +178,22 @@ namespace Hospital
             this.PatientIDComp.DisplayMember = "Name";
             this.PatientIDComp.ValueMember = "ID";
                  
+        }
+
+        private void Visitordeletebtn_Click(object sender, EventArgs e)
+        {
+            int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
+            var visitor = context.Doctors.Where(d => d.ID == visitorid).AsNoTracking().FirstOrDefault();
+
+            try
+            {
+                context.Doctors.Remove(visitor);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
     }
 }

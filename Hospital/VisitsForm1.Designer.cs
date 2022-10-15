@@ -195,6 +195,7 @@
             this.Visitordeletebtn.TabIndex = 15;
             this.Visitordeletebtn.Text = "Delete";
             this.Visitordeletebtn.UseVisualStyleBackColor = false;
+            this.Visitordeletebtn.Click += new System.EventHandler(this.Visitordeletebtn_Click);
             // 
             // VisitorADDbtn
             // 
