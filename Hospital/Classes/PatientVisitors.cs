@@ -19,7 +19,5 @@ namespace Hospital.Classes
         public virtual Patient Patient { get; set; }
         public virtual Visits Visits { get; set; }  
 
-
-
     }
 }

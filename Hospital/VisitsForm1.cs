@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Classes;
 using Hospital.Data;
 
 namespace Hospital
@@ -61,7 +62,20 @@ namespace Hospital
 
         private void VisitorADDbtn_Click(object sender, EventArgs e)
         {
+            var  Patient_Name =  this.PatientIDComp.ToString();
+            var patientvisitors = new PatientVisitors
+            { 
+                
+            };
 
+            var visits = new Visits
+            {
+                Name = this.VisitorNameText.Text,
+                ID = Convert.ToInt32(this.VisitorIDText.Text),
+                Phone = Convert.ToInt32(this.VisitorPhoneText.Text),
+                
+                gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female,
+            };
         }
 
         private void Doctorbtn_Click(object sender, EventArgs e)
@@ -95,6 +109,27 @@ namespace Hospital
             roomForm = new RoomForm(this.context, this);
             roomForm.Show();
             this.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VisitorUpdatebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VisitsForm1_Load(object sender, EventArgs e)
+        {
+            var room = context.Rooms.Select(r => new { r.ID, r.Name });
+            this.RoomIDComp.DisplayMember = "Name";
+            this.RoomIDComp.ValueMember = "ID";
+            foreach (var item in room)
+            {
+                RoomIDComp.Items.Add(item);
+            }
         }
     }
 }
