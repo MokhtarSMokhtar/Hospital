@@ -327,6 +327,7 @@
             this.Controls.Add(this.DoctorPanal);
             this.Name = "DoctorForm";
             this.Text = "DoctorForm";
+            this.Load += new System.EventHandler(this.DoctorForm_Load);
             this.DoctorPanal.ResumeLayout(false);
             this.DoctorPanal.PerformLayout();
             this.ResumeLayout(false);

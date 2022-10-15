@@ -31,6 +31,8 @@ namespace Hospital
         {
             this.Deptpanal.Visible = true;
             this.ViewPanal.Visible = false;
+            var dEP = context.Departments.ToArray();
+            DeptInfoCompo.Items.AddRange(dEP);
         }
         private void DepartmentForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
@@ -43,8 +45,7 @@ namespace Hospital
 
             this.ViewPanal.Visible = true;
 
-            var dEP = context.Departments.ToArray();
-            DeptInfoCompo.Items.AddRange(dEP);
+          
             //DeptInfoCompo.DisplayMember = "Name";
             //DeptInfoCompo.ValueMember = "ID";
             //DeptInfoCompo.DataSource = dEP;

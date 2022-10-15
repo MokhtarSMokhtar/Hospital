@@ -10,7 +10,7 @@ namespace Hospital.Classes
 {
     public class Room
     {
-
+        [Key]
         public int ID { get; set; }
         public string Name { get; set; }
         public int NumberOfBeds { get; set; }
@@ -22,8 +22,7 @@ namespace Hospital.Classes
 
         public virtual ICollection<Nurse> Nurses { get; set; }
 
-
-
+        public virtual ICollection<Patient> Patients { get; set; }
 
     }
 }

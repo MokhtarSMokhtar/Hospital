@@ -31,22 +31,12 @@ namespace Hospital
             InitializeComponent();
             this.FormClosed += showMain;
             this.mainForm = _mainForm;
-            DoctorDeptCompo.DisplayMember = "Name";
-            DoctorDeptCompo.ValueMember = "ID";
-            var list = context.Departments.AsNoTracking().ToList();
-            DoctorDeptCompo.DataSource = list;
-  
+          
+
         }
 
 
-        private IQueryable<Department>DeptSelect ()
-         { 
-            var dept = 
-                from d in
-                context.Departments
-                       select d;
-            return dept;
-         }
+
 
         public DoctorForm(Context _context, PatiantForm _patiantForm)
         {
@@ -90,7 +80,7 @@ namespace Hospital
                 WorkDepartment = (Department)DoctorDeptCompo.SelectedItem
 
             };
-         
+            context.ChangeTracker.DetectChanges();
             context.Doctors.Add(doctor);
             context.SaveChanges();
 
@@ -179,6 +169,17 @@ namespace Hospital
 
         }
 
-       
+        private void DoctorForm_Load(object sender, EventArgs e)
+        {
+            context.Configuration.AutoDetectChangesEnabled = false;
+            DoctorDeptCompo.DisplayMember = "Name";
+            DoctorDeptCompo.ValueMember = "ID";
+            var list = context.Departments.AsNoTracking();
+            foreach (var item in list)
+            {
+                DoctorDeptCompo.Items.Add(item);
+
+            }
+        }
     }
 }
