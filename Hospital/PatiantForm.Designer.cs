@@ -62,7 +62,7 @@
             this.patients.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.patients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.patients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patients.Location = new System.Drawing.Point(50, 26);
+            this.patients.Location = new System.Drawing.Point(33, 9);
             this.patients.Name = "patients";
             this.patients.Size = new System.Drawing.Size(83, 24);
             this.patients.TabIndex = 0;
@@ -298,7 +298,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(664, 325);
+            this.ClientSize = new System.Drawing.Size(713, 344);
             this.Controls.Add(this.PatientDeleteBtn);
             this.Controls.Add(this.PatientUpdateBtn);
             this.Controls.Add(this.PatientAddBtn);
