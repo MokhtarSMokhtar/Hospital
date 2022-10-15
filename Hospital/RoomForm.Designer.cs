@@ -64,7 +64,7 @@
             this.R_ID.AutoSize = true;
             this.R_ID.Location = new System.Drawing.Point(39, 114);
             this.R_ID.Name = "R_ID";
-            this.R_ID.Size = new System.Drawing.Size(49, 13);
+            this.R_ID.Size = new System.Drawing.Size(48, 13);
             this.R_ID.TabIndex = 1;
             this.R_ID.Text = "Room ID";
             // 
@@ -73,7 +73,7 @@
             this.R_Nurse.AutoSize = true;
             this.R_Nurse.Location = new System.Drawing.Point(39, 166);
             this.R_Nurse.Name = "R_Nurse";
-            this.R_Nurse.Size = new System.Drawing.Size(66, 13);
+            this.R_Nurse.Size = new System.Drawing.Size(65, 13);
             this.R_Nurse.TabIndex = 2;
             this.R_Nurse.Text = "Room Nurse";
             // 
@@ -91,7 +91,7 @@
             this.R_type.AutoSize = true;
             this.R_type.Location = new System.Drawing.Point(39, 257);
             this.R_type.Name = "R_type";
-            this.R_type.Size = new System.Drawing.Size(62, 13);
+            this.R_type.Size = new System.Drawing.Size(61, 13);
             this.R_type.TabIndex = 4;
             this.R_type.Text = "Room Type";
             // 
@@ -154,8 +154,9 @@
             this.RoomPanel.Controls.Add(this.Room);
             this.RoomPanel.Location = new System.Drawing.Point(0, 0);
             this.RoomPanel.Name = "RoomPanel";
-            this.RoomPanel.Size = new System.Drawing.Size(721, 309);
+            this.RoomPanel.Size = new System.Drawing.Size(721, 422);
             this.RoomPanel.TabIndex = 1;
+            this.RoomPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RoomPanel_Paint);
             // 
             // Room_previous
             // 
@@ -212,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 321);
+            this.ClientSize = new System.Drawing.Size(720, 426);
             this.Controls.Add(this.RoomPanel);
             this.Name = "RoomForm";
             this.Text = "RoomForm";

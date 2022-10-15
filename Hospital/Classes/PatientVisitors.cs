@@ -15,7 +15,6 @@ namespace Hospital.Classes
         public int PatientId { get; set; }
         [Key,ForeignKey("Visits") , Column(Order =21)]
         public int VisitorId { get; set; }
-
         public virtual Patient Patient { get; set; }
         public virtual Visits Visits { get; set; }  
 

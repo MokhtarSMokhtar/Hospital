@@ -87,6 +87,9 @@ namespace Hospital
 
         private void Patiant_Load(object sender, EventArgs e)
         {
+            this.panel1.Visible = false;
+            var hours = Enumerable.Range(00, 24).Select(i => (DateTime.MinValue.AddHours(i)).ToString("hh.mm ")).ToArray();
+            this.comboBox1.DataSource = hours;
 
         }
 
@@ -127,19 +130,7 @@ namespace Hospital
 
         private void PatientAddBtn_Click(object sender, EventArgs e)
         {
-            var patient = new Patient
-            {
-                ID = Convert.ToInt32(this.p_id.Text),
-                Name = this.p_name.Text,
-                Address = this.p_address.Text,
-                Phone = Convert.ToInt32(this.p_phone.Text),
-                Age = Convert.ToInt32(this.p_age.Text),
-                Case = this.p_case.Text,
-                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female
-
-            };
-            context.Patients.Add(patient);
-            context.SaveChanges();
+            this.panel1.Visible = true;
         }
 
         private void PatientUpdateBtn_Click(object sender, EventArgs e)
@@ -178,6 +169,41 @@ namespace Hospital
             {
                 MessageBox.Show(updateExc.Message);
             }
+        }
+
+        private void comfirmbtn_Click(object sender, EventArgs e)
+        {
+      
+            var patient = new Patient
+            {
+                ID = Convert.ToInt32(this.p_id.Text),
+                Name = this.p_name.Text,
+                Address = this.p_address.Text,
+                Phone = Convert.ToInt32(this.p_phone.Text),
+                Age = Convert.ToInt32(this.p_age.Text),
+                Case = this.p_case.Text,
+                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female
+
+            };
+            var dragtim = this.AmChecked.Checked ? Shift.Am : Shift.Pm;
+
+            var nurse = context.Nurses.Where(n => n.shift == dragtim && n.Room == patient.Room).ToList();
+            this.NurseCombo.DataSource = nurse;
+
+            var Drage1 = new DrageTime
+            {
+                DrageName = this.DrageTextBox.Text,
+                Shift = dragtim,
+                Time = (DateTime)comboBox1.SelectedItem,
+                patient = patient,
+                Nurse = NurseCombo.SelectedItem as Nurse,
+            };
+
+            patient.medicineTimes = new List<DrageTime>() { Drage1 };
+
+            context.Patients.Add(patient);
+            context.SaveChanges();
+
         }
     }
 }
