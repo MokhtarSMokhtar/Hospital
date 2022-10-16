@@ -13,9 +13,7 @@ namespace Hospital.Classes
         Am ,
         Pm
     }
-    
-
-
+  
     public class Nurse
     {
         public int ID { get; set; }
@@ -42,8 +40,6 @@ namespace Hospital.Classes
 
         [InverseProperty("Nurses")]
         public virtual Room Room { get; set; }
-
-
 
     }
 }
