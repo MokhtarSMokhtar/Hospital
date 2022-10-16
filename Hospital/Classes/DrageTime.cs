@@ -17,7 +17,7 @@ namespace Hospital.Classes
         public int NurseId { get; set; }
         public string DrageName { get; set; }
         public virtual Patient patient { get; set; }
-        public virtual  Nurse Nurse { get; set; }
+        public virtual Nurse Nurse { get; set; }
 
     }
 }

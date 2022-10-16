@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisitsForm1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RoomID = new System.Windows.Forms.Label();
+            this.RoomIDComp = new System.Windows.Forms.ComboBox();
+            this.PatientIDComp = new System.Windows.Forms.ComboBox();
+            this.VisitorFemale = new System.Windows.Forms.CheckBox();
+            this.VisitorMale = new System.Windows.Forms.CheckBox();
             this.roomBtn = new System.Windows.Forms.Button();
             this.Doctorbtn = new System.Windows.Forms.Button();
             this.Patientbtn = new System.Windows.Forms.Button();
@@ -46,11 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Patient_Name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.VisitorMale = new System.Windows.Forms.CheckBox();
-            this.VisitorFemale = new System.Windows.Forms.CheckBox();
-            this.PatientIDComp = new System.Windows.Forms.ComboBox();
-            this.RoomIDComp = new System.Windows.Forms.ComboBox();
-            this.RoomID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,52 @@
             this.panel1.Size = new System.Drawing.Size(802, 450);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // RoomID
+            // 
+            this.RoomID.AutoSize = true;
+            this.RoomID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoomID.Location = new System.Drawing.Point(55, 220);
+            this.RoomID.Name = "RoomID";
+            this.RoomID.Size = new System.Drawing.Size(85, 19);
+            this.RoomID.TabIndex = 25;
+            this.RoomID.Text = "Room_ID";
+            // 
+            // RoomIDComp
+            // 
+            this.RoomIDComp.FormattingEnabled = true;
+            this.RoomIDComp.Location = new System.Drawing.Point(199, 222);
+            this.RoomIDComp.Name = "RoomIDComp";
+            this.RoomIDComp.Size = new System.Drawing.Size(121, 21);
+            this.RoomIDComp.TabIndex = 24;
+            // 
+            // PatientIDComp
+            // 
+            this.PatientIDComp.FormattingEnabled = true;
+            this.PatientIDComp.Location = new System.Drawing.Point(199, 263);
+            this.PatientIDComp.Name = "PatientIDComp";
+            this.PatientIDComp.Size = new System.Drawing.Size(121, 21);
+            this.PatientIDComp.TabIndex = 23;
+            // 
+            // VisitorFemale
+            // 
+            this.VisitorFemale.AutoSize = true;
+            this.VisitorFemale.Location = new System.Drawing.Point(260, 319);
+            this.VisitorFemale.Name = "VisitorFemale";
+            this.VisitorFemale.Size = new System.Drawing.Size(60, 17);
+            this.VisitorFemale.TabIndex = 22;
+            this.VisitorFemale.Text = "Female";
+            this.VisitorFemale.UseVisualStyleBackColor = true;
+            // 
+            // VisitorMale
+            // 
+            this.VisitorMale.AutoSize = true;
+            this.VisitorMale.Location = new System.Drawing.Point(199, 319);
+            this.VisitorMale.Name = "VisitorMale";
+            this.VisitorMale.Size = new System.Drawing.Size(49, 17);
+            this.VisitorMale.TabIndex = 21;
+            this.VisitorMale.Text = "Male";
+            this.VisitorMale.UseVisualStyleBackColor = true;
             // 
             // roomBtn
             // 
@@ -176,7 +222,7 @@
             // 
             // VisitorPhoneText
             // 
-            this.VisitorPhoneText.Location = new System.Drawing.Point(199, 183);
+            this.VisitorPhoneText.Location = new System.Drawing.Point(199, 174);
             this.VisitorPhoneText.Name = "VisitorPhoneText";
             this.VisitorPhoneText.Size = new System.Drawing.Size(121, 20);
             this.VisitorPhoneText.TabIndex = 12;
@@ -209,7 +255,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 184);
+            this.label4.Location = new System.Drawing.Point(80, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 19);
             this.label4.TabIndex = 3;
@@ -244,52 +290,6 @@
             this.label1.Size = new System.Drawing.Size(61, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name ";
-            // 
-            // VisitorMale
-            // 
-            this.VisitorMale.AutoSize = true;
-            this.VisitorMale.Location = new System.Drawing.Point(199, 319);
-            this.VisitorMale.Name = "VisitorMale";
-            this.VisitorMale.Size = new System.Drawing.Size(49, 17);
-            this.VisitorMale.TabIndex = 21;
-            this.VisitorMale.Text = "Male";
-            this.VisitorMale.UseVisualStyleBackColor = true;
-            // 
-            // VisitorFemale
-            // 
-            this.VisitorFemale.AutoSize = true;
-            this.VisitorFemale.Location = new System.Drawing.Point(260, 319);
-            this.VisitorFemale.Name = "VisitorFemale";
-            this.VisitorFemale.Size = new System.Drawing.Size(60, 17);
-            this.VisitorFemale.TabIndex = 22;
-            this.VisitorFemale.Text = "Female";
-            this.VisitorFemale.UseVisualStyleBackColor = true;
-            // 
-            // PatientIDComp
-            // 
-            this.PatientIDComp.FormattingEnabled = true;
-            this.PatientIDComp.Location = new System.Drawing.Point(199, 263);
-            this.PatientIDComp.Name = "PatientIDComp";
-            this.PatientIDComp.Size = new System.Drawing.Size(121, 21);
-            this.PatientIDComp.TabIndex = 23;
-            // 
-            // RoomIDComp
-            // 
-            this.RoomIDComp.FormattingEnabled = true;
-            this.RoomIDComp.Location = new System.Drawing.Point(199, 222);
-            this.RoomIDComp.Name = "RoomIDComp";
-            this.RoomIDComp.Size = new System.Drawing.Size(121, 21);
-            this.RoomIDComp.TabIndex = 24;
-            // 
-            // RoomID
-            // 
-            this.RoomID.AutoSize = true;
-            this.RoomID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RoomID.Location = new System.Drawing.Point(55, 220);
-            this.RoomID.Name = "RoomID";
-            this.RoomID.Size = new System.Drawing.Size(85, 19);
-            this.RoomID.TabIndex = 25;
-            this.RoomID.Text = "Room_ID";
             // 
             // VisitsForm1
             // 

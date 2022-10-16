@@ -62,20 +62,29 @@ namespace Hospital
 
         private void VisitorADDbtn_Click(object sender, EventArgs e)
         {
-            var  Patient_Name =  this.PatientIDComp.ToString();
-            var patientvisitors = new PatientVisitors
-            { 
-                
-            };
+            var patient = PatientIDComp.SelectedItem as Patient;
 
             var visits = new Visits
             {
                 Name = this.VisitorNameText.Text,
                 ID = Convert.ToInt32(this.VisitorIDText.Text),
                 Phone = Convert.ToInt32(this.VisitorPhoneText.Text),
-                
+               
                 gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female,
             };
+
+            var ptientvisitors = new PatientVisitors
+            {
+                Patient = patient,
+                Visits = visits,
+            };
+            visits.Patients = new List<PatientVisitors>()
+            {
+                ptientvisitors,
+            };
+
+            context.Visits.Add(visits);
+            context.SaveChanges();
         }
 
         private void Doctorbtn_Click(object sender, EventArgs e)
@@ -130,6 +139,14 @@ namespace Hospital
             {
                 RoomIDComp.Items.Add(item);
             }
+
+            var room1 = (Room)RoomIDComp.SelectedItem;
+            var patient = context.Patients.Where(p => p.Room.ID == room1.ID);
+
+            PatientIDComp.DataSource = patient;
+            this.PatientIDComp.DisplayMember = "Name";
+            this.PatientIDComp.ValueMember = "ID";
+                 
         }
     }
 }
