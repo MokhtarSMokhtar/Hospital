@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital.Classes;
 using Hospital.Data;
 using Hospital.Classes;
 
@@ -62,7 +65,28 @@ namespace Hospital
 
         private void VisitorADDbtn_Click(object sender, EventArgs e)
         {
+            var patient = PatientIDComp.SelectedItem as Patient;
 
+            var visits = new Visits
+            {
+                Name = this.VisitorNameText.Text,
+                ID = Convert.ToInt32(this.VisitorIDText.Text),
+                Phone = Convert.ToInt32(this.VisitorPhoneText.Text),
+                gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female,
+            };
+
+            var ptientvisitors = new PatientVisitors
+            {
+                Patient = patient,
+                Visits = visits,
+            };
+            visits.Patients = new List<PatientVisitors>()
+            {
+                ptientvisitors,
+            };
+
+            context.Visits.Add(visits);
+            context.SaveChanges();
         }
 
         private void Doctorbtn_Click(object sender, EventArgs e)
@@ -96,6 +120,81 @@ namespace Hospital
             roomForm = new RoomForm(this.context, this);
             roomForm.Show();
             this.Visible = false;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VisitorUpdatebtn_Click(object sender, EventArgs e)
+        {
+           // var patient = PatientIDComp.SelectedItem as Patient;
+
+            int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
+            var visitor = context.Doctors.Where(d => d.ID == visitorid).AsNoTracking().FirstOrDefault();
+            try
+            {
+                visitor.Name = this.VisitorIDText.Text;
+                visitor.ID = Convert.ToInt32(this.VisitorIDText.Text);
+                visitor.Phone = Convert.ToInt32(this.VisitorPhoneText.Text);
+                visitor.gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female;
+
+                context.SaveChanges();
+
+                //    var ptientvisitors = new PatientVisitors
+                //    {
+                //        Patient = patient,
+                //        Visits = visitorid,
+                //    };
+                //    visits.Patients = new List<PatientVisitors>()
+                //{
+                //    ptientvisitors,
+                //};
+
+                //context.Visits.Add(visits);
+
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+
+        }
+
+        private void VisitsForm1_Load(object sender, EventArgs e)
+        {
+            var room = context.Rooms.Select(r => new { r.ID, r.Name });
+            this.RoomIDComp.DisplayMember = "Name";
+            this.RoomIDComp.ValueMember = "ID";
+            foreach (var item in room)
+            {
+                RoomIDComp.Items.Add(item);
+            }
+
+            var room1 = (Room)RoomIDComp.SelectedItem;
+            var patient = context.Patients.Where(p => p.Room.ID == room1.ID);
+
+            PatientIDComp.DataSource = patient;
+            this.PatientIDComp.DisplayMember = "Name";
+            this.PatientIDComp.ValueMember = "ID";
+                 
+        }
+
+        private void Visitordeletebtn_Click(object sender, EventArgs e)
+        {
+            int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
+            var visitor = context.Doctors.Where(d => d.ID == visitorid).AsNoTracking().FirstOrDefault();
+
+            try
+            {
+                context.Doctors.Remove(visitor);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
     }
 }

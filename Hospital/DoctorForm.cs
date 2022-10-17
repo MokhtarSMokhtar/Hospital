@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -28,14 +29,14 @@ namespace Hospital
         {
             context = _context;
             InitializeComponent();
-            this.mainForm = _mainForm;
             this.FormClosed += showMain;
-            var dEP = context.Departments.ToArray();
-            DoctorDeptCompo.DataSource = dEP;
-            DoctorDeptCompo.DisplayMember = "Name";
-            DoctorDeptCompo.ValueMember = "ID";
+            this.mainForm = _mainForm;
+          
 
         }
+
+
+
 
         public DoctorForm(Context _context, PatiantForm _patiantForm)
         {
@@ -79,7 +80,7 @@ namespace Hospital
                 WorkDepartment = (Department)DoctorDeptCompo.SelectedItem
 
             };
-         
+            context.ChangeTracker.DetectChanges();
             context.Doctors.Add(doctor);
             context.SaveChanges();
 
@@ -128,7 +129,7 @@ namespace Hospital
         private void UpdateDoctorbtn_Click(object sender, EventArgs e)
         {
             int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
-            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).AsNoTracking().FirstOrDefault();
             try
             {
                 doctor.ID = Convert.ToInt32(this.DoctorIDText.Text);
@@ -154,7 +155,7 @@ namespace Hospital
         private void DeleteDoctorbtn_Click(object sender, EventArgs e)
         {
             int doctorid = Convert.ToInt32(this.DoctorIDText.Text);
-            var doctor = context.Doctors.Where(d => d.ID == doctorid).FirstOrDefault();
+            var doctor = context.Doctors.Where(d => d.ID == doctorid).AsNoTracking().FirstOrDefault();
             try
             {
                 context.Doctors.Remove(doctor);
@@ -166,6 +167,19 @@ namespace Hospital
             }
 
 
+        }
+
+        private void DoctorForm_Load(object sender, EventArgs e)
+        {
+            context.Configuration.AutoDetectChangesEnabled = false;
+            DoctorDeptCompo.DisplayMember = "Name";
+            DoctorDeptCompo.ValueMember = "ID";
+            var list = context.Departments.AsNoTracking();
+            foreach (var item in list)
+            {
+                DoctorDeptCompo.Items.Add(item);
+
+            }
         }
     }
 }

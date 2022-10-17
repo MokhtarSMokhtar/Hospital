@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Hospital.Classes
 {
-
-
+    public enum Shift
+    {
+        Am ,
+        Pm
+    }
+  
     public class Nurse
     {
         public int ID { get; set; }
@@ -18,15 +22,16 @@ namespace Hospital.Classes
         public string Address { get; set; }
 
         public int Phone { get; set; }
+        public Shift shift { get; set; }
 
         public int Age { get; set; }
         [ForeignKey("Room")]
 
-        public int RoomId { get; set; }
+        public int? RoomId { get; set; }
         [ForeignKey("ManagerRoom")]
 
-        public int RoomManageId { get; set; }
-
+        public int? RoomManageId { get; set; }
+        
         public Gender gender { get; set; }
         public ICollection<DrageTime> medicineTimes { get; set; }
 
@@ -35,8 +40,6 @@ namespace Hospital.Classes
 
         [InverseProperty("Nurses")]
         public virtual Room Room { get; set; }
-
-
 
     }
 }

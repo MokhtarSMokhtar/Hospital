@@ -164,8 +164,9 @@
             this.RoomPanel.Controls.Add(this.Room);
             this.RoomPanel.Location = new System.Drawing.Point(0, 0);
             this.RoomPanel.Name = "RoomPanel";
-            this.RoomPanel.Size = new System.Drawing.Size(721, 309);
+            this.RoomPanel.Size = new System.Drawing.Size(721, 422);
             this.RoomPanel.TabIndex = 1;
+            this.RoomPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RoomPanel_Paint);
             // 
             // Room_previous
             // 
@@ -269,6 +270,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 348);
+
+            this.ClientSize = new System.Drawing.Size(720, 426);
+
             this.Controls.Add(this.RoomPanel);
             this.Name = "RoomForm";
             this.Text = "RoomForm";

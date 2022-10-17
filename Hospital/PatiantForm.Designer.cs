@@ -32,11 +32,10 @@
             this.patients = new System.Windows.Forms.Label();
             this.p_id = new System.Windows.Forms.TextBox();
             this.p_name = new System.Windows.Forms.TextBox();
-            this.p_adress = new System.Windows.Forms.TextBox();
+            this.p_address = new System.Windows.Forms.TextBox();
             this.p_phone = new System.Windows.Forms.TextBox();
             this.p_age = new System.Windows.Forms.TextBox();
             this.p_case = new System.Windows.Forms.TextBox();
-            this.p_gender = new System.Windows.Forms.TextBox();
             this.PID = new System.Windows.Forms.Label();
             this.PName = new System.Windows.Forms.Label();
             this.PAddress = new System.Windows.Forms.Label();
@@ -50,6 +49,21 @@
             this.Patient_Back = new System.Windows.Forms.Button();
             this.Paitient_previous = new System.Windows.Forms.Button();
             this.Paitient_next = new System.Windows.Forms.Button();
+            this.PatientMale = new System.Windows.Forms.CheckBox();
+            this.PatientFemale = new System.Windows.Forms.CheckBox();
+            this.PatientAddBtn = new System.Windows.Forms.Button();
+            this.PatientUpdateBtn = new System.Windows.Forms.Button();
+            this.PatientDeleteBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comfirmbtn = new System.Windows.Forms.Button();
+            this.DrageTextBox = new System.Windows.Forms.TextBox();
+            this.AmChecked = new System.Windows.Forms.CheckBox();
+            this.PmChecked = new System.Windows.Forms.CheckBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NurseCombo = new System.Windows.Forms.ComboBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // patients
@@ -58,7 +72,7 @@
             this.patients.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.patients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.patients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patients.Location = new System.Drawing.Point(50, 26);
+            this.patients.Location = new System.Drawing.Point(33, 9);
             this.patients.Name = "patients";
             this.patients.Size = new System.Drawing.Size(83, 24);
             this.patients.TabIndex = 0;
@@ -80,12 +94,12 @@
             this.p_name.Size = new System.Drawing.Size(114, 20);
             this.p_name.TabIndex = 2;
             // 
-            // p_adress
+            // p_address
             // 
-            this.p_adress.Location = new System.Drawing.Point(165, 125);
-            this.p_adress.Name = "p_adress";
-            this.p_adress.Size = new System.Drawing.Size(114, 20);
-            this.p_adress.TabIndex = 3;
+            this.p_address.Location = new System.Drawing.Point(165, 125);
+            this.p_address.Name = "p_address";
+            this.p_address.Size = new System.Drawing.Size(114, 20);
+            this.p_address.TabIndex = 3;
             // 
             // p_phone
             // 
@@ -108,13 +122,6 @@
             this.p_case.Size = new System.Drawing.Size(114, 20);
             this.p_case.TabIndex = 6;
             // 
-            // p_gender
-            // 
-            this.p_gender.Location = new System.Drawing.Point(165, 287);
-            this.p_gender.Name = "p_gender";
-            this.p_gender.Size = new System.Drawing.Size(114, 20);
-            this.p_gender.TabIndex = 7;
-            // 
             // PID
             // 
             this.PID.AutoSize = true;
@@ -130,7 +137,7 @@
             this.PName.AutoSize = true;
             this.PName.Location = new System.Drawing.Point(68, 96);
             this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(35, 13);
+            this.PName.Size = new System.Drawing.Size(34, 13);
             this.PName.TabIndex = 9;
             this.PName.Text = "Name";
             this.PName.Click += new System.EventHandler(this.label1_Click_1);
@@ -140,7 +147,7 @@
             this.PAddress.AutoSize = true;
             this.PAddress.Location = new System.Drawing.Point(68, 132);
             this.PAddress.Name = "PAddress";
-            this.PAddress.Size = new System.Drawing.Size(45, 13);
+            this.PAddress.Size = new System.Drawing.Size(46, 13);
             this.PAddress.TabIndex = 10;
             this.PAddress.Text = "Address";
             // 
@@ -149,7 +156,7 @@
             this.PPhone.AutoSize = true;
             this.PPhone.Location = new System.Drawing.Point(71, 170);
             this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(38, 13);
+            this.PPhone.Size = new System.Drawing.Size(37, 13);
             this.PPhone.TabIndex = 11;
             this.PPhone.Text = "Phone";
             // 
@@ -226,7 +233,7 @@
             // 
             // Paitient_previous
             // 
-            this.Paitient_previous.Location = new System.Drawing.Point(342, 284);
+            this.Paitient_previous.Location = new System.Drawing.Point(317, 246);
             this.Paitient_previous.Name = "Paitient_previous";
             this.Paitient_previous.Size = new System.Drawing.Size(39, 23);
             this.Paitient_previous.TabIndex = 19;
@@ -235,12 +242,148 @@
             // 
             // Paitient_next
             // 
-            this.Paitient_next.Location = new System.Drawing.Point(403, 284);
+            this.Paitient_next.Location = new System.Drawing.Point(386, 246);
             this.Paitient_next.Name = "Paitient_next";
             this.Paitient_next.Size = new System.Drawing.Size(39, 23);
             this.Paitient_next.TabIndex = 20;
             this.Paitient_next.Text = ">";
             this.Paitient_next.UseVisualStyleBackColor = true;
+            // 
+            // PatientMale
+            // 
+            this.PatientMale.AutoSize = true;
+            this.PatientMale.Location = new System.Drawing.Point(165, 290);
+            this.PatientMale.Name = "PatientMale";
+            this.PatientMale.Size = new System.Drawing.Size(48, 17);
+            this.PatientMale.TabIndex = 21;
+            this.PatientMale.Text = "Male";
+            this.PatientMale.UseVisualStyleBackColor = true;
+            // 
+            // PatientFemale
+            // 
+            this.PatientFemale.AutoSize = true;
+            this.PatientFemale.Location = new System.Drawing.Point(220, 290);
+            this.PatientFemale.Name = "PatientFemale";
+            this.PatientFemale.Size = new System.Drawing.Size(60, 17);
+            this.PatientFemale.TabIndex = 22;
+            this.PatientFemale.Text = "Female";
+            this.PatientFemale.UseVisualStyleBackColor = true;
+            // 
+            // PatientAddBtn
+            // 
+            this.PatientAddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientAddBtn.Location = new System.Drawing.Point(286, 290);
+            this.PatientAddBtn.Name = "PatientAddBtn";
+            this.PatientAddBtn.Size = new System.Drawing.Size(75, 23);
+            this.PatientAddBtn.TabIndex = 23;
+            this.PatientAddBtn.Text = "Add";
+            this.PatientAddBtn.UseVisualStyleBackColor = true;
+            this.PatientAddBtn.Click += new System.EventHandler(this.PatientAddBtn_Click);
+            // 
+            // PatientUpdateBtn
+            // 
+            this.PatientUpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientUpdateBtn.Location = new System.Drawing.Point(367, 290);
+            this.PatientUpdateBtn.Name = "PatientUpdateBtn";
+            this.PatientUpdateBtn.Size = new System.Drawing.Size(75, 23);
+            this.PatientUpdateBtn.TabIndex = 24;
+            this.PatientUpdateBtn.Text = "Update";
+            this.PatientUpdateBtn.UseVisualStyleBackColor = true;
+            this.PatientUpdateBtn.Click += new System.EventHandler(this.PatientUpdateBtn_Click);
+            // 
+            // PatientDeleteBtn
+            // 
+            this.PatientDeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientDeleteBtn.Location = new System.Drawing.Point(448, 290);
+            this.PatientDeleteBtn.Name = "PatientDeleteBtn";
+            this.PatientDeleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.PatientDeleteBtn.TabIndex = 25;
+            this.PatientDeleteBtn.Text = "Delete";
+            this.PatientDeleteBtn.UseVisualStyleBackColor = true;
+            this.PatientDeleteBtn.Click += new System.EventHandler(this.PatientDeleteBtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.NurseCombo);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.checkedListBox1);
+            this.panel1.Controls.Add(this.PmChecked);
+            this.panel1.Controls.Add(this.AmChecked);
+            this.panel1.Controls.Add(this.DrageTextBox);
+            this.panel1.Controls.Add(this.comfirmbtn);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(715, 351);
+            this.panel1.TabIndex = 26;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(491, 267);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // comfirmbtn
+            // 
+            this.comfirmbtn.Location = new System.Drawing.Point(174, 152);
+            this.comfirmbtn.Name = "comfirmbtn";
+            this.comfirmbtn.Size = new System.Drawing.Size(75, 23);
+            this.comfirmbtn.TabIndex = 1;
+            this.comfirmbtn.Text = "Confirm";
+            this.comfirmbtn.UseVisualStyleBackColor = true;
+            this.comfirmbtn.Click += new System.EventHandler(this.comfirmbtn_Click);
+            // 
+            // DrageTextBox
+            // 
+            this.DrageTextBox.Location = new System.Drawing.Point(165, 30);
+            this.DrageTextBox.Name = "DrageTextBox";
+            this.DrageTextBox.Size = new System.Drawing.Size(130, 20);
+            this.DrageTextBox.TabIndex = 2;
+            // 
+            // AmChecked
+            // 
+            this.AmChecked.AutoSize = true;
+            this.AmChecked.Location = new System.Drawing.Point(367, 59);
+            this.AmChecked.Name = "AmChecked";
+            this.AmChecked.Size = new System.Drawing.Size(41, 17);
+            this.AmChecked.TabIndex = 3;
+            this.AmChecked.Text = "Am";
+            this.AmChecked.UseVisualStyleBackColor = true;
+            // 
+            // PmChecked
+            // 
+            this.PmChecked.AutoSize = true;
+            this.PmChecked.Location = new System.Drawing.Point(317, 59);
+            this.PmChecked.Name = "PmChecked";
+            this.PmChecked.Size = new System.Drawing.Size(40, 17);
+            this.PmChecked.TabIndex = 4;
+            this.PmChecked.Text = "Pm";
+            this.PmChecked.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(710, 170);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBox1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(165, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // NurseCombo
+            // 
+            this.NurseCombo.FormattingEnabled = true;
+            this.NurseCombo.Location = new System.Drawing.Point(165, 82);
+            this.NurseCombo.Name = "NurseCombo";
+            this.NurseCombo.Size = new System.Drawing.Size(130, 21);
+            this.NurseCombo.TabIndex = 7;
             // 
             // PatiantForm
             // 
@@ -248,7 +391,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(664, 325);
+            this.ClientSize = new System.Drawing.Size(713, 348);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.PatientDeleteBtn);
+            this.Controls.Add(this.PatientUpdateBtn);
+            this.Controls.Add(this.PatientAddBtn);
+            this.Controls.Add(this.PatientFemale);
+            this.Controls.Add(this.PatientMale);
             this.Controls.Add(this.Paitient_next);
             this.Controls.Add(this.Paitient_previous);
             this.Controls.Add(this.Patient_Back);
@@ -262,11 +411,10 @@
             this.Controls.Add(this.PAddress);
             this.Controls.Add(this.PName);
             this.Controls.Add(this.PID);
-            this.Controls.Add(this.p_gender);
             this.Controls.Add(this.p_case);
             this.Controls.Add(this.p_age);
             this.Controls.Add(this.p_phone);
-            this.Controls.Add(this.p_adress);
+            this.Controls.Add(this.p_address);
             this.Controls.Add(this.p_name);
             this.Controls.Add(this.p_id);
             this.Controls.Add(this.patients);
@@ -274,6 +422,8 @@
             this.Name = "PatiantForm";
             this.Text = "Patiant";
             this.Load += new System.EventHandler(this.Patiant_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,11 +440,10 @@
         private System.Windows.Forms.Label patients;
         private System.Windows.Forms.TextBox p_id;
         private System.Windows.Forms.TextBox p_name;
-        private System.Windows.Forms.TextBox p_adress;
+        private System.Windows.Forms.TextBox p_address;
         private System.Windows.Forms.TextBox p_phone;
         private System.Windows.Forms.TextBox p_age;
         private System.Windows.Forms.TextBox p_case;
-        private System.Windows.Forms.TextBox p_gender;
         private System.Windows.Forms.Label PID;
         private System.Windows.Forms.Label PName;
         private System.Windows.Forms.Label PAddress;
@@ -308,5 +457,19 @@
         private System.Windows.Forms.Button Patient_Back;
         private System.Windows.Forms.Button Paitient_previous;
         private System.Windows.Forms.Button Paitient_next;
+        private System.Windows.Forms.CheckBox PatientMale;
+        private System.Windows.Forms.CheckBox PatientFemale;
+        private System.Windows.Forms.Button PatientAddBtn;
+        private System.Windows.Forms.Button PatientUpdateBtn;
+        private System.Windows.Forms.Button PatientDeleteBtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckBox PmChecked;
+        private System.Windows.Forms.CheckBox AmChecked;
+        private System.Windows.Forms.TextBox DrageTextBox;
+        private System.Windows.Forms.Button comfirmbtn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NurseCombo;
     }
 }

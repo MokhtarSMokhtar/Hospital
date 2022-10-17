@@ -155,6 +155,7 @@
             this.DeptInfoCompo.Name = "DeptInfoCompo";
             this.DeptInfoCompo.Size = new System.Drawing.Size(152, 21);
             this.DeptInfoCompo.TabIndex = 0;
+            this.DeptInfoCompo.SelectedIndexChanged += new System.EventHandler(this.DeptInfoCompo_SelectedIndexChanged);
             // 
             // ViewDeptbtn
             // 
