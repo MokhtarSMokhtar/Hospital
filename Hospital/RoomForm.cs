@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Data;
+using Hospital.Classes;
 
 namespace Hospital
 {
@@ -89,6 +90,74 @@ namespace Hospital
             patiantForm = new PatiantForm(this.context, this);
             patiantForm.Show();
             this.Visible = false;
+        }
+
+        private void RoomForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddRoombtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var NurseRoomMangerID = Convert.ToInt32(MngrIDtxt.Text);
+                var room = new Room
+                {
+                    ID = Convert.ToInt32(this.RID.Text),
+                    Name = this.RoomNurse.Text,
+                    NumberOfBeds = Convert.ToInt32(this.numberofbed.Text),
+                    Type = this.roomtype.Text,
+                    Manager = context.Nurses.Where(n => n.ID == NurseRoomMangerID).FirstOrDefault()
+                };
+                room.Manager.RoomManageId = room.ID;
+                room.Manager.RoomId = room.ID;
+                context.Rooms.Add(room);
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void UpdateRoombtn_Click(object sender, EventArgs e)
+        {
+            int roomId = Convert.ToInt32(this.RID.Text);
+            var room = context.Rooms.Where(r => r.ID == roomId).FirstOrDefault();
+            try
+            {
+                room.ID = Convert.ToInt32(this.RID.Text);
+                room.Name = this.RoomNurse.Text;
+                room.NumberOfBeds = Convert.ToInt32(this.numberofbed.Text);
+                room.Type = this.roomtype.Text;
+
+                room.Manager = context.Nurses.Where(n => n.ID == Convert.ToInt32(MngrIDtxt.Text)).FirstOrDefault();
+
+                room.Manager.RoomManageId = room.ID;
+                room.Manager.RoomId = room.ID;
+
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+        }
+
+        private void DeleteRoombtn_Click(object sender, EventArgs e)
+        {
+            int roomId = Convert.ToInt32(this.RID.Text);
+            var room = context.Rooms.Where(r => r.ID == roomId).FirstOrDefault();
+            try
+            {
+                context.Rooms.Remove(room);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
     }
 }

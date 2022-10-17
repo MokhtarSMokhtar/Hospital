@@ -126,7 +126,7 @@
             this.NameValue,
             this.Phone});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(322, 6);
+            this.listView1.Location = new System.Drawing.Point(322, -1);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(477, 439);
             this.listView1.TabIndex = 1;

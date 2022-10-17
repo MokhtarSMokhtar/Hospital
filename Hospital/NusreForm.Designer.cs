@@ -75,7 +75,7 @@
             this.NName.AutoSize = true;
             this.NName.Location = new System.Drawing.Point(49, 91);
             this.NName.Name = "NName";
-            this.NName.Size = new System.Drawing.Size(35, 13);
+            this.NName.Size = new System.Drawing.Size(34, 13);
             this.NName.TabIndex = 2;
             this.NName.Text = "Name";
             // 
@@ -126,7 +126,7 @@
             this.NAddress.AutoSize = true;
             this.NAddress.Location = new System.Drawing.Point(45, 125);
             this.NAddress.Name = "NAddress";
-            this.NAddress.Size = new System.Drawing.Size(45, 13);
+            this.NAddress.Size = new System.Drawing.Size(46, 13);
             this.NAddress.TabIndex = 11;
             this.NAddress.Text = "Address";
             // 
@@ -226,7 +226,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(659, 313);
+            this.ClientSize = new System.Drawing.Size(694, 348);
             this.Controls.Add(this.Nurse_patient);
             this.Controls.Add(this.Nurse_next);
             this.Controls.Add(this.Nurse_previous);
