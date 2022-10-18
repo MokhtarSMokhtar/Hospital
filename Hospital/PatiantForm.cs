@@ -91,6 +91,11 @@ namespace Hospital
             var hours = Enumerable.Range(00, 24).Select(i => (DateTime.MinValue.AddHours(i)).ToString("hh.mm ")).ToArray();
             this.comboBox1.DataSource = hours;
 
+            var dEP = context.Departments.ToList();
+            this.deptRoomCombo.DataSource = dEP;
+            this.deptRoomCombo.DisplayMember = "Name";
+            this.deptRoomCombo.ValueMember = "ID";
+
         }
 
         private void Doctor_Click(object sender, EventArgs e)
@@ -131,6 +136,7 @@ namespace Hospital
         private void PatientAddBtn_Click(object sender, EventArgs e)
         {
             this.panel1.Visible = true;
+            
         }
 
         private void PatientUpdateBtn_Click(object sender, EventArgs e)
@@ -173,7 +179,10 @@ namespace Hospital
 
         private void comfirmbtn_Click(object sender, EventArgs e)
         {
-      
+            var room = (Room)Roomcombo.SelectedItem;
+            List<Doctor> doctors = context.Doctors.Where(d => d.WorkDepartment == room.Department).ToList();
+
+
             var patient = new Patient
             {
                 ID = Convert.ToInt32(this.p_id.Text),
@@ -182,14 +191,14 @@ namespace Hospital
                 Phone = Convert.ToInt32(this.p_phone.Text),
                 Age = Convert.ToInt32(this.p_age.Text),
                 Case = this.p_case.Text,
-                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female
+                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female,
+                Room = room,
+                Doctors =  doctors 
 
-            };
+        };
             var dragtim = this.AmChecked.Checked ? Shift.Am : Shift.Pm;
 
-            var nurse = context.Nurses.Where(n => n.shift == dragtim && n.Room == patient.Room).ToList();
-            this.NurseCombo.DataSource = nurse;
-
+   
             var Drage1 = new DrageTime
             {
                 DrageName = this.DrageTextBox.Text,
@@ -200,9 +209,33 @@ namespace Hospital
             };
 
             patient.medicineTimes = new List<DrageTime>() { Drage1 };
-
+          
             context.Patients.Add(patient);
             context.SaveChanges();
+
+        }
+
+        private void deptRoomCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dEP = (Department)deptRoomCombo.SelectedItem;
+            this.Roomcombo.Items.Clear();
+            var Rooms = context.Rooms.Where(d => d.Department.ID == dEP.ID).Select(r => r).ToList();
+            foreach (var room in Rooms)
+            {
+
+                this.Roomcombo.Items.Add(room);
+
+            }
+
+        }
+
+        private void PmChecked_CheckedChanged(object sender, EventArgs e)
+        {
+            var dragtim = this.AmChecked.Checked ? Shift.Am : Shift.Pm;
+            var room = (Room)Roomcombo.SelectedItem;
+            NurseCombo.DisplayMember = "Name";
+            NurseCombo.ValueMember = "ID";
+            this.NurseCombo.DataSource = context.Nurses.Where(n => n.shift == dragtim && n.RoomId == room.ID).ToList();
 
         }
     }

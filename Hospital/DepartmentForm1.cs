@@ -33,6 +33,8 @@ namespace Hospital
             this.ViewPanal.Visible = false;
             var dEP = context.Departments.ToArray();
             DeptInfoCompo.Items.AddRange(dEP);
+
+
         }
         private void DepartmentForm1_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {

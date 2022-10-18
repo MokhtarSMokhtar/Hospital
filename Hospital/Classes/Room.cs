@@ -24,6 +24,10 @@ namespace Hospital.Classes
 
         public virtual ICollection<Patient> Patients { get; set; }
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
 
