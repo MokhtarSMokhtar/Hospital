@@ -261,6 +261,7 @@
             this.NurseDeptCompo.Name = "NurseDeptCompo";
             this.NurseDeptCompo.Size = new System.Drawing.Size(115, 21);
             this.NurseDeptCompo.TabIndex = 28;
+            this.NurseDeptCompo.SelectedIndexChanged += new System.EventHandler(this.NurseDeptCompo_SelectedIndexChanged);
             // 
             // NurseDepartment
             // 
@@ -323,8 +324,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(694, 348);
-
             this.ClientSize = new System.Drawing.Size(773, 408);
             this.Controls.Add(this.AmChecked);
             this.Controls.Add(this.PMCheked);

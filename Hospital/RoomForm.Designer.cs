@@ -40,16 +40,18 @@
             this.roomtype = new System.Windows.Forms.TextBox();
             this.Room_Back = new System.Windows.Forms.Button();
             this.RoomPanel = new System.Windows.Forms.Panel();
+            this.MngrIDtxt = new System.Windows.Forms.TextBox();
+            this.MngrIDbtn = new System.Windows.Forms.Label();
+            this.DeleteRoombtn = new System.Windows.Forms.Button();
+            this.UpdateRoombtn = new System.Windows.Forms.Button();
+            this.AddRoombtn = new System.Windows.Forms.Button();
             this.Room_previous = new System.Windows.Forms.Button();
             this.Room_next = new System.Windows.Forms.Button();
             this.Room_patient = new System.Windows.Forms.Button();
             this.Room_Doctor = new System.Windows.Forms.Button();
             this.Room_Visits = new System.Windows.Forms.Button();
-            this.AddRoombtn = new System.Windows.Forms.Button();
-            this.UpdateRoombtn = new System.Windows.Forms.Button();
-            this.DeleteRoombtn = new System.Windows.Forms.Button();
-            this.MngrIDbtn = new System.Windows.Forms.Label();
-            this.MngrIDtxt = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.RoomPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             // R_Nurse
             // 
             this.R_Nurse.AutoSize = true;
-            this.R_Nurse.Location = new System.Drawing.Point(57, 195);
+            this.R_Nurse.Location = new System.Drawing.Point(61, 169);
             this.R_Nurse.Name = "R_Nurse";
             this.R_Nurse.Size = new System.Drawing.Size(65, 13);
             this.R_Nurse.TabIndex = 2;
@@ -85,7 +87,7 @@
             // NofBed
             // 
             this.NofBed.AutoSize = true;
-            this.NofBed.Location = new System.Drawing.Point(48, 96);
+            this.NofBed.Location = new System.Drawing.Point(46, 92);
             this.NofBed.Name = "NofBed";
             this.NofBed.Size = new System.Drawing.Size(80, 13);
             this.NofBed.TabIndex = 3;
@@ -94,7 +96,7 @@
             // R_type
             // 
             this.R_type.AutoSize = true;
-            this.R_type.Location = new System.Drawing.Point(61, 146);
+            this.R_type.Location = new System.Drawing.Point(61, 129);
             this.R_type.Name = "R_type";
             this.R_type.Size = new System.Drawing.Size(61, 13);
             this.R_type.TabIndex = 4;
@@ -109,21 +111,21 @@
             // 
             // RoomNurse
             // 
-            this.RoomNurse.Location = new System.Drawing.Point(197, 188);
+            this.RoomNurse.Location = new System.Drawing.Point(197, 162);
             this.RoomNurse.Name = "RoomNurse";
             this.RoomNurse.Size = new System.Drawing.Size(114, 20);
             this.RoomNurse.TabIndex = 6;
             // 
             // numberofbed
             // 
-            this.numberofbed.Location = new System.Drawing.Point(197, 96);
+            this.numberofbed.Location = new System.Drawing.Point(197, 89);
             this.numberofbed.Name = "numberofbed";
             this.numberofbed.Size = new System.Drawing.Size(114, 20);
             this.numberofbed.TabIndex = 7;
             // 
             // roomtype
             // 
-            this.roomtype.Location = new System.Drawing.Point(197, 146);
+            this.roomtype.Location = new System.Drawing.Point(197, 129);
             this.roomtype.Name = "roomtype";
             this.roomtype.Size = new System.Drawing.Size(114, 20);
             this.roomtype.TabIndex = 8;
@@ -142,6 +144,8 @@
             // RoomPanel
             // 
             this.RoomPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RoomPanel.BackgroundImage")));
+            this.RoomPanel.Controls.Add(this.label1);
+            this.RoomPanel.Controls.Add(this.comboBox1);
             this.RoomPanel.Controls.Add(this.MngrIDtxt);
             this.RoomPanel.Controls.Add(this.MngrIDbtn);
             this.RoomPanel.Controls.Add(this.DeleteRoombtn);
@@ -167,6 +171,52 @@
             this.RoomPanel.Size = new System.Drawing.Size(721, 422);
             this.RoomPanel.TabIndex = 1;
             this.RoomPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.RoomPanel_Paint);
+            // 
+            // MngrIDtxt
+            // 
+            this.MngrIDtxt.Location = new System.Drawing.Point(197, 195);
+            this.MngrIDtxt.Name = "MngrIDtxt";
+            this.MngrIDtxt.Size = new System.Drawing.Size(114, 20);
+            this.MngrIDtxt.TabIndex = 30;
+            // 
+            // MngrIDbtn
+            // 
+            this.MngrIDbtn.AutoSize = true;
+            this.MngrIDbtn.Location = new System.Drawing.Point(61, 214);
+            this.MngrIDbtn.Name = "MngrIDbtn";
+            this.MngrIDbtn.Size = new System.Drawing.Size(57, 13);
+            this.MngrIDbtn.TabIndex = 29;
+            this.MngrIDbtn.Text = "Manger ID";
+            // 
+            // DeleteRoombtn
+            // 
+            this.DeleteRoombtn.Location = new System.Drawing.Point(553, 282);
+            this.DeleteRoombtn.Name = "DeleteRoombtn";
+            this.DeleteRoombtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteRoombtn.TabIndex = 28;
+            this.DeleteRoombtn.Text = "Delete";
+            this.DeleteRoombtn.UseVisualStyleBackColor = true;
+            this.DeleteRoombtn.Click += new System.EventHandler(this.DeleteRoombtn_Click);
+            // 
+            // UpdateRoombtn
+            // 
+            this.UpdateRoombtn.Location = new System.Drawing.Point(456, 282);
+            this.UpdateRoombtn.Name = "UpdateRoombtn";
+            this.UpdateRoombtn.Size = new System.Drawing.Size(75, 23);
+            this.UpdateRoombtn.TabIndex = 27;
+            this.UpdateRoombtn.Text = "Update";
+            this.UpdateRoombtn.UseVisualStyleBackColor = true;
+            this.UpdateRoombtn.Click += new System.EventHandler(this.UpdateRoombtn_Click);
+            // 
+            // AddRoombtn
+            // 
+            this.AddRoombtn.Location = new System.Drawing.Point(339, 283);
+            this.AddRoombtn.Name = "AddRoombtn";
+            this.AddRoombtn.Size = new System.Drawing.Size(75, 23);
+            this.AddRoombtn.TabIndex = 26;
+            this.AddRoombtn.Text = "Add";
+            this.AddRoombtn.UseVisualStyleBackColor = true;
+            this.AddRoombtn.Click += new System.EventHandler(this.AddRoombtn_Click);
             // 
             // Room_previous
             // 
@@ -219,60 +269,28 @@
             this.Room_Visits.UseVisualStyleBackColor = false;
             this.Room_Visits.Click += new System.EventHandler(this.Room_Visits_Click);
             // 
-            // AddRoombtn
+            // comboBox1
             // 
-            this.AddRoombtn.Location = new System.Drawing.Point(339, 283);
-            this.AddRoombtn.Name = "AddRoombtn";
-            this.AddRoombtn.Size = new System.Drawing.Size(75, 23);
-            this.AddRoombtn.TabIndex = 26;
-            this.AddRoombtn.Text = "Add";
-            this.AddRoombtn.UseVisualStyleBackColor = true;
-            this.AddRoombtn.Click += new System.EventHandler(this.AddRoombtn_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(190, 238);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 31;
             // 
-            // UpdateRoombtn
+            // label1
             // 
-            this.UpdateRoombtn.Location = new System.Drawing.Point(456, 282);
-            this.UpdateRoombtn.Name = "UpdateRoombtn";
-            this.UpdateRoombtn.Size = new System.Drawing.Size(75, 23);
-            this.UpdateRoombtn.TabIndex = 27;
-            this.UpdateRoombtn.Text = "Update";
-            this.UpdateRoombtn.UseVisualStyleBackColor = true;
-            this.UpdateRoombtn.Click += new System.EventHandler(this.UpdateRoombtn_Click);
-            // 
-            // DeleteRoombtn
-            // 
-            this.DeleteRoombtn.Location = new System.Drawing.Point(553, 282);
-            this.DeleteRoombtn.Name = "DeleteRoombtn";
-            this.DeleteRoombtn.Size = new System.Drawing.Size(75, 23);
-            this.DeleteRoombtn.TabIndex = 28;
-            this.DeleteRoombtn.Text = "Delete";
-            this.DeleteRoombtn.UseVisualStyleBackColor = true;
-            this.DeleteRoombtn.Click += new System.EventHandler(this.DeleteRoombtn_Click);
-            // 
-            // MngrIDbtn
-            // 
-            this.MngrIDbtn.AutoSize = true;
-            this.MngrIDbtn.Location = new System.Drawing.Point(57, 230);
-            this.MngrIDbtn.Name = "MngrIDbtn";
-            this.MngrIDbtn.Size = new System.Drawing.Size(57, 13);
-            this.MngrIDbtn.TabIndex = 29;
-            this.MngrIDbtn.Text = "Manger ID";
-            // 
-            // MngrIDtxt
-            // 
-            this.MngrIDtxt.Location = new System.Drawing.Point(197, 230);
-            this.MngrIDtxt.Name = "MngrIDtxt";
-            this.MngrIDtxt.Size = new System.Drawing.Size(114, 20);
-            this.MngrIDtxt.TabIndex = 30;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(65, 246);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Department";
             // 
             // RoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 348);
-
             this.ClientSize = new System.Drawing.Size(720, 426);
-
             this.Controls.Add(this.RoomPanel);
             this.Name = "RoomForm";
             this.Text = "RoomForm";
@@ -308,5 +326,7 @@
         private System.Windows.Forms.Button AddRoombtn;
         private System.Windows.Forms.TextBox MngrIDtxt;
         private System.Windows.Forms.Label MngrIDbtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
