@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Data;
+using Hospital.Classes;
 
 namespace Hospital
 {
@@ -91,6 +92,80 @@ namespace Hospital
             this.Visible = false;
         }
 
+        private void RoomForm_Load(object sender, EventArgs e)
+        {
+            comboBox1.DisplayMember = "Name";
+            comboBox1.ValueMember = "ID";
+            var list = context.Departments;
+            foreach (var item in list)
+            {
+                comboBox1.Items.Add(item);
+
+            }
+        }
+
+        private void AddRoombtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var NurseRoomMangerID = Convert.ToInt32(MngrIDtxt.Text);
+                var room = new Room
+                {
+                    ID = Convert.ToInt32(this.RID.Text),
+                    Name = this.RoomNurse.Text,
+                    NumberOfBeds = Convert.ToInt32(this.numberofbed.Text),
+                    Type = this.roomtype.Text,
+                    Manager = context.Nurses.Where(n => n.ID == NurseRoomMangerID).FirstOrDefault(),
+                    Department =(Department) comboBox1.SelectedItem,
+                };
+                room.Manager.RoomManageId = room.ID;
+                room.Manager.RoomId = room.ID;
+                context.Rooms.Add(room);
+                context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+        }
+
+        private void UpdateRoombtn_Click(object sender, EventArgs e)
+        {
+            int roomId = Convert.ToInt32(this.RID.Text);
+            var id = Convert.ToInt32(MngrIDtxt.Text);
+            var room = context.Rooms.Where(r => r.ID == roomId).FirstOrDefault();
+            try
+            {
+                room.ID = Convert.ToInt32(this.RID.Text);
+                room.Name = this.RoomNurse.Text;
+                room.NumberOfBeds = Convert.ToInt32(this.numberofbed.Text);
+                room.Type = this.roomtype.Text;
+                room.Department = (Department)comboBox1.SelectedItem;
+                room.Manager = context.Nurses.Where(n => n.ID == id).FirstOrDefault();
+                room.Manager.RoomManageId = room.ID;
+                room.Manager.RoomId = room.ID;
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+        }
+
+        private void DeleteRoombtn_Click(object sender, EventArgs e)
+        {
+            int roomId = Convert.ToInt32(this.RID.Text);
+            var room = context.Rooms.Where(r => r.ID == roomId).FirstOrDefault();
+            try
+            {
+                context.Rooms.Remove(room);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
+        }
         private void RoomPanel_Paint(object sender, PaintEventArgs e)
         {
 

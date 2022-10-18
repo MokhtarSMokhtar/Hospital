@@ -261,6 +261,7 @@
             this.NurseDeptCompo.Name = "NurseDeptCompo";
             this.NurseDeptCompo.Size = new System.Drawing.Size(115, 21);
             this.NurseDeptCompo.TabIndex = 28;
+            this.NurseDeptCompo.SelectedIndexChanged += new System.EventHandler(this.NurseDeptCompo_SelectedIndexChanged);
             // 
             // NurseDepartment
             // 

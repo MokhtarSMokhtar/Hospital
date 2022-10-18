@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Classes;
 using Hospital.Data;
+using Hospital.Classes;
 
 namespace Hospital
 {
@@ -37,15 +38,7 @@ namespace Hospital
             NurseDeptCompo.DisplayMember = "Name";
             NurseDeptCompo.ValueMember = "ID";
           
-            foreach (var item in dEP)
-            {
-                var Rooms = context.Rooms.Where(d => d.Department.ID == item.ID ).Select(r => new { r.ID, r.Name }).ToList();
-                foreach (var room in Rooms)
-                {
-                    this.ComboRoom.Items.Add(item);
-
-                }
-            }
+         
         
         }
 
@@ -79,6 +72,7 @@ namespace Hospital
             this.Visible = false;
         }
 
+
         private void NurseAddBtn_Click(object sender, EventArgs e)
         {
             var nurse = new Nurse
@@ -111,9 +105,10 @@ namespace Hospital
                 nurse.Age = Convert.ToInt32(this.n_age.Text);
                 nurse.Phone = Convert.ToInt32(this.n_phone.Text);
                 nurse.gender = this.NurseMale.Checked ? Gender.Male : Gender.Female;
-
+                nurse.Room = (Room)ComboRoom.SelectedItem;
+                nurse.RoomId = nurse.Room.ID;
                 context.SaveChanges();
-
+                nurse.RoomId = nurse.Room.ID;
             }
             catch (Exception updateExc)
             {
@@ -134,6 +129,20 @@ namespace Hospital
             {
                 MessageBox.Show(updateExc.Message);
             }
+        }
+
+        private void NurseDeptCompo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dEP =(Department) NurseDeptCompo.SelectedItem;
+                this.ComboRoom.Items.Clear();
+                var Rooms = context.Rooms.Where(d => d.Department.ID == dEP.ID).Select(r =>r).ToList();
+                foreach (var room in Rooms)
+                {
+             
+                    this.ComboRoom.Items.Add(room);
+
+                }
+            
         }
     }
 }

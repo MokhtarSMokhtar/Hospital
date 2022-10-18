@@ -80,8 +80,7 @@ namespace Hospital
                 WorkDepartment = (Department)DoctorDeptCompo.SelectedItem
 
             };
-            context.ChangeTracker.DetectChanges();
-            context.Doctors.Add(doctor);
+             context.Doctors.Add(doctor);
             context.SaveChanges();
 
         }
@@ -171,13 +170,20 @@ namespace Hospital
 
         private void DoctorForm_Load(object sender, EventArgs e)
         {
-            context.Configuration.AutoDetectChangesEnabled = false;
+          //  context.Configuration.AutoDetectChangesEnabled = false;
             DoctorDeptCompo.DisplayMember = "Name";
             DoctorDeptCompo.ValueMember = "ID";
+ 
             //var list = context.Departments.AsNoTracking();
             //foreach (var item in list)
             //{
             //    DoctorDeptCompo.Items.Add(item);
+ 
+            var list = context.Departments;
+            foreach (var item in list)
+            {
+                DoctorDeptCompo.Items.Add(item);
+ 
 
             //}
         }
