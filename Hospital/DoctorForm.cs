@@ -174,12 +174,12 @@ namespace Hospital
             context.Configuration.AutoDetectChangesEnabled = false;
             DoctorDeptCompo.DisplayMember = "Name";
             DoctorDeptCompo.ValueMember = "ID";
-            var list = context.Departments.AsNoTracking();
-            foreach (var item in list)
-            {
-                DoctorDeptCompo.Items.Add(item);
+            //var list = context.Departments.AsNoTracking();
+            //foreach (var item in list)
+            //{
+            //    DoctorDeptCompo.Items.Add(item);
 
-            }
+            //}
         }
     }
 }
