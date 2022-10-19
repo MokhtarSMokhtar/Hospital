@@ -137,7 +137,7 @@
             this.PName.AutoSize = true;
             this.PName.Location = new System.Drawing.Point(68, 96);
             this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(34, 13);
+            this.PName.Size = new System.Drawing.Size(35, 13);
             this.PName.TabIndex = 9;
             this.PName.Text = "Name";
             this.PName.Click += new System.EventHandler(this.label1_Click_1);
@@ -147,7 +147,7 @@
             this.PAddress.AutoSize = true;
             this.PAddress.Location = new System.Drawing.Point(68, 132);
             this.PAddress.Name = "PAddress";
-            this.PAddress.Size = new System.Drawing.Size(46, 13);
+            this.PAddress.Size = new System.Drawing.Size(45, 13);
             this.PAddress.TabIndex = 10;
             this.PAddress.Text = "Address";
             // 
@@ -156,7 +156,7 @@
             this.PPhone.AutoSize = true;
             this.PPhone.Location = new System.Drawing.Point(71, 170);
             this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(37, 13);
+            this.PPhone.Size = new System.Drawing.Size(38, 13);
             this.PPhone.TabIndex = 11;
             this.PPhone.Text = "Phone";
             // 
@@ -236,7 +236,7 @@
             this.PatientMale.AutoSize = true;
             this.PatientMale.Location = new System.Drawing.Point(165, 329);
             this.PatientMale.Name = "PatientMale";
-            this.PatientMale.Size = new System.Drawing.Size(48, 17);
+            this.PatientMale.Size = new System.Drawing.Size(49, 17);
             this.PatientMale.TabIndex = 21;
             this.PatientMale.Text = "Male";
             this.PatientMale.UseVisualStyleBackColor = true;
@@ -254,7 +254,7 @@
             // PatientAddBtn
             // 
             this.PatientAddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientAddBtn.Location = new System.Drawing.Point(244, 352);
+            this.PatientAddBtn.Location = new System.Drawing.Point(235, 352);
             this.PatientAddBtn.Name = "PatientAddBtn";
             this.PatientAddBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientAddBtn.TabIndex = 23;
@@ -265,7 +265,7 @@
             // PatientUpdateBtn
             // 
             this.PatientUpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientUpdateBtn.Location = new System.Drawing.Point(344, 352);
+            this.PatientUpdateBtn.Location = new System.Drawing.Point(405, 352);
             this.PatientUpdateBtn.Name = "PatientUpdateBtn";
             this.PatientUpdateBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientUpdateBtn.TabIndex = 24;
@@ -276,7 +276,7 @@
             // PatientDeleteBtn
             // 
             this.PatientDeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientDeleteBtn.Location = new System.Drawing.Point(448, 352);
+            this.PatientDeleteBtn.Location = new System.Drawing.Point(500, 352);
             this.PatientDeleteBtn.Name = "PatientDeleteBtn";
             this.PatientDeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientDeleteBtn.TabIndex = 25;
@@ -294,7 +294,7 @@
             this.panel1.Controls.Add(this.comfirmbtn);
             this.panel1.Location = new System.Drawing.Point(3, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(715, 391);
+            this.panel1.Size = new System.Drawing.Size(715, 396);
             this.panel1.TabIndex = 26;
             // 
             // NurseCombo
@@ -318,7 +318,7 @@
             this.PmChecked.AutoSize = true;
             this.PmChecked.Location = new System.Drawing.Point(317, 59);
             this.PmChecked.Name = "PmChecked";
-            this.PmChecked.Size = new System.Drawing.Size(40, 17);
+            this.PmChecked.Size = new System.Drawing.Size(41, 17);
             this.PmChecked.TabIndex = 4;
             this.PmChecked.Text = "Pm";
             this.PmChecked.UseVisualStyleBackColor = true;
@@ -374,7 +374,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(68, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "Department";
             // 
@@ -383,7 +383,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(79, 300);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Room";
             // 
