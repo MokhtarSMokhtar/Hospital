@@ -32,7 +32,7 @@ namespace Hospital
 
         private void Nusre_Load(object sender, EventArgs e)
         {
-
+            this.panel1.Visible = false;
             var dEP = context.Departments.ToList();
             NurseDeptCompo.DataSource = dEP;
             NurseDeptCompo.DisplayMember = "Name";
@@ -153,15 +153,35 @@ namespace Hospital
             var Drage1 = new DrageTime
             {
                 DrageName = this.DargelistCom.Text,
-            
             };
 
             var drage = (DrageTime)DargelistCom.SelectedItem;
-
             //foreach (var item in drage)
             //{
             //    this.DargelistCom.Items.Add(item);
             //}
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.panel1.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(this.NurseDragID.Text);
+            string Name = this.NurseDrageName.Text;
+            var Drage = context.DrageTimes.Where(d => d.NurseId == id).ToList();
+
+            listView1.Items.Clear();
+            foreach (var item in Drage)
+            {
+                ListViewItem listView = new ListViewItem(item.patient.Name);
+                listView.SubItems.Add(item.DrageName);
+                listView.SubItems.Add(item.Time.ToString("hh:mm "));
+                this.listView1.Items.Add(listView);
+            }
+
         }
     }
 }

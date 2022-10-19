@@ -60,6 +60,16 @@
             this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.DargelistCom = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NurseDragID = new System.Windows.Forms.TextBox();
+            this.NurseDrageName = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.PateintName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DragName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TimeDrge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Nurse
@@ -347,13 +357,89 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Drage";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(374, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.NurseDrageName);
+            this.panel1.Controls.Add(this.NurseDragID);
+            this.panel1.Location = new System.Drawing.Point(5, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(768, 433);
+            this.panel1.TabIndex = 39;
+            // 
+            // NurseDragID
+            // 
+            this.NurseDragID.Location = new System.Drawing.Point(101, 21);
+            this.NurseDragID.Name = "NurseDragID";
+            this.NurseDragID.Size = new System.Drawing.Size(100, 20);
+            this.NurseDragID.TabIndex = 0;
+            // 
+            // NurseDrageName
+            // 
+            this.NurseDrageName.Location = new System.Drawing.Point(101, 70);
+            this.NurseDrageName.Name = "NurseDrageName";
+            this.NurseDrageName.Size = new System.Drawing.Size(100, 20);
+            this.NurseDrageName.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(104, 106);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.PateintName,
+            this.DragName,
+            this.TimeDrge});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(397, 31);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(316, 380);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // PateintName
+            // 
+            this.PateintName.Text = "Patein Name";
+            this.PateintName.Width = 113;
+            // 
+            // DragName
+            // 
+            this.DragName.Text = "Drage";
+            this.DragName.Width = 118;
+            // 
+            // TimeDrge
+            // 
+            this.TimeDrge.Text = "Time";
+            this.TimeDrge.Width = 186;
+            // 
             // NusreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(773, 408);
+            this.ClientSize = new System.Drawing.Size(773, 455);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DargelistCom);
             this.Controls.Add(this.AmChecked);
@@ -387,6 +473,8 @@
             this.Name = "NusreForm";
             this.Text = "Nusre";
             this.Load += new System.EventHandler(this.Nusre_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,5 +515,14 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.ComboBox DargelistCom;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader PateintName;
+        private System.Windows.Forms.ColumnHeader DragName;
+        private System.Windows.Forms.ColumnHeader TimeDrge;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox NurseDrageName;
+        private System.Windows.Forms.TextBox NurseDragID;
     }
 }
