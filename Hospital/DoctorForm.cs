@@ -179,13 +179,13 @@ namespace Hospital
             {
                 DoctorDeptCompo.Items.Add(item);
 
-                //var list = context.Departments;
-                //foreach (var item in list)
-                //{
-                //    DoctorDeptCompo.Items.Add(item);
+                list = context.Departments;
+                foreach (var items in list)
+                {
+                    DoctorDeptCompo.Items.Add(item);
 
 
-                //}
+                }
 
             }
         }

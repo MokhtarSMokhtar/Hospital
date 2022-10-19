@@ -37,9 +37,9 @@ namespace Hospital
             NurseDeptCompo.DataSource = dEP;
             NurseDeptCompo.DisplayMember = "Name";
             NurseDeptCompo.ValueMember = "ID";
-          
-         
-        
+
+
+
         }
 
         private void Doctor_Click(object sender, EventArgs e)
