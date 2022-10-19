@@ -57,6 +57,9 @@
             this.ComboRoom = new System.Windows.Forms.ComboBox();
             this.PMCheked = new System.Windows.Forms.CheckBox();
             this.AmChecked = new System.Windows.Forms.CheckBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.DargelistCom = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Nurse
@@ -84,7 +87,7 @@
             this.NName.AutoSize = true;
             this.NName.Location = new System.Drawing.Point(49, 74);
             this.NName.Name = "NName";
-            this.NName.Size = new System.Drawing.Size(34, 13);
+            this.NName.Size = new System.Drawing.Size(35, 13);
             this.NName.TabIndex = 2;
             this.NName.Text = "Name";
             // 
@@ -128,7 +131,7 @@
             this.NAddress.AutoSize = true;
             this.NAddress.Location = new System.Drawing.Point(45, 106);
             this.NAddress.Name = "NAddress";
-            this.NAddress.Size = new System.Drawing.Size(46, 13);
+            this.NAddress.Size = new System.Drawing.Size(45, 13);
             this.NAddress.TabIndex = 11;
             this.NAddress.Text = "Address";
             // 
@@ -239,7 +242,7 @@
             this.NurseMale.AutoSize = true;
             this.NurseMale.Location = new System.Drawing.Point(109, 318);
             this.NurseMale.Name = "NurseMale";
-            this.NurseMale.Size = new System.Drawing.Size(48, 17);
+            this.NurseMale.Size = new System.Drawing.Size(49, 17);
             this.NurseMale.TabIndex = 26;
             this.NurseMale.Text = "Male";
             this.NurseMale.UseVisualStyleBackColor = true;
@@ -257,7 +260,7 @@
             // NurseDeptCompo
             // 
             this.NurseDeptCompo.FormattingEnabled = true;
-            this.NurseDeptCompo.Location = new System.Drawing.Point(112, 211);
+            this.NurseDeptCompo.Location = new System.Drawing.Point(112, 204);
             this.NurseDeptCompo.Name = "NurseDeptCompo";
             this.NurseDeptCompo.Size = new System.Drawing.Size(115, 21);
             this.NurseDeptCompo.TabIndex = 28;
@@ -266,34 +269,34 @@
             // NurseDepartment
             // 
             this.NurseDepartment.AutoSize = true;
-            this.NurseDepartment.Location = new System.Drawing.Point(28, 219);
+            this.NurseDepartment.Location = new System.Drawing.Point(28, 212);
             this.NurseDepartment.Name = "NurseDepartment";
-            this.NurseDepartment.Size = new System.Drawing.Size(64, 13);
+            this.NurseDepartment.Size = new System.Drawing.Size(62, 13);
             this.NurseDepartment.TabIndex = 29;
             this.NurseDepartment.Text = "Department";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 288);
+            this.label1.Location = new System.Drawing.Point(49, 296);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 31;
             this.label1.Text = "Shift";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 255);
+            this.label2.Location = new System.Drawing.Point(49, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 32;
             this.label2.Text = "Room";
             // 
             // ComboRoom
             // 
             this.ComboRoom.FormattingEnabled = true;
-            this.ComboRoom.Location = new System.Drawing.Point(112, 252);
+            this.ComboRoom.Location = new System.Drawing.Point(109, 236);
             this.ComboRoom.Name = "ComboRoom";
             this.ComboRoom.Size = new System.Drawing.Size(115, 21);
             this.ComboRoom.TabIndex = 33;
@@ -301,9 +304,9 @@
             // PMCheked
             // 
             this.PMCheked.AutoSize = true;
-            this.PMCheked.Location = new System.Drawing.Point(109, 279);
+            this.PMCheked.Location = new System.Drawing.Point(109, 295);
             this.PMCheked.Name = "PMCheked";
-            this.PMCheked.Size = new System.Drawing.Size(40, 17);
+            this.PMCheked.Size = new System.Drawing.Size(41, 17);
             this.PMCheked.TabIndex = 34;
             this.PMCheked.Text = "Pm";
             this.PMCheked.UseVisualStyleBackColor = true;
@@ -311,12 +314,38 @@
             // AmChecked
             // 
             this.AmChecked.AutoSize = true;
-            this.AmChecked.Location = new System.Drawing.Point(167, 279);
+            this.AmChecked.Location = new System.Drawing.Point(167, 295);
             this.AmChecked.Name = "AmChecked";
             this.AmChecked.Size = new System.Drawing.Size(41, 17);
             this.AmChecked.TabIndex = 35;
             this.AmChecked.Text = "Am";
             this.AmChecked.UseVisualStyleBackColor = true;
+            // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
+            // DargelistCom
+            // 
+            this.DargelistCom.FormattingEnabled = true;
+            this.DargelistCom.Location = new System.Drawing.Point(106, 268);
+            this.DargelistCom.Name = "DargelistCom";
+            this.DargelistCom.Size = new System.Drawing.Size(121, 21);
+            this.DargelistCom.TabIndex = 36;
+            this.DargelistCom.SelectedIndexChanged += new System.EventHandler(this.DargelistCom_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(48, 268);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Drage";
             // 
             // NusreForm
             // 
@@ -325,6 +354,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(773, 408);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DargelistCom);
             this.Controls.Add(this.AmChecked);
             this.Controls.Add(this.PMCheked);
             this.Controls.Add(this.ComboRoom);
@@ -393,5 +424,8 @@
         private System.Windows.Forms.ComboBox ComboRoom;
         private System.Windows.Forms.CheckBox PMCheked;
         private System.Windows.Forms.CheckBox AmChecked;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Windows.Forms.ComboBox DargelistCom;
+        private System.Windows.Forms.Label label3;
     }
 }

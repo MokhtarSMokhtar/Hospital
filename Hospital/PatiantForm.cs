@@ -249,6 +249,17 @@ namespace Hospital
 
         }
 
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NurseCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
    
+
     }
 }

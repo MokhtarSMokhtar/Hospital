@@ -304,6 +304,7 @@
             this.NurseCombo.Name = "NurseCombo";
             this.NurseCombo.Size = new System.Drawing.Size(130, 21);
             this.NurseCombo.TabIndex = 7;
+            this.NurseCombo.SelectedIndexChanged += new System.EventHandler(this.NurseCombo_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -312,6 +313,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // PmChecked
             // 
