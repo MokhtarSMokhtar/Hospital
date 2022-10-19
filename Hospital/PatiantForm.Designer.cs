@@ -254,7 +254,7 @@
             // PatientAddBtn
             // 
             this.PatientAddBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientAddBtn.Location = new System.Drawing.Point(244, 352);
+            this.PatientAddBtn.Location = new System.Drawing.Point(235, 352);
             this.PatientAddBtn.Name = "PatientAddBtn";
             this.PatientAddBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientAddBtn.TabIndex = 23;
@@ -265,7 +265,7 @@
             // PatientUpdateBtn
             // 
             this.PatientUpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientUpdateBtn.Location = new System.Drawing.Point(344, 352);
+            this.PatientUpdateBtn.Location = new System.Drawing.Point(405, 352);
             this.PatientUpdateBtn.Name = "PatientUpdateBtn";
             this.PatientUpdateBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientUpdateBtn.TabIndex = 24;
@@ -276,7 +276,7 @@
             // PatientDeleteBtn
             // 
             this.PatientDeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientDeleteBtn.Location = new System.Drawing.Point(448, 352);
+            this.PatientDeleteBtn.Location = new System.Drawing.Point(500, 352);
             this.PatientDeleteBtn.Name = "PatientDeleteBtn";
             this.PatientDeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.PatientDeleteBtn.TabIndex = 25;
@@ -294,7 +294,7 @@
             this.panel1.Controls.Add(this.comfirmbtn);
             this.panel1.Location = new System.Drawing.Point(3, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(715, 391);
+            this.panel1.Size = new System.Drawing.Size(715, 396);
             this.panel1.TabIndex = 26;
             // 
             // NurseCombo

@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Data
+namespace Hospital
 {
     public class Context : DbContext
     {
 
-        public Context():base(@"Data Source = 192.168.1.110; Initial Catalog = Hospital; User ID = Hospital; Password=123;Connect Timeout = 30;")
+        public Context():base(@"Data Source = 192.168.1.107; Initial Catalog = Hospital; User ID = SA; Password=MyPassword123#;Connect Timeout = 30;")
         {
 
         }

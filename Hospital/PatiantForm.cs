@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Classes;
-using Hospital.Data;
+using Hospital;
 namespace Hospital
 {
     public partial class PatiantForm : Form
@@ -88,7 +88,7 @@ namespace Hospital
         private void Patiant_Load(object sender, EventArgs e)
         {
             this.panel1.Visible = false;
-            var hours = Enumerable.Range(00, 24).Select(i => (DateTime.MinValue.AddHours(i)).ToString("hh.mm ")).ToArray();
+            var hours = Enumerable.Range(00, 24).Select(i => (DateTime.MinValue.AddHours(i)).ToString("hh:mm ")).ToArray();
             this.comboBox1.DataSource = hours;
 
             var dEP = context.Departments.ToList();
@@ -135,6 +135,28 @@ namespace Hospital
 
         private void PatientAddBtn_Click(object sender, EventArgs e)
         {
+            var room = (Room)Roomcombo.SelectedItem;
+            var doctors = context.Doctors.Where(d => d.DepartmentWorkId == room.Department.ID).Select(d => d).ToList();
+            var patient = new Patient
+            {
+                ID = Convert.ToInt32(this.p_id.Text),
+                Name = this.p_name.Text,
+                Address = this.p_address.Text,
+                Phone = Convert.ToInt32(this.p_phone.Text),
+                Age = Convert.ToInt32(this.p_age.Text),
+                Case = this.p_case.Text,
+                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female,
+                Room = room,
+                Doctors = doctors
+
+            };
+  
+           
+            context.Patients.Add(patient);
+            context.SaveChanges();
+
+
+
             this.panel1.Visible = true;
             
         }
@@ -179,39 +201,27 @@ namespace Hospital
 
         private void comfirmbtn_Click(object sender, EventArgs e)
         {
-            var room = (Room)Roomcombo.SelectedItem;
-            List<Doctor> doctors = context.Doctors.Where(d => d.WorkDepartment == room.Department).ToList();
-
-
-            var patient = new Patient
-            {
-                ID = Convert.ToInt32(this.p_id.Text),
-                Name = this.p_name.Text,
-                Address = this.p_address.Text,
-                Phone = Convert.ToInt32(this.p_phone.Text),
-                Age = Convert.ToInt32(this.p_age.Text),
-                Case = this.p_case.Text,
-                gender = this.PatientMale.Checked ? Gender.Male : Gender.Female,
-                Room = room,
-                Doctors =  doctors 
-
-        };
+            int id = Convert.ToInt32(this.p_id.Text);
+            var patient = context.Patients.Where(p => p.ID == id).FirstOrDefault();
             var dragtim = this.AmChecked.Checked ? Shift.Am : Shift.Pm;
 
-   
+            string userInput = comboBox1.SelectedItem.ToString();
+            var time = TimeSpan.Parse(userInput);
+            var dateTime = DateTime.Today.Add(time);
             var Drage1 = new DrageTime
             {
                 DrageName = this.DrageTextBox.Text,
                 Shift = dragtim,
-                Time = (DateTime)comboBox1.SelectedItem,
+                Time = dateTime,
                 patient = patient,
-                Nurse = NurseCombo.SelectedItem as Nurse,
+                Nurse = (Nurse)NurseCombo.SelectedItem,
             };
 
-            patient.medicineTimes = new List<DrageTime>() { Drage1 };
-          
-            context.Patients.Add(patient);
+           // patient.medicineTimes = new List<DrageTime>() { Drage1 };
+            context.DrageTimes.Add(Drage1);
             context.SaveChanges();
+
+
 
         }
 
@@ -239,6 +249,7 @@ namespace Hospital
 
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -248,5 +259,7 @@ namespace Hospital
         {
 
         }
+   
+
     }
 }
