@@ -87,6 +87,11 @@
     <Compile Include="Migrations\202210190406072_hospital.cs" />
     <Compile Include="Migrations\202210190406072_hospital.designer.cs">
       <DependentUpon>202210190406072_hospital.cs</DependentUpon>
+
+    <Compile Include="Migrations\202210071032173_inti.cs" />
+    <Compile Include="Migrations\202210071032173_inti.designer.cs">
+      <DependentUpon>202210071032173_inti.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NusreForm.cs">
@@ -124,8 +129,12 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Migrations\202210190406072_hospital.resx">
       <DependentUpon>202210190406072_hospital.cs</DependentUpon>
+
+    <EmbeddedResource Include="Migrations\202210071032173_inti.resx">
+      <DependentUpon>202210071032173_inti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NusreForm.resx">
       <DependentUpon>NusreForm.cs</DependentUpon>

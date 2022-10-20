@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Hospital.Data;
+using Hospital;
 using System.Data.Entity.Core.Objects.DataClasses;
 
 namespace Hospital
