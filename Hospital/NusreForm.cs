@@ -107,6 +107,7 @@ namespace Hospital
                 nurse.gender = this.NurseMale.Checked ? Gender.Male : Gender.Female;
                 nurse.Room = (Room)ComboRoom.SelectedItem;
                 nurse.RoomId = nurse.Room.ID;
+                nurse.medicineTimes = (ICollection<DrageTime>)(DrageTime)DargelistCom.SelectedItem;
                 context.SaveChanges();
                 nurse.RoomId = nurse.Room.ID;
             }
@@ -143,6 +144,24 @@ namespace Hospital
 
                 }
             
+        }
+
+        private void DargelistCom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+            var Drage1 = new DrageTime
+            {
+                DrageName = this.DargelistCom.Text,
+            
+            };
+
+            var drage = (DrageTime)DargelistCom.SelectedItem;
+
+            //foreach (var item in drage)
+            //{
+            //    this.DargelistCom.Items.Add(item);
+            //}
         }
     }
 }

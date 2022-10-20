@@ -238,5 +238,15 @@ namespace Hospital
             this.NurseCombo.DataSource = context.Nurses.Where(n => n.shift == dragtim && n.RoomId == room.ID).ToList();
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NurseCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

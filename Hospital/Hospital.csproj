@@ -84,21 +84,9 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202210121752510_init.cs" />
-    <Compile Include="Migrations\202210121752510_init.designer.cs">
-      <DependentUpon>202210121752510_init.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210132302289_update.cs" />
-    <Compile Include="Migrations\202210132302289_update.designer.cs">
-      <DependentUpon>202210132302289_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210151837368_enum.cs" />
-    <Compile Include="Migrations\202210151837368_enum.designer.cs">
-      <DependentUpon>202210151837368_enum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202210151951155_enum2.cs" />
-    <Compile Include="Migrations\202210151951155_enum2.designer.cs">
-      <DependentUpon>202210151951155_enum2.cs</DependentUpon>
+    <Compile Include="Migrations\202210190406072_hospital.cs" />
+    <Compile Include="Migrations\202210190406072_hospital.designer.cs">
+      <DependentUpon>202210190406072_hospital.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NusreForm.cs">
@@ -136,17 +124,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210121752510_init.resx">
-      <DependentUpon>202210121752510_init.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210132302289_update.resx">
-      <DependentUpon>202210132302289_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210151837368_enum.resx">
-      <DependentUpon>202210151837368_enum.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202210151951155_enum2.resx">
-      <DependentUpon>202210151951155_enum2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202210190406072_hospital.resx">
+      <DependentUpon>202210190406072_hospital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NusreForm.resx">
       <DependentUpon>NusreForm.cs</DependentUpon>

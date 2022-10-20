@@ -23,15 +23,15 @@ namespace Hospital
         PatiantForm patiantForm;
         VisitsForm1 visitsForm1;
 
-        
- 
-        public DoctorForm( Context _context, MainForm _mainForm)
+
+
+        public DoctorForm(Context _context, MainForm _mainForm)
         {
             context = _context;
             InitializeComponent();
             this.FormClosed += showMain;
             this.mainForm = _mainForm;
-          
+
 
         }
 
@@ -80,7 +80,7 @@ namespace Hospital
                 WorkDepartment = (Department)DoctorDeptCompo.SelectedItem
 
             };
-             context.Doctors.Add(doctor);
+            context.Doctors.Add(doctor);
             context.SaveChanges();
 
         }
@@ -94,7 +94,7 @@ namespace Hospital
             mainForm.Visible = true;
 
             this.Hide();
- 
+
         }
 
         private void DoctorForm_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
@@ -143,7 +143,7 @@ namespace Hospital
                 context.SaveChanges();
 
             }
-            catch(Exception updateExc)
+            catch (Exception updateExc)
             {
                 MessageBox.Show(updateExc.Message);
             }
@@ -170,22 +170,24 @@ namespace Hospital
 
         private void DoctorForm_Load(object sender, EventArgs e)
         {
-          //  context.Configuration.AutoDetectChangesEnabled = false;
+              context.Configuration.AutoDetectChangesEnabled = false;
             DoctorDeptCompo.DisplayMember = "Name";
             DoctorDeptCompo.ValueMember = "ID";
- 
-            //var list = context.Departments.AsNoTracking();
-            //foreach (var item in list)
-            //{
-            //    DoctorDeptCompo.Items.Add(item);
- 
-            var list = context.Departments;
+
+            var list = context.Departments.AsNoTracking();
             foreach (var item in list)
             {
                 DoctorDeptCompo.Items.Add(item);
- 
 
-            //}
+                //var list = context.Departments;
+                //foreach (var item in list)
+                //{
+                //    DoctorDeptCompo.Items.Add(item);
+
+
+                //}
+
+            }
         }
     }
 }

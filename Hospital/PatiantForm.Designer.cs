@@ -137,7 +137,7 @@
             this.PName.AutoSize = true;
             this.PName.Location = new System.Drawing.Point(68, 96);
             this.PName.Name = "PName";
-            this.PName.Size = new System.Drawing.Size(34, 13);
+            this.PName.Size = new System.Drawing.Size(35, 13);
             this.PName.TabIndex = 9;
             this.PName.Text = "Name";
             this.PName.Click += new System.EventHandler(this.label1_Click_1);
@@ -147,7 +147,7 @@
             this.PAddress.AutoSize = true;
             this.PAddress.Location = new System.Drawing.Point(68, 132);
             this.PAddress.Name = "PAddress";
-            this.PAddress.Size = new System.Drawing.Size(46, 13);
+            this.PAddress.Size = new System.Drawing.Size(45, 13);
             this.PAddress.TabIndex = 10;
             this.PAddress.Text = "Address";
             // 
@@ -156,7 +156,7 @@
             this.PPhone.AutoSize = true;
             this.PPhone.Location = new System.Drawing.Point(71, 170);
             this.PPhone.Name = "PPhone";
-            this.PPhone.Size = new System.Drawing.Size(37, 13);
+            this.PPhone.Size = new System.Drawing.Size(38, 13);
             this.PPhone.TabIndex = 11;
             this.PPhone.Text = "Phone";
             // 
@@ -236,7 +236,7 @@
             this.PatientMale.AutoSize = true;
             this.PatientMale.Location = new System.Drawing.Point(165, 329);
             this.PatientMale.Name = "PatientMale";
-            this.PatientMale.Size = new System.Drawing.Size(48, 17);
+            this.PatientMale.Size = new System.Drawing.Size(49, 17);
             this.PatientMale.TabIndex = 21;
             this.PatientMale.Text = "Male";
             this.PatientMale.UseVisualStyleBackColor = true;
@@ -304,6 +304,7 @@
             this.NurseCombo.Name = "NurseCombo";
             this.NurseCombo.Size = new System.Drawing.Size(130, 21);
             this.NurseCombo.TabIndex = 7;
+            this.NurseCombo.SelectedIndexChanged += new System.EventHandler(this.NurseCombo_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -312,13 +313,14 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(128, 21);
             this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // PmChecked
             // 
             this.PmChecked.AutoSize = true;
             this.PmChecked.Location = new System.Drawing.Point(317, 59);
             this.PmChecked.Name = "PmChecked";
-            this.PmChecked.Size = new System.Drawing.Size(40, 17);
+            this.PmChecked.Size = new System.Drawing.Size(41, 17);
             this.PmChecked.TabIndex = 4;
             this.PmChecked.Text = "Pm";
             this.PmChecked.UseVisualStyleBackColor = true;
@@ -374,7 +376,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(68, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "Department";
             // 
@@ -383,7 +385,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(79, 300);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 30;
             this.label2.Text = "Room";
             // 

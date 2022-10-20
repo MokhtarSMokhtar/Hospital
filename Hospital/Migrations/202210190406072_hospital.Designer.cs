@@ -7,13 +7,13 @@ namespace Hospital.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class enum2 : IMigrationMetadata
+    public sealed partial class hospital : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(enum2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(hospital));
         
         string IMigrationMetadata.Id
         {
-            get { return "202210151951155_enum2"; }
+            get { return "202210190406072_hospital"; }
         }
         
         string IMigrationMetadata.Source
