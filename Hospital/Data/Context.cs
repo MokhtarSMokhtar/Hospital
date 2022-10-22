@@ -11,7 +11,7 @@ namespace Hospital
     public class Context : DbContext
     {
 
-        public Context():base(@"Data Source = 192.168.1.107; Initial Catalog = Hospital; User ID = SA; Password=MyPassword123#;Connect Timeout = 30;")
+        public Context() : base(@"Data source =.; initial catalog =Hospital; integrated security = true;")
         {
 
         }

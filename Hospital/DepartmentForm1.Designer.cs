@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentForm1));
             this.Deptpanal = new System.Windows.Forms.Panel();
             this.ViewPanal = new System.Windows.Forms.Panel();
             this.radioButtonNurse = new System.Windows.Forms.RadioButton();
@@ -56,6 +57,8 @@
             // Deptpanal
             // 
             this.Deptpanal.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Deptpanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Deptpanal.BackgroundImage")));
+            this.Deptpanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Deptpanal.Controls.Add(this.ViewPanal);
             this.Deptpanal.Controls.Add(this.ViewDeptbtn);
             this.Deptpanal.Controls.Add(this.DeleteDeptBtn);
@@ -75,14 +78,16 @@
             // 
             // ViewPanal
             // 
+            this.ViewPanal.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ViewPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ViewPanal.Controls.Add(this.radioButtonNurse);
             this.ViewPanal.Controls.Add(this.radioButtonDoctor);
             this.ViewPanal.Controls.Add(this.Backbtn);
             this.ViewPanal.Controls.Add(this.listView1);
             this.ViewPanal.Controls.Add(this.DeptInfoCompo);
-            this.ViewPanal.Location = new System.Drawing.Point(0, 0);
+            this.ViewPanal.Location = new System.Drawing.Point(0, 3);
             this.ViewPanal.Name = "ViewPanal";
-            this.ViewPanal.Size = new System.Drawing.Size(799, 448);
+            this.ViewPanal.Size = new System.Drawing.Size(799, 445);
             this.ViewPanal.TabIndex = 12;
             // 
             // radioButtonNurse
@@ -111,12 +116,13 @@
             // 
             // Backbtn
             // 
-            this.Backbtn.Location = new System.Drawing.Point(12, 393);
+            this.Backbtn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Backbtn.Location = new System.Drawing.Point(12, 379);
             this.Backbtn.Name = "Backbtn";
-            this.Backbtn.Size = new System.Drawing.Size(75, 23);
+            this.Backbtn.Size = new System.Drawing.Size(75, 37);
             this.Backbtn.TabIndex = 2;
             this.Backbtn.Text = "Back";
-            this.Backbtn.UseVisualStyleBackColor = true;
+            this.Backbtn.UseVisualStyleBackColor = false;
             this.Backbtn.Click += new System.EventHandler(this.Backbtn_Click);
             // 
             // listView1
@@ -126,12 +132,13 @@
             this.NameValue,
             this.Phone});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(322, -1);
+            this.listView1.Location = new System.Drawing.Point(322, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(477, 439);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // ID
             // 

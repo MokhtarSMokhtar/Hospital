@@ -62,7 +62,20 @@ namespace Hospital
         {
 
         }
+        private void VisitsForm1_Load(object sender, EventArgs e)
+        {
+            var room = context.Rooms;
+            this.RoomIDComp.DisplayMember = "Name";
+            this.RoomIDComp.ValueMember = "ID";
+            foreach (var item in room)
+            {
+                RoomIDComp.Items.Add(item);
+            }
 
+           
+
+
+        }
         private void VisitorADDbtn_Click(object sender, EventArgs e)
         {
             var patient = PatientIDComp.SelectedItem as Patient;
@@ -73,12 +86,14 @@ namespace Hospital
                 ID = Convert.ToInt32(this.VisitorIDText.Text),
                 Phone = Convert.ToInt32(this.VisitorPhoneText.Text),
                 gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female,
+                
             };
 
             var ptientvisitors = new PatientVisitors
             {
                 Patient = patient,
                 Visits = visits,
+                Date = DateTime.Now,
             };
             visits.Patients = new List<PatientVisitors>()
             {
@@ -132,10 +147,10 @@ namespace Hospital
            // var patient = PatientIDComp.SelectedItem as Patient;
 
             int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
-            var visitor = context.Doctors.Where(d => d.ID == visitorid).AsNoTracking().FirstOrDefault();
+            var visitor = context.Visits.Where(d => d.ID == visitorid).FirstOrDefault();
             try
             {
-                visitor.Name = this.VisitorIDText.Text;
+                visitor.Name = this.VisitorNameText.Text;
                 visitor.ID = Convert.ToInt32(this.VisitorIDText.Text);
                 visitor.Phone = Convert.ToInt32(this.VisitorPhoneText.Text);
                 visitor.gender = this.VisitorMale.Checked ? Gender.Male : Gender.Female;
@@ -162,25 +177,7 @@ namespace Hospital
 
         }
 
-        private void VisitsForm1_Load(object sender, EventArgs e)
-        {
-            var room = context.Rooms.Select(r => new { r.ID, r.Name });
-            this.RoomIDComp.DisplayMember = "Name";
-            this.RoomIDComp.ValueMember = "ID";
-            foreach (var item in room)
-            {
-                RoomIDComp.Items.Add(item);
-            }
-
-            var room1 = (Room)RoomIDComp.SelectedItem;
-            var patient = context.Patients.Where(p => p.Room.ID == room1.ID);
-
-            PatientIDComp.DataSource = patient;
-            this.PatientIDComp.DisplayMember = "Name";
-            this.PatientIDComp.ValueMember = "ID";
-                 
-        }
-
+    
         private void Visitordeletebtn_Click(object sender, EventArgs e)
         {
             int visitorid = Convert.ToInt32(this.VisitorIDText.Text);
@@ -195,6 +192,31 @@ namespace Hospital
             {
                 MessageBox.Show(updateExc.Message);
             }
+        }
+
+        private void RoomIDComp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var roomss = (Room)RoomIDComp.SelectedItem;
+            var patient = context.Patients.Where(p => p.Room.ID == roomss.ID);
+
+            this.PatientIDComp.DisplayMember = "Name";
+            this.PatientIDComp.ValueMember = "ID";
+            // PatientIDComp.DataSource = patient;
+
+            foreach (var item in patient)
+            {
+                PatientIDComp.Items.Add(item);
+            }
+        }
+
+        private void PatientIDComp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VisitorNameText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

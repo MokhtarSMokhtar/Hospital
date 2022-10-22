@@ -286,6 +286,8 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.NurseCombo);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.PmChecked);
@@ -346,12 +348,13 @@
             // 
             // comfirmbtn
             // 
-            this.comfirmbtn.Location = new System.Drawing.Point(174, 152);
+            this.comfirmbtn.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.comfirmbtn.Location = new System.Drawing.Point(191, 127);
             this.comfirmbtn.Name = "comfirmbtn";
-            this.comfirmbtn.Size = new System.Drawing.Size(75, 23);
+            this.comfirmbtn.Size = new System.Drawing.Size(75, 33);
             this.comfirmbtn.TabIndex = 1;
             this.comfirmbtn.Text = "Confirm";
-            this.comfirmbtn.UseVisualStyleBackColor = true;
+            this.comfirmbtn.UseVisualStyleBackColor = false;
             this.comfirmbtn.Click += new System.EventHandler(this.comfirmbtn_Click);
             // 
             // deptRoomCombo

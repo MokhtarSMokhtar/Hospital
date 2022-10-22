@@ -136,7 +136,7 @@ namespace Hospital
         private void PatientAddBtn_Click(object sender, EventArgs e)
         {
             var room = (Room)Roomcombo.SelectedItem;
-            var doctors = context.Doctors.Where(d => d.DepartmentWorkId == room.Department.ID).Select(d => d).ToList();
+          //  var doctors = context.Doctors.Where(d => d.DepartmentWorkId == room.Department.ID).Select(d => d).ToList();
             var patient = new Patient
             {
                 ID = Convert.ToInt32(this.p_id.Text),
@@ -147,7 +147,7 @@ namespace Hospital
                 Case = this.p_case.Text,
                 gender = this.PatientMale.Checked ? Gender.Male : Gender.Female,
                 Room = room,
-                Doctors = doctors
+              //  Doctors = doctors
 
             };
   

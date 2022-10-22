@@ -83,5 +83,10 @@ namespace Hospital
             visitsForm1.Show();
             this.Visible = false;
         }
+
+        private void PatientStateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
