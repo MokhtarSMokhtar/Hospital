@@ -62,13 +62,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.NurseDragID = new System.Windows.Forms.TextBox();
-            this.NurseDrageName = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.PateintName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DragName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TimeDrge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button2 = new System.Windows.Forms.Button();
+            this.NurseDrageName = new System.Windows.Forms.TextBox();
+            this.NurseDragID = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -359,51 +359,31 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(374, 348);
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(374, 342);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 29);
             this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "ViewDrage";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.NurseDrageName);
             this.panel1.Controls.Add(this.NurseDragID);
-            this.panel1.Location = new System.Drawing.Point(5, -2);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(768, 433);
+            this.panel1.Size = new System.Drawing.Size(768, 440);
             this.panel1.TabIndex = 39;
-            // 
-            // NurseDragID
-            // 
-            this.NurseDragID.Location = new System.Drawing.Point(101, 21);
-            this.NurseDragID.Name = "NurseDragID";
-            this.NurseDragID.Size = new System.Drawing.Size(100, 20);
-            this.NurseDragID.TabIndex = 0;
-            // 
-            // NurseDrageName
-            // 
-            this.NurseDrageName.Location = new System.Drawing.Point(101, 70);
-            this.NurseDrageName.Name = "NurseDrageName";
-            this.NurseDrageName.Size = new System.Drawing.Size(100, 20);
-            this.NurseDrageName.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(104, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.PateintName,
             this.DragName,
@@ -430,6 +410,31 @@
             // 
             this.TimeDrge.Text = "Time";
             this.TimeDrge.Width = 186;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Location = new System.Drawing.Point(101, 142);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 31);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Display";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // NurseDrageName
+            // 
+            this.NurseDrageName.Location = new System.Drawing.Point(101, 82);
+            this.NurseDrageName.Name = "NurseDrageName";
+            this.NurseDrageName.Size = new System.Drawing.Size(100, 20);
+            this.NurseDrageName.TabIndex = 1;
+            // 
+            // NurseDragID
+            // 
+            this.NurseDragID.Location = new System.Drawing.Point(101, 43);
+            this.NurseDragID.Name = "NurseDragID";
+            this.NurseDragID.Size = new System.Drawing.Size(100, 20);
+            this.NurseDragID.TabIndex = 0;
             // 
             // NusreForm
             // 

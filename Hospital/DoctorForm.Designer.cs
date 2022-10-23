@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorForm));
             this.DoctorPanal = new System.Windows.Forms.Panel();
             this.DoctorDeptCompo = new System.Windows.Forms.ComboBox();
             this.label3Depat = new System.Windows.Forms.Label();
@@ -60,6 +61,7 @@
             // DoctorPanal
             // 
             this.DoctorPanal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DoctorPanal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DoctorPanal.BackgroundImage")));
             this.DoctorPanal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DoctorPanal.Controls.Add(this.DoctorDeptCompo);
             this.DoctorPanal.Controls.Add(this.label3Depat);
@@ -124,7 +126,7 @@
             this.Malechek.AutoSize = true;
             this.Malechek.Location = new System.Drawing.Point(215, 385);
             this.Malechek.Name = "Malechek";
-            this.Malechek.Size = new System.Drawing.Size(48, 17);
+            this.Malechek.Size = new System.Drawing.Size(49, 17);
             this.Malechek.TabIndex = 21;
             this.Malechek.Text = "Male";
             this.Malechek.UseVisualStyleBackColor = true;
@@ -158,12 +160,13 @@
             // 
             // FromDoctorToMain
             // 
+            this.FromDoctorToMain.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FromDoctorToMain.Location = new System.Drawing.Point(492, 280);
             this.FromDoctorToMain.Name = "FromDoctorToMain";
             this.FromDoctorToMain.Size = new System.Drawing.Size(75, 40);
             this.FromDoctorToMain.TabIndex = 17;
             this.FromDoctorToMain.Text = "Back";
-            this.FromDoctorToMain.UseVisualStyleBackColor = true;
+            this.FromDoctorToMain.UseVisualStyleBackColor = false;
             this.FromDoctorToMain.Click += new System.EventHandler(this.FromDoctorToMain_Click);
             // 
             // FromDoctorToPAtiant

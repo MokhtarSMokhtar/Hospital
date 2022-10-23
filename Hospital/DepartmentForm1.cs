@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital;
 using System.Data.Entity.Core.Objects.DataClasses;
+using System.Data.Entity;
 
 namespace Hospital
 {
@@ -31,6 +32,8 @@ namespace Hospital
         {
             this.Deptpanal.Visible = true;
             this.ViewPanal.Visible = false;
+            DeptInfoCompo.DisplayMember = "Name";
+            DeptInfoCompo.ValueMember = "ID";
             var dEP = context.Departments.ToArray();
             DeptInfoCompo.Items.AddRange(dEP);
 
@@ -67,11 +70,11 @@ namespace Hospital
                     Name = this.DeptNameTextbox.Text,
                     ID = Convert.ToInt32(DeptIdTextbox.Text),
                     Manager = context.Doctors.Where(d => d.ID == DoctorId).FirstOrDefault(),
-                    
 
                 };
                 Dept.Manager.DepartmentManageId = Dept.ID;
                 Dept.Manager.DepartmentWorkId = Dept.ID;
+          
                 context.Departments.Add(Dept);
                 context.SaveChanges();
             }
@@ -120,12 +123,41 @@ namespace Hospital
 
         private void UpdateDeptBtn_Click(object sender, EventArgs e)
         {
+            var DoctorId = Convert.ToInt32(DeptManagerTextbox.Text);
+            int departmentid = Convert.ToInt32(this.DeptIdTextbox.Text);
+            var department = context.Departments.Where(d=> d.ID == departmentid).FirstOrDefault();
+            try
+            {
+                department.ID = Convert.ToInt32(this.DeptIdTextbox.Text);
+                department.Name = this.DeptNameTextbox.Text;
+                department.Manager = context.Doctors.Where(d => d.ID == DoctorId).FirstOrDefault();
+                department.Manager.DepartmentManageId = department.ID;
+                department.Manager.DepartmentWorkId = department.ID;
+                 
+
+                context.SaveChanges();
+
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
 
         }
 
         private void DeleteDeptBtn_Click(object sender, EventArgs e)
         {
-
+            int departmentid = Convert.ToInt32(this.DeptIdTextbox.Text);
+            var department = context.Doctors.Where(d => d.ID == departmentid).AsNoTracking().FirstOrDefault();
+            try
+            {
+                context.Doctors.Remove(department);
+                context.SaveChanges();
+            }
+            catch (Exception updateExc)
+            {
+                MessageBox.Show(updateExc.Message);
+            }
         }
 
         private void Backbtn_Click(object sender, EventArgs e)
@@ -139,6 +171,11 @@ namespace Hospital
         }
 
         private void DeptInfoCompo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

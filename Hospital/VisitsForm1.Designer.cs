@@ -103,6 +103,7 @@
             this.RoomIDComp.Name = "RoomIDComp";
             this.RoomIDComp.Size = new System.Drawing.Size(121, 21);
             this.RoomIDComp.TabIndex = 24;
+            this.RoomIDComp.SelectedIndexChanged += new System.EventHandler(this.RoomIDComp_SelectedIndexChanged);
             // 
             // PatientIDComp
             // 
@@ -111,6 +112,7 @@
             this.PatientIDComp.Name = "PatientIDComp";
             this.PatientIDComp.Size = new System.Drawing.Size(121, 21);
             this.PatientIDComp.TabIndex = 23;
+            this.PatientIDComp.SelectedIndexChanged += new System.EventHandler(this.PatientIDComp_SelectedIndexChanged);
             // 
             // VisitorFemale
             // 
@@ -241,6 +243,7 @@
             this.VisitorNameText.Name = "VisitorNameText";
             this.VisitorNameText.Size = new System.Drawing.Size(121, 20);
             this.VisitorNameText.TabIndex = 6;
+            this.VisitorNameText.TextChanged += new System.EventHandler(this.VisitorNameText_TextChanged);
             // 
             // label5
             // 

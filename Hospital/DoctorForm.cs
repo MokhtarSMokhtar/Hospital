@@ -170,7 +170,7 @@ namespace Hospital
 
         private void DoctorForm_Load(object sender, EventArgs e)
         {
-              context.Configuration.AutoDetectChangesEnabled = false;
+            context.Configuration.AutoDetectChangesEnabled = false;
             DoctorDeptCompo.DisplayMember = "Name";
             DoctorDeptCompo.ValueMember = "ID";
 
@@ -179,13 +179,13 @@ namespace Hospital
             {
                 DoctorDeptCompo.Items.Add(item);
 
-                list = context.Departments;
-                foreach (var items in list)
-                {
-                    DoctorDeptCompo.Items.Add(item);
+                //list = context.Departments;
+                //foreach (var items in list)
+                //{
+                //    DoctorDeptCompo.Items.Add(item);
 
 
-                }
+                //}
 
             }
         }
