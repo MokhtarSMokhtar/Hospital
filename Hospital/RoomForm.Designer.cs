@@ -69,9 +69,11 @@
             // R_ID
             // 
             this.R_ID.AutoSize = true;
-            this.R_ID.Location = new System.Drawing.Point(61, 56);
+            this.R_ID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.R_ID.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R_ID.Location = new System.Drawing.Point(34, 53);
             this.R_ID.Name = "R_ID";
-            this.R_ID.Size = new System.Drawing.Size(49, 13);
+            this.R_ID.Size = new System.Drawing.Size(105, 29);
             this.R_ID.TabIndex = 1;
             this.R_ID.Text = "Room ID";
             // 
@@ -87,9 +89,10 @@
             // NofBed
             // 
             this.NofBed.AutoSize = true;
-            this.NofBed.Location = new System.Drawing.Point(46, 92);
+            this.NofBed.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NofBed.Location = new System.Drawing.Point(31, 91);
             this.NofBed.Name = "NofBed";
-            this.NofBed.Size = new System.Drawing.Size(80, 13);
+            this.NofBed.Size = new System.Drawing.Size(124, 18);
             this.NofBed.TabIndex = 3;
             this.NofBed.Text = "Number Of Bed";
             // 
@@ -104,9 +107,10 @@
             // 
             // RID
             // 
+            this.RID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RID.Location = new System.Drawing.Point(197, 53);
             this.RID.Name = "RID";
-            this.RID.Size = new System.Drawing.Size(114, 20);
+            this.RID.Size = new System.Drawing.Size(114, 26);
             this.RID.TabIndex = 5;
             // 
             // RoomNurse
@@ -189,6 +193,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 31;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // MngrIDtxt
             // 

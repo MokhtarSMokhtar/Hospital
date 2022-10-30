@@ -118,8 +118,8 @@ namespace Hospital
                     Manager = context.Nurses.Where(n => n.ID == NurseRoomMangerID).FirstOrDefault(),
                     Department =(Department) comboBox1.SelectedItem,
                 };
-                room.Manager.RoomManageId = room.ID;
-                room.Manager.RoomId = room.ID;
+                room.Manager.ManagerRoom = room;
+                room.Manager.Room = room;
                 context.Rooms.Add(room);
                 context.SaveChanges();
             }
@@ -142,7 +142,7 @@ namespace Hospital
                 room.Type = this.roomtype.Text;
                 room.Department = (Department)comboBox1.SelectedItem;
                 room.Manager = context.Nurses.Where(n => n.ID == id).FirstOrDefault();
-                room.Manager.RoomManageId = room.ID;
+            //    room.Manager.RoomManageId = room.ID;
                 room.Manager.RoomId = room.ID;
                 context.SaveChanges();
             }
@@ -167,6 +167,11 @@ namespace Hospital
             }
         }
         private void RoomPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

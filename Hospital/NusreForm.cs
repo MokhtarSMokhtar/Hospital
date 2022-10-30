@@ -170,7 +170,7 @@ namespace Hospital
         private void button2_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(this.NurseDragID.Text);
-            string Name = this.NurseDrageName.Text;
+          
             var Drage = context.DrageTimes.Where(d => d.NurseId == id).ToList();
 
             listView1.Items.Clear();
@@ -181,6 +181,11 @@ namespace Hospital
                 listView.SubItems.Add(item.Time.ToString("hh:mm "));
                 this.listView1.Items.Add(listView);
             }
+
+        }
+
+        private void NurseDragID_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

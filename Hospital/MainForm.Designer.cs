@@ -61,6 +61,7 @@
             // 
             this.DeptBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.DeptBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeptBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeptBtn.Location = new System.Drawing.Point(16, 12);
             this.DeptBtn.Name = "DeptBtn";
             this.DeptBtn.Size = new System.Drawing.Size(101, 34);
@@ -72,6 +73,7 @@
             // VisitBtn
             // 
             this.VisitBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.VisitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VisitBtn.Location = new System.Drawing.Point(731, 12);
             this.VisitBtn.Name = "VisitBtn";
             this.VisitBtn.Size = new System.Drawing.Size(85, 34);
@@ -83,6 +85,7 @@
             // NurseBtn
             // 
             this.NurseBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NurseBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NurseBtn.Location = new System.Drawing.Point(551, 12);
             this.NurseBtn.Name = "NurseBtn";
             this.NurseBtn.Size = new System.Drawing.Size(86, 34);
@@ -95,6 +98,7 @@
             // 
             this.DoctorBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.DoctorBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DoctorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DoctorBtn.Location = new System.Drawing.Point(368, 11);
             this.DoctorBtn.Name = "DoctorBtn";
             this.DoctorBtn.Size = new System.Drawing.Size(85, 34);
@@ -106,6 +110,7 @@
             // PatientBtn
             // 
             this.PatientBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.PatientBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientBtn.Location = new System.Drawing.Point(459, 12);
             this.PatientBtn.Name = "PatientBtn";
             this.PatientBtn.Size = new System.Drawing.Size(86, 34);
@@ -117,6 +122,7 @@
             // RoomBtn
             // 
             this.RoomBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.RoomBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoomBtn.Location = new System.Drawing.Point(643, 12);
             this.RoomBtn.Name = "RoomBtn";
             this.RoomBtn.Size = new System.Drawing.Size(85, 34);
